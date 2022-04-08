@@ -1,0 +1,94 @@
+%! Package = assignment
+%! Author = Rishibh
+%! Date = 5/2/2021
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{assignment}[2021/02/05 Rishibh's Package]
+
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{amsthm}
+\RequirePackage{mathtools}
+\RequirePackage{thmtools}
+\RequirePackage{graphicx}
+\RequirePackage{tikz-cd}
+\RequirePackage{caption}
+\RequirePackage{subcaption}
+\RequirePackage{makecell}
+\RequirePackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=cyan}
+\numberwithin{equation}{section}
+\RequirePackage[a4paper, total={6in, 9in}]{geometry}
+
+
+% Commands
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\id}{\text{id}}
+\newcommand{\andt}{\text{ and }}
+\newcommand{\ort}{\text{ or }}
+\newcommand{\nextq}{\vskip.3in}
+\newcommand{\nulll}{\text{null}}
+\newcommand{\range}{\text{range}}
+\newcommand{\Span}{\text{span}}
+\newcommand{\Tr}{\mathrm{Tr}}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\lan}{\langle}
+\newcommand{\ran}{\rangle}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\inn}[1]{\left\lan#1\right\ran}
+\newcommand{\ol}{\overline}
+\renewcommand{\matrix}[1]{\begin{pmatrix} #1 \end{pmatrix}}
+\renewcommand{\L}{\mathcal{L}}
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\Bd}{\mathrm{Bd}}
+\newcommand{\intr}{\mathrm{int}}
+\newcommand{\T}{\mathcal{T}}
+\renewcommand{\sp}{\mathrm{sp}}
+
+\theoremstyle{definition}
+\declaretheorem[name=Example,qed={\lower-0.3ex\hbox{$\blacksquare$}}, parent=section]{example}
+
+\newtheoremstyle{theoremdd}% name of the style to be used
+  {\topsep}% measure of space to leave above the theorem. E.g.: 3pt
+  {\topsep}% measure of space to leave below the theorem. E.g.: 3pt
+  {\itshape}% name of font to use in the body of the theorem
+  {0pt}% measure of space to indent
+  {\bfseries}% name of head font
+  { }% punctuation between head and body
+  { }% space after theorem head; " " = normal interword space
+  {\thmname{#1}\thmnumber{ #2}\textnormal{\thmnote{ (#3)}}}
+
+\theoremstyle{theoremdd}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+\theoremstyle{definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\def\sectionautorefname{Section}
+\def\subsectionautorefname{Subsection}
+
+\newenvironment{minenumerate}
+{ \begin{enumerate}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}     }
+{ \end{enumerate}                } 
+
+\newenvironment{minitemize}
+{ \begin{itemize}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}     }
+{ \end{itemize}                  } 
+
