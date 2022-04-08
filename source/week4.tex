@@ -1,0 +1,182 @@
+\section{Canonical Forms and Genericity}
+
+\begin{definition}[Hyperbolicity]
+    The origin is called a hyperbolic equilibrium for the ODE $X' = AX$ if all eigenvalues of $A$ have non-zero real part. 
+\end{definition}
+In the case when $A$ is a $2 \times 2$ matrix, hyperbolicity holds whenever $\det(A) < 0$ or if $\det(A) > 0$ and $\Tr(A) \neq 0$ (see trace-determinant plane). 
+
+\begin{definition}[Genericity]
+    A property (for example of matrices) is called generic if it is satisfied on a dense, open subset (of $\R^{n \times n}$ for example).
+\end{definition}
+
+\begin{theorem}
+The property of having $n$ distinct eigenvalues is generic for $n \times n$ matrices. In other words the subset of $n \times n$ matrices which have $n$ distinct eigenvalues is open and dense in $\R^{n \times n}$.
+\end{theorem}
+
+\begin{corollary}[Cayley Hamilton Theorem]
+Let $A$ be an $n \times n$ matrix and let $p_{A}(\lambda)$ be its characteristic polynomial. Then $p_{A}(A) = 0$.
+\end{corollary}
+\begin{proof}
+    The statement is easily verified for diagonal matrices (the diagonal entries are the eigenvalues and also the zeroes to the characteristic polynomial). Also note that $p_{S}(T^{-1}ST) = T^{-1}p_{S}(S)T$ for every invertible $T \in \R^{n \times n}$ and every $S \in \R^{n \times n}$. Thus the statement holds true not only for diagonal matrices but for diagonalisable matrices as well. Since the subset of matrices with $n$ distinct eigenvalues is dense in $\R^{n \times n}$, there exists a sequence of diagonalisable matrices $(A_i)_{i = 1}^{\infty}$ (with $n$ distinct eigenvalues) that converges to $A$. In particular this means that the entries of the sequence of the matrices approach the entries of $A$. The coefficients of the characterisitic polynomial of a matrix depend continuously on the entries of the matrix. Thus as $A_i \to A$ we have that $p_{A_i} \to p_A$. Since $p_{A_i}(A_i) = 0$ we get $p_{A_i}(A_i) \to p_A(A) = 0$.
+\end{proof}
+
+\subsection{Canonical Forms}
+Suppose we are studying our good old friend $X' = AX$. Suppose we set $X = TY$ where $T$ is some invertible matrix. Then
+$$ Y' = (T^{-1} X)' = T^{-1} X' = T^{-1} AX = T^{-1}AT Y $$
+Defining $C := T^{-1}AT$ we get another differential equation $Y' = CY$. Importantly if we choose $T$ cleverly we can make $C$ a `simple' matrix so that $Y' = CY$ is easily solved. Once we have a solution for $Y$, we can easily find $X$, the solution to our original differential equation, since by definition $X = TY$. What does it mean for $C$ to be simple? Ideally we would want it to be diagonal of course. But this of course not always possible. Thus we go for the next best thing: the Jordan Canonical Form (JCF). Technically even this is not always possible over the reals. However, what we can put the matrix into JCF as if we were over the complex numbers and use the complex solutions to get (pairs of) real solutions, as we've done before.
+
+The Jordan Canonical form allows to perform a change of basis to write every matrix as a block matrix of the form
+\begin{align*}
+    C = \matrix{J_1 & & \\ & \ddots &\\ & & J_k}, J_i = 
+\begin{pmatrix}
+\lambda_i & 1 \\
+ & \lambda_i & \ddots\\
+ & & \ddots & 1\\
+& & &\lambda_i
+\end{pmatrix}
+\end{align*}
+where each $J_i$ is an $l_i \times l_i$ matrix. The $J_i$'s are called Jordan blocks. Note that a diagonal matrix is a special case of the above form where each Jordan block is $1 \times 1$.
+\begin{remark}
+The same eigenvalue could appear in different Jordan block. The total number of times that $\lambda$ appears in $C$ (along the diagonal of course) is exactly the algebraic multiplicity of $\lambda$.
+\end{remark}
+\begin{remark}
+If $\lambda \in \C$ is an eigenvalue, we know that $\ol{\lambda}$ is as well. This also means that $\ol{J}$ is a Jordan block in $A$.
+\end{remark}
+\subsubsection{Example}
+Suppose we know that a $5 \times 5$ matrix has an eigenvalue $\lambda$ that has algebraic multiplicity 5 as well. Here are some possible Jordan blocks.
+\begin{align*}
+    \begin{pmatrix}
+    \lambda & 1 & & & \\
+    & \lambda & 1 \\
+    & & \lambda & 1 \\
+    & & & \lambda & 1 \\
+    & & & & \lambda\\
+    \end{pmatrix}, 
+    \begin{pmatrix}
+    \lambda & & & & \\
+    & \lambda & 1 \\
+    & & \lambda & 1 \\
+    & & & \lambda & 1 \\
+    & & & & \lambda\\
+    \end{pmatrix}, 
+    \begin{pmatrix}
+    \lambda & 1 & & &\\
+    & \lambda \\
+    & & \lambda & 1 \\
+    & & & \lambda & 1\\
+    & & & & \lambda
+    \end{pmatrix},
+    \begin{pmatrix}
+    \lambda & & & &\\
+    & \lambda \\
+    & & \lambda & 1 \\
+    & & & \lambda & 1\\
+    & & & & \lambda
+    \end{pmatrix}
+\end{align*}
+The question then is how do we know which of the Jordan blocks we have? This takes a bit more work.\\
+
+Note that any Jordan block of size $l$ can be written as
+$$ J = \lambda I + N $$
+where $N$ is a nilpotent matrix (this means that $N^l = 0$ but $N^{l - 1} \neq 0$). As a consequece then we can distinguish which of the canonical forms by looking at the kernel of $(A - \lambda)$ raised to various power. To be specific, $\dim \ker((A - \lambda I)^{m})$ is the number of Jordan blocks of size less than or equal to $m$. In first case given above, we see that $\dim \ker(A - \lambda) = 1$. This is enough to characterise this matrix completely since this is the only way to a $5 \times 5$ Jordan block with one eigenvector. However for the middle two examples, we see that $\dim \ker (A - \lambda I) = 2$ for both of them (they both have two eigenvectors). We then try the next power: $\dim \ker(A - \lambda I)^2$ is 3 for the first matrix (second in row) and 4 for the other matrix (third in row).
+
+\subsection{Solving Jordan Blocks}
+The question now boils down to how to solve a system of the form $Y' = CY$ where $C$ is in canonical form and possibly complex. One thing to note is that Jordan decomposition allows us to break the space into invariant subspaces (that is after all one of the motivations for the decomposition). What this means is that solutions for the Jordan blocks can be found independently and `stacked' up together (think of the analogy with diagonal matrices where we get $n$ distict equations that can be solved independenly and when combined give us a solution to the entire system). Thus we we only need solutions to $Y' = JY$ where the matrix $J$ is of the form
+
+$$ J = \begin{pmatrix}
+\lambda& 1 \\
+ & \lambda & \ddots\\
+ & & \ddots & 1\\
+& & &\lambda
+\end{pmatrix} = \lambda I + 
+\underbrace{\begin{pmatrix}
+0& 1 \\
+ & 0 & \ddots\\
+ & & \ddots & 1\\
+& & & 0
+\end{pmatrix}}_{N}$$
+
+Suppose $Y(t) = e^{t \lambda} Z(t)$ is a solution to $Y' = JY$. Then
+\begin{align*}
+    Z'(t) &= -\lambda e^{-t \lambda} Y + e^{-t \lambda} Y'\\
+    &= -\lambda e^{-t \lambda} Y + e^{-t \lambda} (\lambda Y + NY)\\
+    &= N(e^{-t \lambda} Y)\\
+    &= NZ
+\end{align*}
+Thus we solve for $Z' = NZ$, where $N$ is a nilpotent matrix as shown above. This is equivalent to writing
+\begin{align*}
+    \matrix{z_1  \\ \vdots \\ z_{n - 1} \\ z_n}' = \matrix{z_2 \\ \vdots \\ z_n \\ 0}
+\end{align*}
+Since $z_n' = 0$, we know that $z_n(t) = c_n$ where $c_n$ is some arbitrary constant. Then $z_{n - 1} = c_nt + c_{n - 1}$ where $c_{n-1}$ is again some real constant. Continue this way we get $z_1(t) = p(t)$ where $p$ is some polynomial of degree $n - 1$ (since $n$-th derivative is 0). This is the general solution (which makes sense, the space of polynomials of degree at most $n - 1$ is of dimension $n$). Then $Y(t) = e^{t \lambda} Z(t)$ solves $Y' = JY$, where we may split $Y$ into its real and imaginary components if necessary. We have thus found a solution for all linear systems! A pat on the back is well-deserved but we postpone that for after a discussion of matrix exponentials. 
+
+\section{Matrix Exponentials}
+There is a second method of reaching the same answer with a bit less work (or rather with most of the work swept under the rugs of past theorems and lemmas). We claim that a (in fact the) solution to $Y' = (\lambda I + N)Y$ (where $N$ is nilpotent) with $Y(0)=  y_0$ is given by
+$$e^{\lambda I  + N}y_0 = e^\lambda t \sum_{k = 0}^{\infty} \frac{t^k}{k!} N^k y_0$$
+Normally we would have to worry about convergence of infinite series, however since $N$ is nilpotent the above series is finite. Once again we have a product of $e^\lambda t$ with some polynomial in $t$ as we did before (the coefficents come from $y_0$). This might lead one to conjecture that the general solution to $X' = AX$ for \textit{any} $A$ is given by
+$$e^{tA}$$
+where once again we are more or less using the exponential notation as shorthand for its Taylor expansion. We first need to ensure that this actually makes sense, that is we really do have convergence. We first need a norm. It is a fact that in finite dimensions that all norms (and also all inner products) are equivalent (any norm can be bounded by a multiple of another norm and similarly with inner products). Thus we can quite frankly choose any norm we want. We will choose one that is quite common in this setting, called the operation norm which is defined as
+$$ \norm{A} := \sup_{\norm{v} \leq 1} \norm{Av} = \sup_{v \in \R^n, v\neq 0} \frac{|Av|}{|v|} $$
+We may equivalently define it as the largest singular value of $A$ (in the appropriate setting).
+
+By definition we have the fact that $\norm{A} \leq \norm{A} \norm{v}$. This leads to the lovely fact that $\norm{AB} \leq \norm{A} \norm{B}$ since
+$$ \norm{AB} = \sup_{\norm{v} \leq 1} \norm{ABv} \leq \norm{A} \sup_{\norm{v} \leq 1} \norm{Bv} \leq \norm{A} \norm{B} $$
+\begin{remark}
+$\R^{n \times n}$ with this norm is called a Banach algebra.
+\end{remark}
+
+\begin{proposition}
+The series
+$$ e^{tA} := \sum_{k = 0}^{\infty} \frac{t^k}{k!} A^k $$
+converges absolutely.
+\end{proposition}
+\begin{proof}
+We need to show that
+$$ \sum_{k = 0}^{\infty} \norm{ \frac{t^k}{k!} A^k } $$
+is finite. With our previous statement this is easy to see, since
+\begin{align*}
+    \sum_{k = 0}^{\infty} \norm{ \frac{t^k}{k!} A^k } &= \sum_{k = 0}^{\infty} \frac{|t|^k}{k!} \norm{A^k}\\
+    &= \sum_{k = 0}^{\infty} \frac{|t|^k}{k!} \norm{A}^k\\
+    &= e^{|t| \norm{A}}
+\end{align*}
+\end{proof}
+
+We also have the following lovely statements about matrix exponentials. Note that the first property is often called the semigroup property and the latter property is an if and only if.
+\begin{lemma} Let $s, t \in \R$ and $A, B \in \R^{n \times n}$. Then
+\begin{enumerate}
+    \item $e^{(t + s)A} = e^{tA} e^{sA}$
+    \item $e^{t(A + B)} = e^{tA} e^{tB}$ if $AB = BA$
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+For the first statement (and for the second statement, the proofs are near identical), we see that
+\begin{align*}
+    e^{(t + s)A} &= \sum_{k = 0}^{\infty} \left( k! \sum_{i + j = k} \frac{s^i}{i!} \frac{t^j}{j!} \right) \frac{A^k}{k!} \\
+    &= \sum_{k = 0}^{\infty} \left( \sum_{i + j = k} \frac{s^i}{i!} A^i \frac{t^j}{j!} A^j  \right)\\
+    &= \left( \sum_{i = 0}^{\infty} \frac{s^i}{i!} A^i \right) \left( \sum_{j = 0}^{\infty} \frac{t^j}{j!} A^j \right)\\
+    &= e^{sA} e^{tA}
+\end{align*}
+The same proof works for the second case since we can use the binomial theorem again as the matrices $A, B$ commute.
+\end{proof}
+A consequence of the second property is that the exponential of a matrix is always invertible (we take $B = -A$). 
+
+Finally we want to make a comment on the differentiability of this map to make sure that it is what we expect.
+\begin{lemma}
+$$ \frac{d}{dt} e^{tA} = A e^{tA} $$
+\end{lemma}
+\begin{proof}
+\begin{align*}
+    \frac{d}{dt} e^{tA} &= \lim_{h \to 0} \frac{\exp((t + h)A) - \exp(tA)}{h}\\
+    &= \lim_{h \to 0} \frac{\exp(tA)\exp(hA) - \exp(tA)}{h}\\
+    &= \exp(tA) \lim_{h \to 0} \frac{\exp(hA) - I}{h}\\
+    &= \exp(tA) \lim_{h \to 0} \frac{1}{h} \left( hA + \frac{h^2}{2} A^2 + \frac{h^3}{3!} A^3 + \dots \right)\\
+    &= \exp(tA) A
+\end{align*}
+\end{proof}
+Much like the exponential function with real numbers, matrix exponentiation gives us a unique solution to a differential equation. In particular, $X(t) = e^{tA}$ is the unique solution to the initial value problem $X' = AX$ with $X(0) = X_0$. The proof is the exact same as with real numbers: suppose $Z(t)$ is another solution. Define $W(t) = Z(t) e^{-tA} x_0$. Then
+\begin{align*}
+    W'(t) &= \frac{d}{dt} (Z(t) e^{-tA} x_0)\\
+    &= (-Z(t)A e^{-tA}) x_0 + (Z'(t) e^{-tA}) x_0\\
+    &= (-A e^{-tA} Z(t) + e^{-tA} AZ(t))x_0\\
+    &= 0
+\end{align*}
+(we use the fact that $A$ commutes with its exponential). Therefore $W(t)$ is a constant $x_0$. Since $Z(0) = e^{0A} x_0 = x_0$, $Z$ and $X$ agree everywhere and we are done.

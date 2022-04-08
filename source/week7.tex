@@ -1,0 +1,238 @@
+\subsection{Existence of solutions}
+Given an initial value problem (IVP), there are 3 things we would like to have, the existence of a solution, the uniqueness of a solution and a continuous dependence on its parameters. We begin by showing the first of these. To be precise we want the following.
+
+Suppose $\xi_0 \in \R^n$ and $f: [t_0, t_1] \times \R^n \to \R^n$ is continuous. We wish to find a function $x: [t_0, t_1] \to \R^n \in C^1([t_0, t_1]; \R^n)$ such that
+$$ x'(t) = f(t, x(t)) $$
+and $x(t_0) = \xi_0$.
+
+We call this the initial value problem of course. There is an equivalent way of formulating this problem, in which we need to solve an integral equation. The statement is as follows.
+
+Let $f$ and $\xi_0$ be as above. We wish to find $x: C^1([t_0, t_1]; \R^n)$ such that for all $t \in [t_0, t_1]$, we have
+\begin{align*}
+    x(t) = \xi_0 + \int_{t_0}^{t} f(s, x(s)) ds
+\end{align*}
+
+Using the fundamental theorem of calculus, we can see that the two problems are equivalent. (In other words, if we find an $x$ that solves the integral equation, then it will be a solution to the initial value problem and vice verse). In general, we will work to solve the integral equation as integrating things makes them nicer (discontinuous functions become continuous, continuous functions become differentiable, etc.).
+
+\begin{theorem}[Cauchy-Peano Theorem]\label{thm:cau-pen}
+Suppose $f: [t_0, t_1] \times \R^n \to \R^n$ is continuous and bounded by $M$. Suppose we are given the initial value problem 
+\begin{align*}
+    \begin{cases}
+    x'(t) = f(t, x(t)) \text{ for all } t \in [t_0, t_1]\\
+    x(t_0) = \xi_0
+    \end{cases}
+\end{align*}
+Then the IVP has at least one solution.
+\end{theorem}
+\begin{proof}
+As mentioned previously, we will work to solve the integral equation
+$$ x(t) = \xi_0 + \int_{t_0}^{t} f(s, x(s)) ds $$
+We first define an operator $T: C^1([t_0, t_1]; \R^n) \to C^1([t_0, t_1]; \R^n)$ where
+\begin{align*}
+    Ty(t) = \xi_0 + \int_{t_0}^{t} f(s, y(s)) ds
+\end{align*}
+What we wish to find, then, is some $x$ such that $Tx = x$. As one can imagine, we will use the \hyperref[thm:sch-tyc-thm]{Schauder-Tychonoff} theorem to do this.
+
+In order to apply the theorem, we need to verify that its conditions hold. So let $B$ be the unit ball in $C^1([t_0, t_1]; \R^n)$ (in other words $B = \{y \in C^1([t_0, t_1]; \R^n) : |y(t)| \leq 1\}$; we use $C^1$ because we want the solution to be $C^1$). We see that
+\begin{align*}
+    |Tx(t)| &\leq |\xi_0| + \bigg| \int_{t_0}^{t} f(s, x(s)) ds \bigg|\\
+    &\leq |\xi_0| + \int_{t_0}^{t} |f(s, x(s))| ds\\
+    &\leq |\xi_0| + M(t - t_0)
+\end{align*}
+We split the remainder of the proof into two cases. First suppose $|\xi_0| + M(t_1 - t_0) \leq 1$. Then clearly $Tx \in B$ implying that we do indeed have a map $T: B \to B$. Now suppose $t, t' \in [t_0, t_1]$. Then
+\begin{align*}
+    |Tx(t) - Tx(t')| &= \bigg| \left(\xi_0 + \int_{t_0}^{t} f(s, x(s)) ds\right) - \left(\xi_0 + \int_{t_0}^{t'} f(s, x(s)) ds \right) \bigg|\\
+    &= \bigg| \int_{t'}^{t} f(s, x(s)) ds \bigg|\\
+    &\leq M|t - t'|
+\end{align*}
+This means that $T(B)$ is a family of functions which all share the Lipschitz constant $M$. Therefore $T(B)$ is equicontinuous. Since we already know it to be bounded (we are assuming that $T(B) \subset B$), we have that $T(B)$ is relatively compact by \autoref{thm:rel-compact-equiv}. All that remains to show is that $T$ is continuous. Since we are working in metric spaces, it suffices to show that $T$ maps convergent sequences to convergent sequences. So suppose $\{x_k\}$ is a sequence of functions in $B$ that converge uniformly to some function $x$. In other words, we have that $\norm{x - x_k}_{\infty} \to 0$. Then
+\begin{align*}
+    \left| Tx(t) - Tx_k(t) \right| \leq \int_{t_0}^{t} \left| f(s, x(s)) - f(s, x_k(s)) \right| ds
+\end{align*}
+By uniform convergence, the right hand side goes to 0. This is because $f$ is uniformly continuous (this follows from $f$ being continuous on the compact set $[t_0, t_1] \times [-1, 1]^n$. Since we are only concerned with the set $B$, we only need consider $f$ restricted to this domain) thus we can get the integrand to be as small as we like given that the inputs are close enough and the inputs can be made as close as we like by uniform convergence.
+
+To be precise, suppose $\epsilon > 0$. By uniform continuity of $f$, we know there is some $\delta > 0$ such that $\left| (s_1, x_1) - (s_2, x_2) \right| < \delta$ implies that $\left| f(s_1, x_1) - f(s_2, x_2) \right| < \frac{\epsilon}{t_1 - t_0}$. By uniform convergence of $x_k$, there is some $N \in \N$ such that for $k \geq N$, we have $\norm{x - x_k}_{\infty} < \delta$. Then $\left| x(t) - x_k(t) \right| < \delta$ for all $t$. Thus for $k \geq N$, we have
+$$ \int_{t_0}^{t} \left| f(s, x(s)) - f(s, x_k(s)) \right| ds < \frac{\epsilon}{t_1 - t_0} (t_1 - t_0) = \epsilon $$
+
+With this we satisfy all the conditions of Schauder-Tychonoff which tells us there exists some $x \in B$ such that $Tx = x$, the precise statement we were aiming for.
+
+The second case to consider is when $|\xi_0| + M(t_1 - t_0) > 1$. Let us call the quantity on the left $H$. Then we define
+$$g(t, x) = \frac{1}{H} f(t, Hx), \eta_0 = \frac{1}{H}\xi_0$$
+This gets us a new IVP which falls under case 1 and gets us a solution $y(t)$. Then $x(t) = H y(t)$ solves the original IVP.
+\end{proof}
+There is a second proof of the Cauchy-Peano theorem that is inspired by \href{https://en.wikipedia.org/wiki/Euler_method}{Euler's polygonal}.
+\begin{proof}
+    Just to make notation easier, suppose we take $t_0 = 0$ and $t_1 = 1$. Let $k$ be some natural number. Then we define
+    \begin{align*}
+        x_k(t) &=
+        \begin{cases}
+        \xi_0 &\text{ if } 0 \leq t \leq \frac{1}{k}\\
+        \xi_0 + \int_{0}^{t - \frac{1}{k}} f(s, x_k(s)) ds &\text{ otherwise}
+        \end{cases}
+    \end{align*}
+    Note that $x_k'(t) = f(t - \frac{1}{k}, x_k(t - \frac{1}{k}))$ which should be close $f(t, x_k(t))$ provided that $k$ is sufficiently large. Hence the hope is that we can find a converging (sub)sequence among these $x_k$ that will satisfy the IVP. We show that a converging subsequence exists by using \hyperref[thm:ascoli]{Ascoli-Arzelà}.
+    
+    Since $M$ is a bound for $f$, we see that
+    $$ |x_k(t)| \leq |\xi_0| + \int_{0}^{t - \frac{1}{k}} \left| f(s, x_k(s)) \right| ds \leq |\xi_0| + M $$
+    Therefore $|\xi_0| + M$ is a uniform bound for the $x_k$. Additionally
+    \begin{align*}
+        \left| x_k(t) - x_k(t') \right| &= \left| \int_{t' - \frac{1}{k}}^{t - \frac{1}{k}} f(s, x_k(s)) ds \right|\\
+        &\leq M \left| \left( t- \frac{1}{k} \right) - \left( t' - \frac{1}{k} \right) \right|\\
+        &= M \left| t - t' \right|
+    \end{align*}
+    This means that all the $x_k$ are Lipschitz with Lipschitz constant $M$ and hence form an equicontinuous family of functions. By Ascoli-Arzelà, we know there exists a convergence subsequence which we will denote $x_k$ again and we denote their limit as $x$. All that remains to show is that $x$ satisfies the integral equation (this ends up being easier to show than proving it satisfies the IVP). We see that
+    $$ x_k(t) = \xi_0 + \int_0^t f(s, x_k(s)) ds - \int_{t - \frac{1}{k}}^{t} f(s, x_k(s)) ds $$
+    Consider what happens as we take the limit as $k \to \infty$. The left hand side goes to $x(t)$ by definition and the final term clearly goes to 0 (it bounded by $\frac{M}{k}$). Since the convergence of the $x_k$ is uniform, taking the limit commutes with integration allowing us to conclude that
+    $$ x(t) = \xi_0 + \int_0^t f(s, x(s)) ds $$
+\end{proof}
+
+Consider again the initial value problem 
+\begin{align*}
+    x'(t) &= f(t, x(t))\\
+    x(t_0) &= \xi_0
+\end{align*}
+We will try find an interval $I = [t_0, t_0 + h]$ (for $h > 0$) and a solution $x \in C^1(I; \R^n)$ such that $x$ is a solution to the IVP. In this case, we will say that $x$ is a solution to IVP$_+$. For now we only focus on moving time forward, the theory for working backwards in time in near identical and will be discussed later. 
+
+If $x$ is a solution to IVP$_+$ on $I$, then we will say it can be continued to the right if there exists a pair ($\ol{x}, \ol{I}$) such that $\ol{I} \supset I$ and $\ol{x}|_{I} = x$. We will say a continuation is strict if $\ol{I} \supsetneq I$. This allows us to define a preorder, namely
+$$ (x_1, I_1) \geq (x_2, I_2) \Leftrightarrow I_1 \supset I_2 \text{ and } x_1|_{I_2} = x_2 $$
+By Zorn's lemma, there exists a maximal continuation $(x^*, I^*)$ of $(x, I)$. Note that $I^*$ is a union of all intervals on which we have continuations of $x$.
+
+\begin{theorem}
+Suppose we are given $(t_0, \xi_0) \in \R \times \R^n$. Let $A = [t_0 - h, t_0 + h] \times \ol{B(\xi_0, a)}$ for some $h, a > 0$. Let $f: A \to \R^n$ be continuous function bounded by $M$. Then the IVP
+\begin{align*}
+    x'(t) &= f(t, x(t))\\
+    x(t_0) &= \xi_0
+\end{align*}
+has at least one solution $x$ defined on
+$$ I = [t_0 - \min\left\{h, \frac{a}{M}\right\}, t_0 + \min\left\{h, \frac{a}{M}\right\}] $$
+Moreover, any solution to the IVP defined on $J \subset I$, where $J$ is a neighbourhood of $t_0$ (i.e. $J$ contains an open set that in turn contains $t_0$), can be continued to a solution on $I$.
+\end{theorem}
+\begin{remark}
+Although the first statement is quite similar to Cauchy-Peano, note that $f$ is now local in space (we use a closed ball rather than all of $\R^n$). Hence we will require a further bit of argument.
+\end{remark}
+\begin{proof}
+By \autoref{thm:cont-ext}, we can extend $f$ to $\ol{f}$ defined on $[t_0 - h, t_0 + h] \times \R^n$. By definition of the extension, $\norm{\ol{f}}_{\infty} \leq M$ (which is to say its values are contained in the cube of `radius' $M$). By \hyperref[thm:cau-pen]{Cauchy-Peano}, there exists a solution $\ol{x}$ to the IVP
+\begin{align*}
+    x'(t) &= \ol{f}(t, x(t))\\
+    x(t_0) &= \xi_0
+\end{align*}
+Unfortunately $\ol{x}$ is not a solution to our original IVP since it may take values outside of $A$. However this can be easily fixed by using the fact that $\ol{x}$ is continuous. Since $\ol{x}$ is continuous, there exists $j > 0$ (where $j \leq h$) such that if $t \in [t_0, t_0 + j]$ then $|\ol{x}(t) - \ol{x}(t_0)| = |\ol{x}(t) - \xi_0| \leq a$. 
+
+Hence we have a solution to the given IVP on $I = [t_0, t_{0} + j]$ for some $j$. Now we want to show that given a solution on any $J \subset I$, the solution can be extended to a solution on $I$ (where of course $J$ must be a neighbourhood of $t_0$).
+
+Let $(x, J)$ be a solution to the IVP where $J = [t_0, t_1]$ for some $t_1 \in [t_0, t_0 + h]$ (as mentioned, we will only consider the case of moving forward in time for now). We extend it as described above to get a maximal solution (i.e. defined on the maximal time interval). Then we need show that if $(x^*, J^*)$ is this maximal solution, then $J^* \supset I$.
+
+First we claim that $J^*$ contains its right endpoint (in other words $J^*$ is a closed interval).
+Let $t', t'' \in J^*$ with $t' < t''$. Then, by considering the integral equation instead of the IVP, we get that
+\begin{align*}
+    \left| x^*(t'') - x^*(t') \right| &\leq \left| \int_{t'}^{t''} f(s, x^*(s)) ds \right|\\
+    &\leq \int_{t'}^{t''} \left| f(s, x^* (s) \right| ds\\
+    &\leq M(t'' - t')
+\end{align*}
+This means that $x^*$ is uniformly continuous (indeed it is even Lipschitz). In particular then $x^*$ maps a Cauchy sequence to a Cauchy sequence. By constructing a Cauchy sequence that converges to $t_1 := \sup(J^*)$, we can either define $x^*$ on it or verify that it is continuous at that point. In principle we also need to check that $x^*(t_1) \in \ol{B(\xi_0, a)}$. However this is clear since the set is closed (and even compact), so it contains its limit points (and by the construction given, we know that $x^*(t_1)$ is indeed a limit point). 
+\begin{remark}
+    This means that any solutions (at least the ones obtained via this method) are defined on closed intervals rather than open/half-open intervals.
+\end{remark}
+
+Then we show that $t_1 \geq t_0 + \min \left\{ h, \frac{a}{M} \right\}$.
+If $t_1 = t_0 + h$, we are done, so suppose $t_1 < t_0 + h$. We will show that $t_1 \geq t_0 + \frac{a}{M}$ in this case. First we note that we must have $x^*(t_1)$ on the boundary of $\ol{B(\xi_0, a)}$ (if $x^*(t_1)$ was in the interior, we could run the proof again with $x^*(t_1)$ as our initial starting point and obtain a solution on $[t_1, t_1 + b]$ for some $b > 0$. We could then combine these solutions to get a solution on $[t_0, t_1 + b]$, contradicting $J^*$ being the maximal interval). This means that
+\begin{align*}
+    a &= |x^*(t_1) - \xi_0|\\
+    &= |x^*(t_1) - x^*(t_0)|\\
+    &\leq (t_1 - t_0) \norm{x'}\\
+    &\leq M (t_1 - t_0)
+\end{align*}
+The third line follows from the mean value theorem in higher dimensions (see \href{https://en.wikipedia.org/wiki/Mean_value_theorem#Mean_value_theorem_in_several_variables}{Wikipedia}). Therefore we get that 
+$$ t_1 \geq \frac{a}{M} + t_0 $$
+
+All that remains to show then is that we can continue to the left of $t_0$ in a similar manner. Of course we could simply run through the proof again changing the signs where necessary to obtain solutions to the left of $t_0$. However, if we are clever (and mathematicians are nothing if not clever), we can use the theory built up thus far to find the solution for negative time. 
+
+We define $g: [t_0 - h, t_0 + h] \times \ol{B(\xi_0, a)} \to \R^n$ where $g(t, \xi) = -f(2t_0 - t, \xi)$ (notice how as $t$ increases from $t_0 - h$ to $t_0 + h$, the first input to $f$ decreases from $t_0 + h$ to $t_0 - h$). We then find a solution on some $J' = [t_0, t_0 + b]$ (where $b$ is the minimum value asserted in the statement of the theorem) to the IVP
+\begin{align*}
+    y'(t) &= g(t, y(t))\\
+    y(t_0) &= \xi_0
+\end{align*}
+By setting $x(t) = y(2t_0 - t)$ we obtain a solution on $[t_0 - b, t_0]$ as desired.
+
+\end{proof}
+
+Now that we shown a few existence theorems, we should give uniqueness a shot as well. We will in fact give 2 proofs, related in essence but different in flavour.
+\begin{theorem}\label{thm:ext-and-unq-lip}
+    Let $D$ be an open subset of $\R \times \R^n$ with $(x_0, y_0) \in D$. Let $f: D \to \R^n$ be a function that is continuous in $x$ and Lipschitz in $y$, with Lipschitz constant $K$. Then there exists some $a > 0$ such that the initial value problem
+    \begin{align*}
+        y'(x) &= f(x, y(x))\\
+        y(0) &= x_0
+    \end{align*}
+    has a unique solutions on $(x_0 - a, x_0 + a)$.
+\end{theorem}
+\begin{proof}[Contraction Mapping]
+    For the first proof, we will use \hyperref[thm:banach-con-map]{Banach's contraction mapping theorem}. 
+    
+    First we choose a rectangle $R' = [x_0 - A, x_0 + A] \times [y_0 - L, y_0 + L]$ (if $y_0 \in \R^n$ for $n > 1$, we do this for every coordinate) that is contained in $D$. Since $f$ is continuous and $R'$ is compact, it is bounded by some constant $M$. Let $a$ be a positive real number that is less than $\min\left\{ \frac{L}{M}, A, \frac{1}{K} \right\}$. Let $R = [x_0 - a, x_0 + a] \times [y_0 - L, y_0 + L]$. 
+    
+    Now we define a space $X := \{y \in C([x_0 - a, x_0 + a]; \R^n) : \norm{y - y_0}_{\infty} \leq L\}$. Note that if $y \in X$, then the graph of $y$ is contained in $R'$ and since $R' \subset D$, in particular it is contained in $D$. Thus $f(x, y(x))$ makes sense for every $y \in X$. We would like to apply the Banach contraction mapping theorem to $X$ (note it is complete as it is the closed subset of a complete metric space). Then we need a map $\Gamma: X \to X$ that is a contraction from which we will get a fixed point. Remembering the integral equation, what we want is to find a $y \in C([x_0 - a, x_0 + a]; \R^n)$ such that
+    $$ y(x) = y_0 + \int_{x_0}^{x} f(s, y(s))ds $$
+    This tells us how to define $\Gamma$. In particular,
+    $$ \Gamma(y)(x) = y_0 + \int_{x_0}^{x} f(s, y(s))ds $$
+    If we can find a fixed point of $\Gamma$, we will have found a solution to our initial value problem. In order to do so, all we need do is verify that the hypotheses of the Banach contraction mapping theorem hold.
+    
+    First we want to know that $\Gamma$ does indeed map $X$ into itself (a priori, it is not obvious that the image of $y \in X$ under $\Gamma$ is in $X$). Luckily for us this indeed the case since
+    \begin{align*}
+        |\Gamma(y)(x) - y_0| &= \bigg| \int_{x_0}^{x} f(s, y(s)) ds \bigg|\\
+        &\leq \int_{x_0}^{x} |f(s, y(s))| ds\\
+        &\leq M |x - x_0|\\
+        &\leq Ma\\
+        &\leq L
+    \end{align*}
+    As this holds for all $x$, we get that
+    $$ \norm{\Gamma(y) - y_0}_{\infty} \leq L $$
+    
+    The only thing that remains to be shown then, is that $\Gamma$ is a contraction. What we will show is that $\norm{\Gamma(y) - \Gamma(z)} \leq aK \norm{y - Z}$. By our choice of $a$, we know that $aK < 1$ and so the claim will be satisfied.
+    \begin{align*}
+        |\Gamma(y)(x) - \Gamma(z)(x)| &\leq \int_{x_0}^{x} |f(s, y(s)) - f(s, z(s))| ds\\
+        &\leq \int_{x_0}^{x} K|y(s) - z(s)| ds\\
+        &\leq K \int_{x_0}^{x} \norm{y - z}_{\infty}\\
+        &= K \norm{y - z}_{\infty} (x - x_0)\\
+        &\leq aK \norm{y - z}_{\infty}
+    \end{align*}
+    The second line follows from the fact that $f$ is Lipschitz in the second component.
+    
+    Thus we can safely apply the contraction mapping theorem and conclude the proof. Since the theorem tells us that the fixed point is unique, we know that our solution $y$ is unique.
+\end{proof}
+\begin{remark}
+    Suppose $y_1$ is any continuous map. Then functions $\Gamma(y_1)$, $\Gamma^2(y_1) = \Gamma(\Gamma(y_1))$, $\Gamma^3(y_1) = \Gamma(\Gamma(\Gamma(y_1))), \dots$ are known as the Picard iterates.
+\end{remark}
+
+Now we present a second proof of the same theorem using Picard iterates. Arguably this is the same thing, since if we were to follow through with the contraction mapping theorem, we would be applying the contraction, i.e. $\Gamma$, repeatedly to our initial point which is exactly what the Picard iterates are. However it's still useful to consider different proofs to see the different techniques they employ. Additionally, our solution will be defined on a slightly larger interval which is also nice.
+\begin{proof}[Picard Iterates]
+    Let $R'$ be as before (in other words $R' = [x_0 - A, x_0 + A] \times [y_0 - L, y_0 + L]$ such that $R' \subset D$). This time we choose our $a$ to be less that $\min \left\{ \frac{L}{M}, A \right\}$ (where, as a reminder, $M$ is a bound for $f$). As before, we will take $R = [x_0 - a, x_0 + a] \times [y_0 - L, y_0 + L]$. 
+    
+    Let $y_1 \equiv y_0$. For $n > 1$, we define $y_n = \Gamma(y_{n - 1}) = \Gamma^{n - 1}(y_1)$. We claim that the $y_n$ converge uniformly to some $y \in C([x_0 - a, x_0 + a]; \R^n)$ where $y$ is a solution to the integral equation (corresponding to the given IVP). 
+    
+    Perhaps, we should first show that the above makes sense. Which is to say, we need that $(x, y_n(x))$ is always in $D$ so that we can evaluate $f$ on it. But as shown in the previous proof, $\norm{\Gamma(y) - y_0}_{\infty} \leq L$ if $\norm{y - y_{0}}_{\infty} \leq L$. We know that $\norm{y_1 - y_0}_{\infty} \leq L$ (in fact it's 0!), so its graph is contained in $R$ (which in turn is contained in $D$). By induction, this holds for all $y_n$.
+    
+    Now we get to the actual meat: showing that the $y_n$ converge. 
+    First we can immediately compute that 
+    $$ |y_2(x) - y_1(x)| \leq M|x - x_0| $$
+    This a calculation we have done many times previously.
+    Then we see that for $n \geq 2$
+    \begin{align*}
+        |y_{n + 1}(x) - y_n(x)| \leq \int_{x_0}^{x} |f(t, y_n(t)) - f(t, y_{n - 1}(t)| dt 
+        \leq K \int_{x_0}^{x} |y_{n}(t) - y_{n - 1}(t)|dt
+    \end{align*}
+    By induction then what we get is that 
+    $$ |y_{n + 1}(x) - y_n(x)| \leq K^{n - 1} M \frac{|x - x_0|^{n}}{n!} \leq K^{n - 1} M \frac{a^n}{n!} $$
+    Since this holds for all $x \in [x_0 - a, x_0 + a]$ what we get is that
+    $$ \norm{y_{n + 1} - y_{n}}_{\infty} \leq \frac{M}{K} \frac{(Ka)^n}{n!} $$
+    Since the right hand side denotes the terms of a convergent series, we can conclude that the $y_n$ form a Cauchy sequence and hence converge to some $y$ (to be precise, in order to show Cauchy, we should show that $|y_n - y_m| < \epsilon$ eventually, as well let $n, m \to \infty$. However $\norm{y_n - y_m}_{\infty} \leq \norm{y_{n} - y_{n - 1}}_{\infty} + \norm{y_{n - 1} - y_{n - 2}}_{\infty} + \dots + \norm{y_{m + 1} - y _m}_{\infty}$ (assuming $n > m$). Each of these terms can be made arbitrarily small by the above estimate and so we are done).
+    
+    The final thing we wish to show is that $y$ does indeed solve the integral equation. We know that
+    $$ y_n(x) = y_0 + \int_{x_0}^{x} f(t, y_{n - 1}(t)) dt $$
+    We can consider what happens as we let $n$ tend to infinity on both sides. The left hand side goes to $y(x)$ by definition. As for the right hand side, what we see is that
+    \begin{align*}
+        \bigg|\int_{x_0}^{x} f(t, y_{n - 1}(t)) dt - f(t, y(t)) dt \bigg| \leq K \int_{x_0}^{x} |y_{n - 1}(t) - y(t)| dt \leq Ka \norm{y_{n - 1} - y}
+    \end{align*}
+    Therefore the right hand side approaches
+    $$ y_0 + \int_{x_0}^{x} f(t, y(t)) dt $$
+    and we are done.
+\end{proof}

@@ -1,0 +1,237 @@
+\subsection{Uniqueness of solutions}
+The reader has the right to complain because the previous theorem guarantees not only the existence of a solution but also its uniqueness. This was quietly swept under the rug for the second proof (and arguably swept under the rug of another theorem for the first one!). We remedy that over here. In fact to make up for it, we will provide 2 proofs of uniqueness.
+\begin{proposition}
+The solution found using Picard iterates for \autoref{thm:ext-and-unq-lip} is unique.
+\end{proposition}
+\begin{proof}[Proof 1.]
+Suppose $z$ is another solution to the IVP on $[x_0 - a, x_0 + a]$. Then again we have that the graph of $z$ is contained in $R = [x_0 - a, x_0 + a] \times [y_0 - L, y_0 + L]$ (all the quantities are as defined in the proof). This is because
+\begin{align*}
+    |z(x) - y_0| &= |z(x) - z(x_0)| \\
+    &\leq \norm{z'} |(x - x_0)|\\
+    &\leq M a\\
+    &\leq L
+\end{align*}
+where $M$, as before, is a bound for $f$ and $a$ is chosen to be smaller than $\frac{L}{M}$ ($\norm{z'}$ means the operator norm of $z'$).
+
+We will show that $|y(x) - z(x)| = 0$ for every $x \in [x_0 - a, x_0 + a]$. Immediately, computing this quantity, what we find is that
+\begin{align*}
+    |y(x) - z(x)| = \bigg| \int_{x_0}^{x} f(t, y(t)) - f(t, z(t)) dt \bigg| \leq K \int_{x_0}^{x} |y(t) - z(t)| dt \leq 2LK |x - x_0|
+\end{align*}
+Then
+\begin{align*}
+    |y(x) - z(x)| &\leq K \int_{x_0}^{x} |y(t) - z(t)| dt\\
+    &\leq K \int_{x_0}^{x} 2LK (t - x_0) dt\\
+    &\leq \frac{2LK (x - x_0)^2}{2}
+\end{align*}
+By induction what we find is that 
+$$ |y(x) - z(x)| \leq \frac{2LK (x - x_0)^n}{n!} $$
+for all $n$. Clearly the right hand side goes to 0 as $n \to \infty$ (the series converges to an exponential for example), thus $y(x) = z(x)$.
+\end{proof}
+
+\begin{proof}[Proof 2.]
+    For the second proof, we once again reach the same estimate as before
+    $$ |y(x) - z(x)| \leq K \int_{x_0}^{x} |y(t) - z(t)| dt $$
+    Now we define $u(x) = |y(x) - z(x)|$ which we will show is 0. Note that by assumption $u$ statisfies the following property
+    $$ u(x) \leq K \int_{x_0}^{x} u(t)dt $$
+    This is known as Grönwall's inequality.
+    
+    Define 
+    $$ U(x) = \int_{x_0}^{x} u(t) dt $$
+    Then we know that
+    $$ U'(x) = u(x) \leq KU(x)$$
+    If we had an equality here, we could say that $U(x) = U(x_0) e^{K(x - x_0)}$. Grönwall tells us that the statement remains true if we replace the equalities with inequalities. Intuitively this is because $U(x_0) = U(x_0)e^{K(x_0 - x_0)}$, so they `start' at the same point but the right hand side grows faster (has larger gradient) so must always be greater than the left hand side. For more rigorous reasons, consider the following argument
+\begin{align*}
+    \left( \frac{U(x)}{e^{K(x - x_0)}} \right)' = \frac{U'(x) - K U(x)}{e^{K(x - x_0)}} \leq 0
+\end{align*}
+    This means that the function is non-increasing so must reach its maximum at $x_0$ (we only consider the case for $x > x_0$ the other case is near identical). Therefore
+    \begin{align*}
+        \frac{U(x)}{e^{K(x - x_0)}} &\leq \frac{U(x_0)}{e^{K(x_0 - x_0)}}\\
+        U(x) &\leq U(x_0) e^{K(x - x_0)}
+    \end{align*}
+    
+    Since $U(x_0) = 0$, we know that $U(x) \leq 0$ for all $x$. However, $U$ is also the integral of a non-negative function, so $U(x)$ must always be non-negative as well. This must mean that $U$ is 0 which in turn implies that $u$ is 0.
+\end{proof}
+
+Grönwall's inequality exists in different levels of generality. A slightly more general case (than the one used above) is as follows.
+\begin{theorem}
+If $U'(x) \leq K(x) U(x)$ where $K(x)$ is continuous and $U(x)$ is (of course) differentiable, then
+$$ U(x) \leq U(x_0) \exp \left( \int_{x_0}^{x} K(t) dt \right) $$
+\end{theorem}
+\begin{proof}
+    Exercise for the student :(
+\end{proof}
+
+We have seen that under sufficiently good conditions, we can get unique solutions on intervals of the form $[x_0, x_0 + \delta_1]$ for some $\delta_1 > 0$. We can then run the proofs again so that our new solutions are on $[x_0 + \delta_1, x_0 + \delta_1 + \delta_2]$. Thus we obtain a sequence of $\delta_i$. There are then 2 possibilities: either the $\delta_i$ form a convergent series or they don't. Since they are all positive, if the $\delta_i$ don't converge, then we get a solution defined on $[x_0, \infty)$. Otherwise the endpoint is simply the value that the series converges to. One such example of `good conditions' is when the function is $C^1$, which means that function is at least locally bounded (and indeed even has a locally bounded derivatives so is locally Lipschitz). We have seen an example of the latter phenomena with the differential equation
+$$ x' = x^2 $$
+which we noted blew up in finite time.
+\\
+
+There also exists a more general uniqueness theorem called Osgood's Uniqueness Theorem.
+\begin{theorem}[Osgood's Uniqueness Theorem]
+    Suppose $D \subset \R \times \R^n$ is open and contains some $(x_0, y_0)$. Assume that for all $(x, y_1), (x, y_2) \in D$ we have that 
+    $$ |f(x, y_1) - f(x, y_2)| \leq \varphi(|y_1 - y_2|) $$
+    where $\varphi: [0, \infty) \to [0, \infty)$ is continuous and $\varphi(0) = 0$. It also has the properties that for every $a > 0$, we have $\varphi(a) > 0$ and
+    $$ \int_{0}^{a} \frac{1}{\varphi(u)} du = \infty $$
+    Then the initial value problem
+    \begin{align*}
+        y' &= f(x, y(x))\\
+        y(x_0) &= y_0
+    \end{align*}
+    has no more than one solution.
+\end{theorem}
+Before proving the theorem, a few remarks need to be made. First we will only prove the theorem for $n = 1$. With some more tools and techniques, the given proof can be modified to work in the general case, but we won't worry about that here.
+
+Another important point is that we are not assuming $f$ to be continuous, so we cause the Cauchy-Peano theorem to assert the existence of a solution. Indeed, we will not prove that a solution exists; only that if it does, it is unique. However, if we had $\varphi(x) = Kx$ for some $K > 0$, then $f$ would be Lipschitz continuous and we reduce back to previous cases. Thus this theorem is certainly more general than what we seen thus far.
+
+\begin{proof}
+    We will prove this using contradiction. Suppose we have two distinct solutions $y_1(x), y_2(x)$ on some interval $(\alpha, \beta)$ (containing $x_0$ of course). We define $z(x) = y_1(x) - y_2(x)$. This function satisfies the IVP
+    \begin{align*}
+        z'(x) &= f(x, y_1(x)) - f(x, y_2(x))\\
+        z(x_0) &= 0
+    \end{align*}
+    If $z(x) = 0$ everywhere then we are done. So suppose that there is some $x_1$ such that $z(x_1) \neq 0$. Then importantly
+    $$ z'(x_1) \leq \varphi(|z(x_1)|) < 2 \varphi(|z(x_1)|) $$
+    We now proceed using a comparison argument which we split into cases. The first (and only) case we consider is when $x_1 > x_0$ and $y_1(x_1) > y_2(x_1)$ (the remaining cases are left as exercises for the student(s) :( \ ).
+    
+    Let $v$ be the solution to the IVP
+    \begin{align*}
+        v'(x) &= 2 \varphi(v)\\
+        v(x_1) &= z(x_1) =: z_1
+    \end{align*}
+    Note that $z_1 > 0$ by the assumption that $y_1(x_1) > y_2(x_1)$.
+    We see that $v$ and $z$ are functions that agree on $x_1$ but $v' > z'$. Thus the graphs of $v$ and $z$ cannot intersect anywhere else. We will show this leads to a contradiction. In particular we will show that $v$ is an increasing, positive function defined at least on $(-\infty, x_1]$ but since $z(x_0) = 0$, this means there must be another intersection for some $x < x_1$.
+    
+    In order to verify the above statements for $v$, it would be nice to have a slightly more explicit formula for it. Since the differentiation equation for $v$ is separable, we can at least get part of the way there.
+    By separating the variables, we know that
+    $$ \int_{v(x)}^{v(x_1) = z_1} \frac{1}{\varphi(v)} dv = \int_{x}^{x_1} 2 dx = 2(x_1 - x) $$
+    Or at least this is what $v$ should satisfy as the solution (consider substituting $v(x)$ on the right hand side). Thus we define the map $v$ so that it makes the above statement true. This only makes sense, however, if for every $x$ there exists exactly one $v_x$ such that
+    $$ \int_{v_x}^{z_1} \frac{1}{\varphi(v)} dv = 2(x_1 - x) $$
+    However this must be the case since $\frac{1}{\varphi}$ is positive so the integral is going to be monotone.
+    
+    We claim that $v(x)$ is defined for all $x < x_1$. We first define
+    $$ \Phi(y) = \int_{y}^{z_1} \frac{1}{\varphi(u)} du $$
+    Then in particular $v(x)$ is the implicit solution to the equation
+    $$ \Phi(v(x)) = 2(x_1 - x) $$
+    By assumption, $\Phi(y) \to \infty$ as $y \to 0$ (recall this was one of the properties of $\varphi$). Additionally $\Phi(z_1) = 0$ so $\Phi: (0, z_1] \to [0, \infty)$. Since
+    $\Phi' = -\frac{1}{\varphi}$, we can conclude that $\Phi$ is decreasing. This mean that $\Phi$ is in particular invertible, allowing us to write
+    $$ v(x) = \Phi^{-1}(2(x_1 - x)) $$
+    The domain of $\Phi^{-1}$ is $[0, \infty)$ thus the above formula is define whenever $x_1 - x > 0$ or in other words when $x < x_0$. 
+    
+    Clearly $v$ is increasing (there are 2 ways of seeing this: for one it is the composition of two decreasing maps and secondly, we can look at the IVP defining it and use the fact that $\varphi$ is positive on non-zero values). Additionally, since $\Phi^{-1}$ takes values in $(0, z_1]$, $v$ must also be positive. As discussed previously, this implies that the graphs of $v$ and $z$ intersect (at least) twice: once at $z_1$ and once prior, leading to the desired contradiction.
+\end{proof}
+\begin{remark}
+    There is a simpler proof if $\Phi$ were concave up which would occur if $\phi$ were non-decreasing. There is a standard way of turning any function into a non-decreasing function, define
+    $$ \tilde{\varphi}(u) = \sup_{\tilde{u} \in [0, u]} \varphi(\tilde{u}) $$
+    Unfortunately, it is not true that
+    $$ \int_{0}^{a} \frac{1}{\varphi(u)} du = \infty \Rightarrow \int_{0}^{a} \frac{1}{\tilde{\varphi}(u)} du = \infty $$
+\end{remark}
+\begin{remark}
+    If $\varphi: [0, \infty) \to [0, \infty)$ such that $\varphi(0) = 0$, $\varphi(a) > 0$ for $a > 0$ and $\varphi'(0)$ exists, then
+    $$ \int_{0}^{a} \frac{1}{\varphi(u)} du = \infty $$
+    for all $a > 0$
+\end{remark}
+
+\begin{theorem}\label{thm:solns-c1-and-stuff}
+    Let $(X, d)$ be a complete metric space. Suppose $F: X \times I \to X$ (where $I$ is any interval) is such that $F(\cdot, \lambda)$ is a uniform contraction. In other words, there exists some $0 \leq q < 1$ such that for every $\lambda \in I$ and every $x, y \in X$, we have that
+    $$ d(F(x, \lambda) - F(y, \lambda)) \leq q d(x, y) $$
+    Then there exists a unique fixed point $x^*_{\lambda}$. This defines a map $\lambda \mapsto x^*_{\lambda}$ that satisfies
+    $$ d(x^*(\lambda), x^*(\lambda')) \leq \frac{1}{1 - q} d(F(x^*(\lambda), \lambda), F(x^*(\lambda), \lambda')) $$
+    
+    If $F$ is continuous in $\lambda$ then the map $x^*$ is continuous (in $\lambda$) as well.
+\end{theorem}
+\begin{remark}
+    The word continuous in the final sentence can be replaced with Lipschitz, differentiable, $C^k$, etc.
+\end{remark}
+\begin{proof}
+    The first statement for the bound on $d(x^*(\lambda), x^*(\lambda'))$ can be seen by
+    \begin{align*}
+        d(x^*(\lambda), x^*(\lambda')) &= d( F(x^*(\lambda), \lambda), F(x^*(\lambda'), \lambda') )\\
+        &\leq d(F(x^*(\lambda), \lambda), F(x^*(\lambda), \lambda')) + d(F(x^*(\lambda), \lambda'), F(x^*(\lambda'), \lambda'))\\
+        &\leq d(F(x^*(\lambda), \lambda), F(x^*(\lambda), \lambda')) + q d(x^*(\lambda), x^*(\lambda'))
+    \end{align*}
+    From this it is clear that continuity of $F$ (in $\lambda$) implies continuity of $x^*$. It is not clear how this would generalise for smooth or $C^k$ $F$. So we present another proof that will give these to us readily.
+    
+    Suppose $F$ is $C^1$. We seek to solve for $x$ such that 
+    $$ x = F(x, v) $$
+    More precisely we know that for every $v$ there is a solution and we wish to decide how these solutions depend on $v$.
+    Taking everything to one side and taking derivatives what we find is that
+    $$ I - D_{x}F = 0 $$
+    where $I$ is the identity. Since $\norm{D_{x}F} \leq q < 1$ what we find is that this is invertible (see following lemma). Therefore we can use the inverse function theorem to conclude that the dependence on solutions is smooth/$C^K$/etc.
+\end{proof}
+
+\begin{lemma}
+If $A \in \R^{n \times n}$ such that $\norm{A} < 1$ then $I - A$ is invertible.
+\end{lemma}
+\begin{proof}
+    The inverse of $I - A$ is given by
+    $$ \sum_{k = 0}^{\infty} A^k $$
+    (note similarity to geometric series). The series converges absolutely since
+    \begin{align*}
+        \ \sum_{k = 0}^{\infty} \norm{A^k} \leq \sum_{k = 0}^{\infty} \norm{A}^k
+    \end{align*}
+    Then we see that
+    \begin{align*}
+        (I - A) \sum_{k = 0}^{\infty} A^k &= \lim_{N \to \infty} (I - A) \sum_{k = 0}^{N} A^k\\
+        &= \lim_{N \to \infty} \sum_{k = 0}^{N} A^k - \sum_{k = 0}^{N} A^{k + 1}\\
+        &= \lim_{N \to \infty} I - A^{N + 1}
+    \end{align*}
+    Since $A^N$ converges to 0 (check norms), we get the desired statement.
+\end{proof}
+\begin{remark}
+    A remark that is entirely unrelated to ODEs but also so delightful that I cannot help but mention it here. We've seen that plugging matrix into $e^x$ and $\frac{1}{1 + x}$ kind of makes sense (admittedly the latter only working for some matrices). In both cases we used the fact that these functions can be approximated via polynomials. Thus as you might imagine, any time we can approximate a function via polynomials, we can consider what happens if we input a matrix! The even more amazing fact is that any continuous function on a compact interval can be approximated via polynomials. So in fact we can apply any continuous function to a matrix. This is what leads to the so-called \href{https://en.wikipedia.org/wiki/Functional_calculus}{functional calculus}.
+\end{remark}
+
+\begin{definition}[Locally Lipschitz]
+A map $f: A \to \R^n$ is said to be locally Lipschitz, if for every compact set $K \subset A$ there exists a constant $L$ (which may depend on $K$) such that $|f(x) - f(y)| \leq L|x - y|$ for all $x, y \in K$.
+\end{definition}
+
+We will finish with a global existence and uniqueness theorem. Essentially, what we want to say is that if we have a solution on the maximal time interval then the solution blows up (in norm) or the solution approaches the boundary of the domain (or both).
+\begin{theorem}
+Suppose $D \subset \R^n$ is open and connected and $f: D \to \R^n$ is a locally Lipschitz vector field. Let $v$ be some vector in $D$. Then there exists a unique maximal interval of existence $I_{max} = (\underline{T}, \ol{T}) \ni 0$ such that
+\begin{enumerate}
+    \item The IVP
+    \begin{align*}
+        x' &= f(x)\\
+        x(0) &= v
+    \end{align*}
+    has a unique solution on $I_{max}$ and
+    \item if $\ol{T} < \infty$ then
+    $$ \lim_{t \to \ol{T}} |x(t)| + \frac{1}{d(x(t), \partial D)} $$
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+    We already know that the solution exists and is unique so we only need to verify the second statement. We do so by showing the contrapositive. In particular we will show that if $T < \ol{T}$ such that $\lim_{t \to T} |x(t)| \neq \infty$ and $\lim_{t \to T} d(x(t), \partial D) \neq 0$ then there is a solution that goes past $T$.
+    
+    Let $T > 0$ be arbitrary and suppose the two limit conditions from the previous paragraphs hold (that is $|x(t)|$ doesn't tend to infinity and $x(t)$ always remains some distance from the boundary). Then there exists a sequence $(t_j)_{j \in \N}$ that converges to $T$ such that $M := \sup_{j \in \N} |x(t_j)|$ is finite and $S := \inf_{j \in \N} d(x(t_j), \partial D)$ is positive (or in other words is not 0). Define 
+    $$ K = \{z \in D : |z| \leq M, d(z, \partial D) \geq S\} $$
+    $K$ is closed and bounded, hence it is compact (note that the fact that $K$ is closed might not be as apparent as it seems. In particular $K = D \cap \ol{B(0, M)} \cap \{z \in \R^n : d(z, \partial D) \geq S\}$. The final set is certainly closed however since $D$ is open, it is not clear that the intersection should also be closed. Nevertheless it is true that $K$ is closed because $D \cap \{z \in \R^n : d(z, \partial D) \geq S\} = \{z \in \R^n : d(z, D^c) \geq S\}$ which \textit{is} obviously closed being the preimage of a closed set under a continuous function).
+    
+    On $K$, then we have a Lipschitz constant $L$ and hence by theory we have built up so far (see \autoref{thm:ext-and-unq-lip}) we know there is some $\tau > 0$ such that for every $w \in K$ we have a unique solution to the IVP
+    \begin{align*}
+        y' &= f(y)\\
+        y(0) &= w
+    \end{align*}
+    on $[-\tau, \tau]$ (to be fair we started with an open subset of $\R^{n + 1}$ in that proof whereas we have a compact set here. However, we only needed the fact that the set contained a rectangle. Given the definition of $K$, we can see that this should be true). 
+    
+    Let $y_j$ be the solutions for $w = x(t_j)$ for the above IVP. Then $y_j(t - t_j)$ is defined on $[\tau - t_j, \tau + t_j]$ which agrees with $x(t)$ at $t_j$ (note that since $K$ contains all the $t_j$ by its definition, this $\tau$ holds for all $t_j$). Since $x$ is maximal and unique, we conclude that $x$ is defined at least until $t_j + \tau$. Now suppose we pick some $t_j$ such that $T - t_j < \tau$ (we can definitely do so since $t_j$ converge to $T$). But this means that $x(t)$ is defined at least till $t_j + \tau > T$. This holds for all $T$ so $x(t)$ is defined on $[0, \infty)$.
+\end{proof}
+
+Now that we have some knowledge of the existence and uniqueness of solutions, we can ask some question about these solutions. For example, how do the solutions depend on the initial condition $x_0$? What if we have a parameter in our differential equation, how do solutions vary as we vary the parameter? If we have solutions on some bounded interval, how and when can we extend the solutions to the maximal time interval and what is the behaviour at the end point of this interval, especially if the endpoint is finite?
+
+We begin by first making our lives easier, i.e. removing questions that are equivalent. We claim that looking at the dependence on initial conditions is entirely equivalent to looking at dependence on parameters. For example suppose $f$ is a function that depends on a parameter $\lambda \in \R^m$. We would then be attempting to solve the IVP
+\begin{align*}
+    x'(t) &= f(t, x(t), \lambda)\\
+    x(t_0) &= x_0
+\end{align*}
+Let $x$ be a solution of this IVP.
+Then we can define
+$$ z(t) = \matrix{x(t) \\ \lambda} $$
+which satisfies the IVP
+\begin{align*}
+    z'(t) = g(t, z(t))\\
+    z(t_0) = w
+\end{align*}
+where
+\begin{align*}
+    g(t, z(t)) = \matrix{f(t, x(t), \lambda)\\0}, w = \matrix{x_0 \\ \lambda}
+\end{align*}

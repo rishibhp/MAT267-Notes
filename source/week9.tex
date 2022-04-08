@@ -1,0 +1,273 @@
+\section{Continuous Dependence}
+We know now that under certain conditions solutions exist and are unique and we even have that solutions vary continuously as the initial conditions (or parameters) vary continuously. This means, for example then, if we have a sequence $v_k$ in $\R^n$ that converge to some $v$ then the solution to 
+\begin{align*}
+    x' &= f(t, x)\\
+    x(0) &= v
+\end{align*}
+can be found by taking the appropriate limits with the $v_k$. In particular, if we use $x_k$ to denote the solutions to 
+\begin{align*}
+    x' = f(t, x)\\
+    x(0) = v_k
+\end{align*}
+Then the solution to the original IVP can be found by $x(t) = \lim_{k \to \infty} x_k(t)$ (again, assuming suitable conditions for $f$). This is easier to express using flow notation as we can equivalently express the above as $ \lim_{k \to \infty} \Phi_t(v_k) = \Phi_t(v)$ for all $t$. (see \autoref{sec:dyn-systems} for definition of the flow map). Although this is lovely, it would be even more lovely if we could have an estimate for how fast the convergence is. To get there, we first need a generalised version of Grönwall's lemma. 
+
+\begin{theorem}[Grönwall's Lemma (Generalised)]\label{thm:big-gronwall}
+    Suppose we have continuous functions $f: [a, b] \to \R$ and $g: [a, b] \to \R^+$. Suppose $y: [a, b] \to \R$ is continuous and satisfies
+    $$ y(t) \leq f(t) + \int_a^t g(s) y(s) ds $$
+    for all $t \in [a, b]$. Then we have that
+    $$ y(t) \leq f(t) + \int_a^t f(s) g(s) \exp \left( \int_s^t g(u) du \right) ds $$
+    In particular if $f(t) \equiv k$ for some constant $k$, then
+    $$ y(t) \leq k \exp \left( \int_a^t g(u) du \right) $$
+\end{theorem}
+First let us verify that the statement works for $f(t) \equiv k$. In other words we wish to show that
+$$ k + k \int_{a}^{t} g(s) \exp \left( \int_s^t g(u) du \right) ds \leq k \exp \left( \int_a^t g(u) du \right) $$
+We see that the above expressions are equal at $t = a$. Thus if we had that the derivative of the left hand side was always less than the right, we would have the desired inequality.
+
+First we rewrite the left hand side as
+\begin{align*}
+    k + k \int_{a}^{t} g(s) \exp \left( \int_s^t g(u) du \right) ds &= k + k \int_a^t g(s) \exp \left( \int_a^t g(u) du - \int_a^s g(u) du \right) ds\\
+    &= k + k \exp \left( \int_a^t g(u) du \right) \cdot \int_a^t g(s) \exp \left( - \int_a^s g(u) du \right) ds
+\end{align*}
+Substituting this into the the desired inequality and multiplying both sides by $\frac{1}{k} \exp(- \int_a^t g(u) du)$, we see that the inequality is equivalent to
+$$ \exp \left( -\int_a^t g(u) du \right) + \int_a^t g(s) \exp \left( - \int_a^s g(u) du \right) ds \leq 1 $$
+Thus we will show that this inequality is true. Once again, it is clear that we have agreement on $t = a$, so we only need argue that the inequality remains with derivatives.
+Taking derivatives on the left hand side (with respect to $t$) we get
+\begin{align*}
+    \exp \left( -\int_a^t g(u) du \right) \cdot -g(t) + g(t) \exp \left( -\int_a^t g(u) du \right) = 0
+\end{align*}
+Therefore the expression on the left is actually constant! Thus rather than having inequality we have equality. 
+
+There is in fact another we can verify equality that is a bit more straightforward and in fact employs a simple technique for computing such double integrals that we will use soon so is worth mentioning. Recall we are trying to evaluate
+$$ k + k \int_a^t g(s) \exp \left( \int_s^t g(u) du \right) ds $$
+We define
+$$ M(s) = \int_s^t g(u) du = - \int_t^s g(u) du $$
+Then
+\begin{align*}
+    k + k \int_a^t g(s) \exp \left( \int_s^t g(u) du \right) ds &= k + k \int_a^t -M'(s) \exp(M(s)) ds\\
+    &= k - k(\exp(M(s)|_a^t)\\
+    &= k - k(\exp (M(t)) - \exp (M(a)))\\
+    &= k \exp(M(a))\\
+    &= k \exp \left( \int_a^t g(u) du \right)
+\end{align*}
+
+Having verified the theorem in some ways, we can try proving it.
+\begin{proof}[Proof 1]
+    For the first proof we will iterate the the assumed inequality. We will see that doing so gives us the Taylor series of an exponential with an additional term that goes to 0 as we continually iterate the inequality.
+
+    First note that without loss of generality we can assume $|y(t)| \leq 1$ ($y$ is continuous on a compact set so $\sup_{t \in [a, b]} |y(t)|$ is finite. Dividing by this quantity, we see that the assumed inequality is maintained). Additionally we will only show the case for when $f$ is a constant (the general case is left as an exercise).
+    
+    By assumption we know that
+    $$ y(t) \leq k + \int_a^t g(s)y(s)ds $$
+    Applying this inequality to the integral what we conclude is that
+    $$ y(t) \leq k + \int_a^t g(s)y(s)ds \leq k + \int_a^t g(t_1) \left[k + \int_a^{t_1} g(s) y(s) ds \right] dt_1$$
+    Expanding the right hand side, what we get is 
+    \begin{align*}
+        k + \int_a^t g(t_1) \left[k + \int_a^{t_1} g(s) y(s) ds \right] dt_1 &= k + k \int_a^{t} g(t_1) dt_1 + \int_a^t g(t_1) \int_a^{t_1} g(s) y(s) ds \ dt_1
+    \end{align*}
+    Unfortunately we need to apply the inequality again to get something useful. Doing so and expanding it like above, what we find is that
+    \begin{align*}
+        y(t) \leq k + k \int_a^{t} g(t_1) dt_1 + k \int_a^{t} g(t_1) \int_a^{t_1} g(t_2) dt_2 \ dt_1 + k \int_a^{t} g(t_1) \int_a^{t_1} g(t_2) \int_a^{t_2} g(t_3) y(t_3) dt_3 \ dt_2 \ dt_1
+    \end{align*}
+    
+    Although this is quite a mess, we won't worry about all of it (for now). Instead just focus on the double integral term. As a first step we will name it (very often a useful first step)
+    $$ I = \int_a^{t} g(t_1) \int_a^{t_1} g(t_2) dt_2 \ dt_1 = \int_a^{t} M'(t_1) M(t_1) dt_1$$
+    where
+    $$ M(t_1) = \int_a^{t_1} g(s) ds  $$
+    Therefore
+    $$ I = \frac{1}{2} [M(t)]^2 - \frac{1}{2} [M(a)]^2 $$
+    However, $M(a) = 0$ so
+    $$ I = \frac{1}{2} [M(t)]^2 = \frac{1}{2} \left(  \int_a^t g(s) ds \right)^2$$
+    
+    With a bit of working out or a bit of faith, we conclude that repeatedly applying the inequality to the integrals gets us
+    \begin{align*}
+        y(t) \leq k + k \int_a^t g(t_1) dt_1 + \frac{k}{2!} \left( \int_a^t g(t_1) dt_1 \right)^2 + \dots + \frac{k}{n!} \left( \int_a^t g(t_1) dt_1 \right)^n + \int_a^t g(t_1) \dots \int_a^{t_n} g(t_{n+1}) y(t_{n + 1}) dt_{n+1}\dots dt_1
+    \end{align*}
+    
+    For completeness, we can verify this holds for the triple integral term which would appear after we apply the inequality to the integral again. In other words we are trying to evaluate
+    $$ J = \int_a^t g(t_1) \int_a^{t_1} g(t_2) \int_a^{t_2} g(t_3) dt_3 \ dt_2 \ dt_1 $$
+    Using our previous notation and result, we see that
+    $$ J = \int_a^t M'(t_1) \cdot \frac{1}{2} [M(t_1)]^2 dt_1 $$
+    Therefore
+    $$ J = \frac{1}{3!} [M(t)]^3 $$
+    as was claimed. Hopefully we can convince ourselves now that the above summation is correct. We can see the desired exponential term appearing (as a Taylor series). Thus if the claim is to hold true then we should find that the final term goes to 0 as we repeatedly apply the inequality. Now we verify that this happens.
+    
+    Since $g$ is always positive what we find is that
+    $$ \bigg| \int_a^t g(t_1) \dots \int_a^{t_n} g(t_{n+1}) y(t_{n + 1}) dt_{n+1}\dots dt_1 \bigg| \leq \int_a^t g(t_1) \dots \int_a^{t_n} g(t_{n+1}) |y(t_{n + 1})| dt_{n+1}\dots dt_1 $$
+    We assumed that $|y(t)| \leq 1$ for all $t \in [a, b]$. Therefore the right hand side above is less than or equal to
+    $$\int_a^t g(t_1) \dots \int_a^{t_n} g(t_{n+1}) dt_{n+1}\dots dt_1 $$
+    However we already know that this is equal to
+    $$ \frac{1}{n!} \left( \int_a^t g(s)ds \right)^n $$
+    Clearly this goes to 0 as $n \to \infty$ (it is a term of a convergent infinite series for example). Therefore we conclude that 
+    $$y(t) \leq k \exp \left( \int_a^t g(s) ds \right)$$
+\end{proof}
+As usual there is a second proof of the theorem. This one, a bit more indirect.
+\begin{proof}[Proof 2]
+    We define
+    $$ z(t) = \int_a^t g(s) y(s) ds $$
+    By assumption we have that
+    $$ y(t) \leq f(t) + \int_a^t g(s) y(s) ds $$
+    By multiplying both sides by $g(t)$ (remember $g$ is positive) and rearranging what we find is that
+    $$ g(t) y(t) -  g(t) \int_a^t g(s) y(s) ds \leq g(t) f(t) $$
+    Therefore
+    $$ z'(t) - g(t) z(t) \leq f(t) g(t) $$
+    Seeing the left hand side one is reminded of linear exact differential equations and integrating factors (see \autoref{sec:exact-diff-eq}). In particular, we can write the left hand side as the derivative of a product if we multiply both sides by
+    $$ \exp \left(- \int_a^t g(u) du \right) $$
+    (note the inequality is maintained since the $\exp$ is always positive). The inequality now becomes
+    $$ z'(t) \exp \left(- \int_a^t g(u) du \right) - z(t) g(t) \exp \left(- \int_a^t g(u) du \right) \leq f(t) g(t) \exp \left(- \int_a^t g(u) du \right) $$
+    Although the left hand side looks like something of a mess, we know (by construction) that it is equal to $w'(t)$ where
+    $$w(t) = z(t) \exp \left(- \int_a^t g(u) du \right)$$
+    Hence we get
+    \begin{align*}
+        \int_a^t w'(s) ds &\leq \int_a^t f(s) g(s) \exp \left( - \int_a^{s} g(u) du \right) ds\\
+        z(t) \exp \left(- \int_a^t g(u) du \right) &\leq \int_a^t f(s) g(s) \exp \left( - \int_a^{s} g(u) du \right) ds\\
+        z(t) &\leq \int_a^t f(s)g(s) \exp \left( \int_s^{t} g(u) du \right) ds\\
+        f(t) + \int_a^t g(s) y(s) ds &\leq f(t) + \int_a^t f(s)g(s) \exp \left( \int_s^{t} g(u) du \right) ds
+    \end{align*}
+    where for the second line we use the fact that $w(a) = 0$ (which follows from the fact that $z(a) = 0$).
+    Since the left hand side is greater or equal to $y(t)$ by assumption, we are done.
+\end{proof}
+
+Now that we have Grönwall's Lemma, we can use it to to provide estimates for how much solutions can differ, if we only change the initial conditions slightly. In particular, we have the following theorem.
+\begin{theorem}\label{thm:sim-init-conds}
+    Let $x_1: [a, b] \to \R^n$ and $x_2: [a, b] \to \R^n$ be differential functions such that $|x_1(a) - x_2(a)| \leq \delta$. Let $f: [a, b] \times \R^n \to \R^n$ be function that is Lipschitz in the second variable with Lipschitz constant $L$. Suppose
+    \begin{align*}
+        |x_1'(t) - f(t, x_1(t))| &\leq \epsilon_1\\
+        |x_2'(t) - f(t, x_2(t))| &\leq \epsilon_2
+    \end{align*}
+    Then
+    $$ |x_1(t) - x_2(t)| \leq \delta e^{L(t - a)} + (\epsilon_1 + \epsilon_2) \frac{e^{L(t - a)} - 1}{L} $$
+\end{theorem}
+\begin{remark}
+Suppose $\epsilon_1 = \epsilon_2 = 0$. Then $x_1$ and $x_2$ satisfy the same differential equation but with slightly different initial conditions. In this case the conclusion of the theorem is that $|x_1(t) - x_2(t)| \leq \delta e^{L(t - a)}$, which is to say that the solutions can differ at most by some exponential term. If we also have $\delta = 0$, we get yet another proof of uniqueness.
+\end{remark}
+\begin{proof}
+    Let $\epsilon = \epsilon_1 + \epsilon_2$. We define $g(t) = x_1(t) - x_2(t)$. We want to show that $g$ is bounded by some kind of exponential term and as we said we want to use Grönwall. For this we need a bound on $g$. First we will find an estimate for $g'$ (as you can imagine this will be easier since we have some strong conditions on $f$ which approximates $x_1'$ and $x_2'$ fairly well) and then use this to find an estimate for $g$.
+    \begin{align*}
+        |g'(t)| &= |x_1'(t) - x_2'(t)|\\
+        &= | (x_1'(t) - x_2'(t)) - f(t, x_1(t)) + f(t, x_1(t)) - f(t, x_2(t)) + f(t, x_2(t)) |\\
+        &\leq |f(t, x_1(t)) - f(t, x_2(t))| + | x_1'(t) - f(t, x_1(t)) | + |x_2'(t) - f(t, x_2(t))|\\
+        &\leq L |g(t)| + \epsilon
+    \end{align*}
+    
+    Now that we have an estimate for $g'$ we can try to find an estimate for $g$ as well. In particular we get
+    \begin{align*}
+        |g(t)| &= \bigg| g(a) + \int_a^t g'(s) ds \bigg|\\
+        &\leq |g(a)| + \int_a^t|g'(s)| ds\\
+        &\leq \delta + \int_a^t L |g(s)| + \epsilon ds\\
+        &= \delta + \epsilon(t - a) + \int_a^t L |g(s)| ds
+    \end{align*}
+    Using \hyperref[thm:big-gronwall]{Grönwall} then what we conclude is that
+    $$ |g(t)| \leq \delta + \epsilon(t - a) + \int_a^t L(\delta + \epsilon(s - a)) e^{L(t - s)} ds $$
+    Computing the right hand side, we find it to be equal to
+    $$ \delta e^{L(t - a)} + \frac{\epsilon}{L} (e^{L(t - a)} - 1) $$
+    giving us the stated inequality.
+\end{proof}
+
+We now make a statement about solving (nonautomous) linear systems that could have been stated earlier but is here because we will use it shortly.
+\begin{corollary}\label{cor:cont-mat-exist}
+Let $(t_0, x_0) \in I \times \R^n$ be arbitrary, where $I$ is some interval in $\R$. Let $A(t)$ be a continuous family of $n \times n$ matrices. Then the IVP
+\begin{align*}
+    x'(t) &= A(t)x\\
+    x(0) &= x_0
+\end{align*}
+has a unique solution on all of $I$. Moreover this solution is given by
+$$ x(t) = e^{\int_{t_0}^t A(s) ds} x_0 $$
+\end{corollary}
+\begin{proof}
+    We already know that the solution exists and is unique from everything we've done. We can check that the solution is as given by verifying that it satisfies the ODE. Indeed we see that
+    $$ x'(t) = A(t) e^{\int_{t_0}^t A(s) ds} x_0 = A(t) x $$
+    and $x(t_0) = x_0$. By uniquness, this is the solution to the IVP.
+\end{proof}
+
+\section{Flow of Dynamical Systems}
+Suppose $f: \R^n \to \R^n$ is $C^1$. Then we for every $x \in \R^n$ there is a unique solution satisfying the IVP
+\begin{align*}
+    y' &= f(y)\\
+    y(0) &= x
+\end{align*}
+Suppose also that the solution is defined for all $t \in \R$.
+Then we define $\Phi_t(x) = y(t)$ (where $y$ is the (unique) solution to the IVP). In effect $\Phi_t$ maps initial points $x$ to where the differential equation sends them at time $t$. As mentioned in \autoref{sec:dyn-systems}, the flow map satisfies the semigroup property: $\Phi_{s + t} = \Phi_s \circ \Phi_t$ (note this property does \textit{not} hold if we do not have uniqueness of solutions).
+
+Sometimes we alternatively use the notation $\Phi(t, x)$. This is especially useful when we wish to take the derivative with respect to time for example. In fact let us do exactly this to try and calculate the so-called time derivative $\frac{\partial \Phi}{\partial t}$. This means that we hold the initial value $x$ constant and vary $t$. Clearly this must be the solution $y(t)$. Therefore
+$$ \frac{\partial \Phi}{\partial t} (t, x) =  f(\Phi(t, x)) $$
+Additionally, it is clear by definition that $\Phi_0(x) = \Phi(0, x) = x$, so $\Phi_0$ is the identity. From these two facts we can conclude that $\Phi_t$ is a bijection for all $t$ with inverse $\Phi_{-t}$. The injectivity of $\Phi_t$ is exactly equivalent to a previous statement we have made of how the uniqueness of solutions implies that the solutions can never intersect. The surjectivity is a confirmation of a long held suspicion of ours that the general solution for $y' = f(y)$ where $f: \R^n \to \R^n$ is an $n-$dimensional space.
+
+Now that we have considered the time derivative, we should also consider its sibling the space derivative $\frac{\partial \Phi}{\partial x}$. First note we know this exists and is continuous by \autoref{thm:solns-c1-and-stuff} (or more precisely by the remark following it). As you can imagine however, computing it will be harder.\\
+
+Consider our standard IVP
+\begin{align*}
+    x'(t) &= f(x(t))\\
+    x(0) &= x_0
+\end{align*}
+for $t \in J$ where $J$ is a closed interval containing 0 and $f$ is $C^1$. For $t \in J$, we define $A(t) = Df(x(t))$ (this is the Jacobian of $f$ at $x(t)$). Since $f$ is $C^1$, we know that $A$ is continuous function. We then define the \textit{variational equation along the solution $x(t)$} to be the unique solution $u(t)$ to
+\begin{align*}
+    u' &= A(t)u\\
+    u(0) &= u_0
+\end{align*}
+(recall we know that unique solutions exist for every $u_0$ and are defined on all of $J$ by \autoref{cor:cont-mat-exist}). Note that this is a (admittedly non-autonomous) linear system of equations, hence the \hyperref[sec:superposition-principle]{linearity principle} still holds. What we will show is that if $u_0$ is small the map $t \mapsto x(t) + u(t)$ (with $x(t)$ as above) is a good approximation to the solution of
+\begin{align*}
+    x' &= f(x)\\
+    x(0) &= x_0 + u_0
+\end{align*} 
+We formalise this in the following proposition.
+\begin{proposition}\label{prop:approx-solns}
+    Let $D \subset \R^n$ and $f: D \to \R^n$ be $C^1$.
+    Let $J$ be a closed interval containing 0 and $x(t)$ is the solution to $x' = f(x)$ with $x(0) = x_0$. Let $u(t)$ be the solution to $u' = Df(x(t)) u$ satisfying $u(0) = \xi$ (in other words $u$ is the variation equation along $x(t)$) and let $y(t)$ be the solution to $x' = f(x)$ satisfying $y(0) = x_0 + \xi$. Then
+    $$ \lim_{\xi \to 0} \frac{|y(t) - x(t) - u(t)|}{|\xi|} $$
+    converges uniformly to 0.
+\end{proposition}
+\begin{remark}
+    Uniform convergence in this context means that for every $\epsilon > 0$ there exists some $\delta > 0$ such that if $|\xi| \leq \delta$ then $|y(t) - x(t) - u(t)| \leq \epsilon|\xi|$ for every $t \in J$.
+\end{remark}
+\begin{proof}
+    As usual we go to integral equations. We have
+    \begin{align*}
+        x(t) &= x_0 + \int_0^t f(x(s)) ds\\
+        y(t) &= x_0 + \xi + \int_0^t f(y(s)) ds\\
+        u(t) &= \xi + \int_0^t Df(x(s)) u(s) ds
+    \end{align*}
+    Then
+    \begin{equation}
+        |y(t) - x(t) - u(t)| \leq \int_0^t |f(y(s)) - f(x(s)) - Df(x(s)) u(s)| ds
+    \end{equation}
+    Let us denote the left hand side as $g(t)$.
+    Finding the Taylor expansion of $f$ centered at $x$ what we find is that
+    $$ f(y) = f(x) + Df(x)(y - x) + R(y - x) $$
+    where $R(y - x)$ is the remainder term such that
+    $$ \lim_{y \to x} \frac{R(y - x)}{|y - x|} = 0 $$
+    Substituting this expansion of $f$ into the above inequality, we get
+    \begin{align*}
+        g(t) &\leq \int_0^t \left|f(x(s)) + Df(x(s))(y(s) - x(s)) + R(y(s) - x(s)) - f(x(s)) - Df(x(s))u(s)\right| ds\\
+        &\leq \int_0^t |Df(x(s))(y(s) - x(s) - u(s))| ds + \int_0^t |R(y(s) - x(s))| ds
+    \end{align*}
+    Since $J$ is a closed interval it is in particular compact hence $|Df(x(s))|_{s \in J}$ achieves its maximum. Let $N$ be this maximum. Then $N$ serves as a Lipschitz constant for $f$. Let $\epsilon > 0$ be given.
+    By uniform convergence of $\frac{R(y - x)}{|y - x|}$ to 0, we know there is some $\delta_1 > 0$ so that $|y - x| < \delta_1$ then $|R(y - x)| \leq \epsilon |y - x|$. But recall that $y$ and $x$ are solutions to the same differential equation with the differing initial condition. We already have an estimate for how far these can differ, by \autoref{thm:sim-init-conds}. We know $f$ is $C^1$ so it is locally Lipschitz. Thus for every compact set $C$, we can find a constant $K$ such that $f$ restricted to $C$ is Lipschitz with Lipschitz constant $K$. There is a compact set containing the images of $x$ and $y$ (we can in particular take the union of their images). Let $K$ be the Lipschitz constant for this compact set. Then we know by the aforementioned theorem that
+    $$ |y(s) - x(s)| \leq |\xi|e^{Ks} $$
+    for every $s \in J$. Since $J$ is compact the right hand attains some maximum. Thus by choosing an appropriate $\delta > 0$ we can ensure that if $|\xi| < \delta$ then $|\xi| e^{Ks} < \delta_1$. Thus if $|\xi| < \delta$, then we know that $|R(y(s) - x(s)| \leq \epsilon|y(s) - x(s)| \leq \epsilon |\xi| e^{Ks}$ for every $s \in J$. Under this condition, what we find then is that
+    \begin{align*}
+        g(t) &\leq \int_0^t |Df(x(s))(y(s) - x(s) - u(s))| ds + \int_0^t |R(y(s) - x(s))| ds\\
+        &\leq \int_0^t |Df(x(s))| g(s) ds + \int_0^t \epsilon |\xi| e^{Ks} ds\\
+        &\leq \int_0^t N g(s) ds + \epsilon |\xi| \int_{J} e^{Ks} ds
+    \end{align*}
+    Note that the integral in the second term is simply a constant which we will denote $c$. Thus using \hyperref[thm:big-gronwall]{Grönwall} (specifically the case when $f$ is a constant function), we conclude that
+    $$ g(t) \leq c \epsilon |\xi| e^{Nt} $$
+    Thus 
+    $$ \lim_{\xi \to 0} \frac{g(t)}{|\xi|} $$
+    goes to 0 uniformly since $\epsilon$ was chosen arbitrarily.    
+\end{proof}
+Why is this proposition important? Well, as we've said it is often impossible to solve differential equations explicitly. However, perhaps we can find $x(t)$ for some special $x_0$ (for example, we might be able to find equilibria, which would would correspond to the zeroes of $f$). This means that we can approximate solutions near these special $x_0$ to get at least get some idea of the behaviour. In fact we can compute $\frac{\partial \Phi}{\partial x}$ a bit more explicitly now. Then $y(t)$ and $x(t)$ in the above proposition are simply $\Phi(t, x_0 + \xi)$ and $\Phi(t, x_0)$. We think of $u(t)$ as a function of 2 variables: namely we define $u(t, \xi)$ to be the solution to the variational equation along $x(t)$ (or $\Phi(t, x_0)$) satisfying $u(0, \xi) = \xi$. The linearity principle ensure that $u$ is linear in $\xi$. The definition of the differential of $f$ is the (unique) linear map $A$ that satisfies 
+$$ \lim_{h \to 0} \frac{|f(x - h) - f(x) - Ah|}{|h|} = 0 $$
+Therefore the map $\xi \mapsto u(t, \xi)$ is the partial derivative of $\Phi(t, x)$ with respect to $x$, which we may also denote $D\Phi_t(x)$. In fact since we have an explicit solution for $u$, we can write
+$$ D \Phi_t(x_0) = e^{\int_0^t Df(x(s)) ds} x_0 $$
+We can then verify that $D\Phi_t(x)$ satisfies the following IVP
+\begin{align*}
+    \frac{\partial}{\partial t} (D \Phi_t (x)) &= Df(\Phi_t(x)) D\Phi_t (x)\\
+    D \Phi_0 (x) = I
+\end{align*}
+where $I$ is the identity map. This matches the IVP for $u$ as well (we use the fact that $A(t) = Df(x(t)) = Df(\Phi_t(x_0))$ and $u(0, x_0) = x_0$).
+
+To recap, we have managed to find some formulae and descriptions of the variation equation. The reason we wanted to solve the variation equation is because it lets us approximate solutions around known solutions. The question then is, have we actually done this? We can find $u(t)$ by solving an integral or by solving an initial value problem, neither of which is particularly easy in general. And indeed, what we've done is converted one difficult problem into another (hurrah.). However there are some important cases where we can solve for things and are hence worth exploring.
+
+Suppose the known solution $x(t)$ is an equlibrium point. In other words $x(t) \equiv a$ for some $a$. Then $A(t) = Df(a)$ for all $t$. Hence what we find is that
+$$ u(t) = D\Phi_t(a) = e^{t Df(a)} $$
+Therefore we conclude that in a neighbourhood around equilibria, the flow is approximated by a linear system.
