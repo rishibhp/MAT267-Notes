@@ -1,0 +1,57 @@
+\section{Techniques for solving ODES}
+
+\subsection{Separation of variables} \label{sec:sep-of-var}
+Suppose we have a differential equation of the following form
+$$ \frac{dx}{dt} = f(t) g(x) $$
+where $f, g$ are continuous. Suppose we are also given that $x(0) = x_0$ as our initial condition.
+
+If $g(x_0) = 0$ then $x(t) \equiv x_0$ is a solution. So suppose that $g(x_0) \neq 0$, implying that $g$ is non-zero in some neighbourhood around $x_0$. We can thus do the following
+\begin{align*}
+    \frac{dx}{dt} &= f(t) g(x)\\
+    \frac{x'(t)}{g(x(t))} &= f(t)\\
+    \int \frac{x'(t)}{g(x(t))} dt &= \int f(t) dt\\
+    \int \frac{1}{g(u)} &= \int f(t) dt\\
+    G(x) &= F(t) + c
+\end{align*}
+where in the penultimate line we substitute $u = x(t)$ and in the final line we take $G$ to be the anti-derivative of $\frac{1}{g}$ and $F$ to be the anti-derivative of $f$. Recall we are solving around $(0, x_0)$ and we know that $g$ is non-zero in non-zero in a neighbourhood of it. Thus $G'(x) = \frac{1}{g(x)}$ is also non-zero (either all positive or all non-negative) implying that $G$ is invertible on this neighbourhood. We can thus take $x = G^{-1}(F(t) + c)$. The solution passing through $(t_0, x_0)$ corresponds to $c = G(x_0) - F(t_0)$.
+
+\begin{remark}
+The concrete construction of the solution implies that the solution to a differential equation with separable values is unique in a small neighbourhood of $(t_0, x_0)$, given than $g(x_0) \neq 0$.
+\end{remark}
+
+The above steps are often written more simply as 
+\begin{align*}
+    \frac{dx}{dt} &= f(t) g(x)\\
+    \frac{1}{g(x)} dx &= f(t) dt\\
+    \int \frac{1}{g(x)} dx &= \int f(t) dt\\
+    G(x) = F(t) + c
+\end{align*}
+
+\subsubsection{Example}
+A simple example of using separation of variables is \autoref{eq:eg3} (no more guesswork required!). A more interesting example can be found in \autoref{sec:logistic-eqn}.
+
+\subsection{Homogeneous Functions}
+We say a function $F$ on $\R^2$ is homogeneous of degree $\alpha$ (with $\alpha \in \R$) if $F(tx, ty) = t^\alpha F(x, y)$.
+
+Suppose we are given
+\begin{equation}
+    P(x, y) dx + Q(x, y) dy = 0
+\end{equation}
+Where $P$ and $Q$ are homogeneous and of the same degree. Then substituting $y = xu$ (giving us $dy = u dx + x du$) or $x = yv$ (giving us $dx = v dy + y dv$) changes our differential equation into one where we can separate variables.
+
+\subsubsection{Example}
+Suppose we have the following equation
+\begin{equation}\label{eq:hom-eg}
+    \underbrace{\left[ x e^{\frac{y}{x}} - y \sin \left(\frac{y}{x} \right) \right]}_{P(x, y)} dx + \underbrace{x \sin\left( \frac{y}{x} \right)}_{Q(x,y)} dy = 0
+\end{equation}
+It is easy to verify $P$ and $Q$ are homogeneous functions (of degree 2). We substitute $y = xu$ (either substitution works but often one is easier that the other. In this case it seems quite apparent that one would want to replace $\frac{y}{x}$). The substitution gives us
+\begin{align*}
+    [xe^u - xu \sin(u)] dx + x \sin(u)(u dx + x du) &= 0\\
+    e^u dx + x \sin(u) du &= 0
+\end{align*}
+(note we divide by $x$ without worry since the original equation \autoref{eq:hom-eg} doesn't allow for $x = 0$)
+The variables can now clearly be separated.
+
+
+
+
