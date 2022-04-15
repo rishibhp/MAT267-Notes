@@ -1,0 +1,1863 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="section_monotone.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     showborder="false"
+     inkscape:snap-global="false"
+     inkscape:zoom="1.7188201"
+     inkscape:cx="290.31543"
+     inkscape:cy="767.96868"
+     inkscape:window-width="1920"
+     inkscape:window-height="986"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:snap-bbox="false"
+     inkscape:snap-bbox-edge-midpoints="false"
+     inkscape:object-paths="true" />
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1280"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1276"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1272"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1268"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1264"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect2755"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect2751"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect2747"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect2743"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect2739"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect2685"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect2681"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect2677"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect2673"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect2669"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1125"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1121"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1117"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1113"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1109"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect3758"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect3748"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect3738"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect3728"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect3558"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect3548"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect2990"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect859"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <path
+       id="MJX-5-TEX-I-78"
+       d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z" />
+    <path
+       id="MJX-5-TEX-N-28"
+       d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z" />
+    <path
+       id="MJX-5-TEX-I-74"
+       d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z" />
+    <path
+       id="MJX-5-TEX-N-31"
+       d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" />
+    <path
+       id="MJX-5-TEX-N-29"
+       d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z" />
+    <path
+       id="MJX-6-TEX-I-78"
+       d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z" />
+    <path
+       id="MJX-6-TEX-N-28"
+       d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z" />
+    <path
+       id="MJX-6-TEX-I-74"
+       d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z" />
+    <path
+       id="MJX-6-TEX-N-32"
+       d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" />
+    <path
+       id="MJX-6-TEX-N-29"
+       d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z" />
+    <path
+       id="MJX-7-TEX-I-3B3"
+       d="M31 249Q11 249 11 258Q11 275 26 304T66 365T129 418T206 441Q233 441 239 440Q287 429 318 386T371 255Q385 195 385 170Q385 166 386 166L398 193Q418 244 443 300T486 391T508 430Q510 431 524 431H537Q543 425 543 422Q543 418 522 378T463 251T391 71Q385 55 378 6T357 -100Q341 -165 330 -190T303 -216Q286 -216 286 -188Q286 -138 340 32L346 51L347 69Q348 79 348 100Q348 257 291 317Q251 355 196 355Q148 355 108 329T51 260Q49 251 47 251Q45 249 31 249Z" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.748416;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 86.346115,99.866475 c 3.583455,10.092985 7.166848,20.185795 9.175213,30.270385 2.008365,10.0846 2.441688,20.15977 2.875035,30.23547"
+       id="path857"
+       inkscape:path-effect="#path-effect859"
+       inkscape:original-d="m 86.346115,99.866475 c 3.583671,10.092905 7.167065,20.185715 10.750197,30.278475 0.433747,10.07649 0.867055,20.15166 1.300051,30.22738"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       id="path1328"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.635361"
+       d="m 98.221577,152.58297 c -9.679142,-0.10637 -11.631272,11.93896 -6.566568,16.73615 10.395121,9.84605 26.476841,0.84758 29.703601,-12.34369 5.27437,-21.56207 -1.84252,-32.69867 -16.83192,-38.27677 -3.96135,-1.47416 -8.190658,-2.19521 -12.415438,-2.16402"
+       sodipodi:nodetypes="csssc"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <g
+       id="g3538"
+       transform="matrix(0.49672442,0,0,0.49672442,43.199072,51.856007)"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.748416;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 81.948909,112.23357 c 5.254508,-1.72279 10.50878,-3.44551 15.762834,-5.16815"
+         id="path2988"
+         inkscape:path-effect="#path-effect2990"
+         inkscape:original-d="m 81.948909,112.23357 c 5.254653,-1.72235 10.508927,-3.44506 15.762834,-5.16815" />
+      <path
+         sodipodi:type="star"
+         style="fill:#000000;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="path3094"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="256.19199"
+         sodipodi:cy="524.12323"
+         sodipodi:r1="9.8931189"
+         sodipodi:r2="4.9465594"
+         sodipodi:arg1="0.52359878"
+         sodipodi:arg2="1.5707963"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="m 264.75968,529.06979 -17.13539,0 8.5677,-14.83968 z"
+         transform="matrix(0.07866537,0.24457305,-0.24457305,0.07866537,206.61387,2.9810492)"
+         inkscape:transform-center-x="-0.26790595"
+         inkscape:transform-center-y="0.38911099" />
+    </g>
+    <g
+       id="g3724"
+       transform="matrix(0.49603016,0.0262532,-0.0262532,0.49603016,52.478946,69.110087)"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.748416;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 81.948909,112.23357 c 5.254508,-1.72279 10.50878,-3.44551 15.762834,-5.16815"
+         id="path3720"
+         inkscape:path-effect="#path-effect3728"
+         inkscape:original-d="m 81.948909,112.23357 c 5.254653,-1.72235 10.508927,-3.44506 15.762834,-5.16815" />
+      <path
+         sodipodi:type="star"
+         style="fill:#000000;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="path3722"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="256.19199"
+         sodipodi:cy="524.12323"
+         sodipodi:r1="9.8931189"
+         sodipodi:r2="4.9465594"
+         sodipodi:arg1="0.52359878"
+         sodipodi:arg2="1.5707963"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="m 264.75968,529.06979 -17.13539,0 8.5677,-14.83968 z"
+         transform="matrix(0.07866537,0.24457305,-0.24457305,0.07866537,206.61387,2.9810492)"
+         inkscape:transform-center-x="-0.26790595"
+         inkscape:transform-center-y="0.38911099" />
+    </g>
+    <g
+       id="g3734"
+       transform="matrix(0.49192074,0.068914,-0.068914,0.49192074,59.343367,74.654143)"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.748416;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 81.948909,112.23357 c 5.254508,-1.72279 10.50878,-3.44551 15.762834,-5.16815"
+         id="path3730"
+         inkscape:path-effect="#path-effect3738"
+         inkscape:original-d="m 81.948909,112.23357 c 5.254653,-1.72235 10.508927,-3.44506 15.762834,-5.16815" />
+      <path
+         sodipodi:type="star"
+         style="fill:#000000;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="path3732"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="256.19199"
+         sodipodi:cy="524.12323"
+         sodipodi:r1="9.8931189"
+         sodipodi:r2="4.9465594"
+         sodipodi:arg1="0.52359878"
+         sodipodi:arg2="1.5707963"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="m 264.75968,529.06979 -17.13539,0 8.5677,-14.83968 z"
+         transform="matrix(0.07866537,0.24457305,-0.24457305,0.07866537,206.61387,2.9810492)"
+         inkscape:transform-center-x="-0.26790595"
+         inkscape:transform-center-y="0.38911099" />
+    </g>
+    <g
+       id="g3744"
+       transform="matrix(0.48289085,0.11641126,-0.11641126,0.48289085,66.39849,81.084835)"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.748416;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 81.948909,112.23357 c 5.254508,-1.72279 10.50878,-3.44551 15.762834,-5.16815"
+         id="path3740"
+         inkscape:path-effect="#path-effect3748"
+         inkscape:original-d="m 81.948909,112.23357 c 5.254653,-1.72235 10.508927,-3.44506 15.762834,-5.16815" />
+      <path
+         sodipodi:type="star"
+         style="fill:#000000;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="path3742"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="256.19199"
+         sodipodi:cy="524.12323"
+         sodipodi:r1="9.8931189"
+         sodipodi:r2="4.9465594"
+         sodipodi:arg1="0.52359878"
+         sodipodi:arg2="1.5707963"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="m 264.75968,529.06979 -17.13539,0 8.5677,-14.83968 z"
+         transform="matrix(0.07866537,0.24457305,-0.24457305,0.07866537,206.61387,2.9810492)"
+         inkscape:transform-center-x="-0.26790595"
+         inkscape:transform-center-y="0.38911099" />
+    </g>
+    <path
+       sodipodi:type="star"
+       style="fill:#000000;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path3782"
+       inkscape:flatsided="true"
+       sodipodi:sides="3"
+       sodipodi:cx="97.194023"
+       sodipodi:cy="439.4101"
+       sodipodi:r1="20.83853"
+       sodipodi:r2="10.419265"
+       sodipodi:arg1="0.52359878"
+       sodipodi:arg2="1.5707963"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 115.24072,449.82936 -36.093393,0 18.046696,-31.25779 z"
+       transform="matrix(0.10895522,-0.04323009,0.04323009,0.10895522,56.961141,56.920841)"
+       inkscape:transform-center-y="-0.17754031"
+       inkscape:transform-center-x="-0.45042865"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <g
+       data-mml-node="math"
+       id="g3960"
+       transform="matrix(0.0047879,0,0,-0.0047879,80.277224,118.4074)"
+       style="fill:#000000;stroke:#000000;stroke-width:0"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <g
+         data-mml-node="mi"
+         id="g3940">
+        <use
+           xlink:href="#MJX-5-TEX-I-78"
+           id="use3938"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+      <g
+         data-mml-node="mo"
+         transform="translate(572)"
+         id="g3944">
+        <use
+           xlink:href="#MJX-5-TEX-N-28"
+           id="use3942"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+      <g
+         data-mml-node="msub"
+         transform="translate(961)"
+         id="g3954">
+        <g
+           data-mml-node="mi"
+           id="g3948">
+          <use
+             xlink:href="#MJX-5-TEX-I-74"
+             id="use3946"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </g>
+        <g
+           data-mml-node="mn"
+           transform="matrix(0.707,0,0,0.707,361,-150)"
+           id="g3952">
+          <use
+             xlink:href="#MJX-5-TEX-N-31"
+             id="use3950"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+      <g
+         data-mml-node="mo"
+         transform="translate(1725.6)"
+         id="g3958">
+        <use
+           xlink:href="#MJX-5-TEX-N-29"
+           id="use3956"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <circle
+       style="fill:#000000;stroke:none;stroke-width:0.12046;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path4101"
+       cx="92.181114"
+       cy="116.68013"
+       r="1.0540251"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <circle
+       style="fill:#000000;stroke:none;stroke-width:0.12046;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="circle4183"
+       cx="98.077896"
+       cy="152.716"
+       r="1.0540251"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <g
+       data-mml-node="math"
+       id="g4251"
+       transform="matrix(0.0047879,0,0,-0.0047879,84.712454,151.49936)"
+       style="fill:#000000;stroke:#000000;stroke-width:0"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <g
+         data-mml-node="mi"
+         id="g4231">
+        <use
+           xlink:href="#MJX-6-TEX-I-78"
+           id="use4229"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+      <g
+         data-mml-node="mo"
+         transform="translate(572)"
+         id="g4235">
+        <use
+           xlink:href="#MJX-6-TEX-N-28"
+           id="use4233"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+      <g
+         data-mml-node="msub"
+         transform="translate(961)"
+         id="g4245">
+        <g
+           data-mml-node="mi"
+           id="g4239">
+          <use
+             xlink:href="#MJX-6-TEX-I-74"
+             id="use4237"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </g>
+        <g
+           data-mml-node="mn"
+           transform="matrix(0.707,0,0,0.707,361,-150)"
+           id="g4243">
+          <use
+             xlink:href="#MJX-6-TEX-N-32"
+             id="use4241"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+      <g
+         data-mml-node="mo"
+         transform="translate(1725.6)"
+         id="g4249">
+        <use
+           xlink:href="#MJX-6-TEX-N-29"
+           id="use4247"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:7.81253px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.195314"
+       x="107.63201"
+       y="162.48906"
+       id="text7327"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan7325"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.81253px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.195314"
+         x="107.63201"
+         y="162.48906">C</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.36391px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.134098"
+       x="85.177284"
+       y="135.50568"
+       id="text7327-3"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan7325-6"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.36391px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.134098"
+         x="85.177284"
+         y="135.50568">S</tspan></text>
+    <use
+       xlink:href="#MJX-7-TEX-I-3B3"
+       id="use8695"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="matrix(0.00658253,0,0,-0.00658253,90.381821,101.70653)"
+       style="fill:#000000;stroke:#000000;stroke-width:0"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.748416;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 73.262173,205.19923 c 3.583454,10.09298 7.166848,20.18578 9.175214,30.27038 2.008366,10.0846 2.44169,20.15976 2.875038,30.23547"
+       id="path857-1"
+       inkscape:path-effect="#path-effect2669"
+       inkscape:original-d="m 73.262173,205.19923 c 3.583671,10.0929 7.167058,20.18571 10.750198,30.27847 0.43374,10.07649 0.86705,20.15166 1.300054,30.22738"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       id="path1328-05"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.635361"
+       d="m 84.850821,258.44489 c 9.679144,-0.10637 11.631274,11.93896 6.566574,16.73615 -10.395124,9.84605 -26.476843,0.84758 -29.703603,-12.34369 -5.27437,-21.56207 2.63627,-35.07992 17.625669,-40.65802"
+       sodipodi:nodetypes="cssc"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       id="path1328-05-5"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.635361"
+       d="m 133.21482,224.90757 c 9.42688,-2.19795 8.45918,-14.36201 2.39916,-17.81748 -12.438,-7.09222 -25.95681,5.4718 -25.91707,19.05193 0.0647,22.11842 16.19426,32.59244 30.329,32.18452"
+       sodipodi:nodetypes="cssc"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <g
+       id="g3538-5"
+       transform="matrix(0.49672442,0,0,0.49672442,30.11513,157.18877)"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.748416;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 81.948909,112.23357 c 5.254508,-1.72279 10.50878,-3.44551 15.762834,-5.16815"
+         id="path2988-5"
+         inkscape:path-effect="#path-effect2673"
+         inkscape:original-d="m 81.948909,112.23357 c 5.254653,-1.72235 10.508927,-3.44506 15.762834,-5.16815" />
+      <path
+         sodipodi:type="star"
+         style="fill:#000000;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="path3094-6"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="256.19199"
+         sodipodi:cy="524.12323"
+         sodipodi:r1="9.8931189"
+         sodipodi:r2="4.9465594"
+         sodipodi:arg1="0.52359878"
+         sodipodi:arg2="1.5707963"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         transform="matrix(0.07866537,0.24457305,-0.24457305,0.07866537,206.61387,2.9810492)"
+         inkscape:transform-center-x="-0.26790595"
+         inkscape:transform-center-y="0.38911099"
+         d="m 264.75968,529.06979 -17.13539,0 8.5677,-14.83968 z" />
+    </g>
+    <g
+       id="g3724-4"
+       transform="matrix(0.49603016,0.0262532,-0.0262532,0.49603016,39.395004,174.44285)"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.748416;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 81.948909,112.23357 c 5.254508,-1.72279 10.50878,-3.44551 15.762834,-5.16815"
+         id="path3720-0"
+         inkscape:path-effect="#path-effect2677"
+         inkscape:original-d="m 81.948909,112.23357 c 5.254653,-1.72235 10.508927,-3.44506 15.762834,-5.16815" />
+      <path
+         sodipodi:type="star"
+         style="fill:#000000;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="path3722-8"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="256.19199"
+         sodipodi:cy="524.12323"
+         sodipodi:r1="9.8931189"
+         sodipodi:r2="4.9465594"
+         sodipodi:arg1="0.52359878"
+         sodipodi:arg2="1.5707963"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         transform="matrix(0.07866537,0.24457305,-0.24457305,0.07866537,206.61387,2.9810492)"
+         inkscape:transform-center-x="-0.26790595"
+         inkscape:transform-center-y="0.38911099"
+         d="m 264.75968,529.06979 -17.13539,0 8.5677,-14.83968 z" />
+    </g>
+    <g
+       id="g3734-2"
+       transform="matrix(0.49192074,0.068914,-0.068914,0.49192074,46.259425,179.9869)"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.748416;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 81.948909,112.23357 c 5.254508,-1.72279 10.50878,-3.44551 15.762834,-5.16815"
+         id="path3730-6"
+         inkscape:path-effect="#path-effect2681"
+         inkscape:original-d="m 81.948909,112.23357 c 5.254653,-1.72235 10.508927,-3.44506 15.762834,-5.16815" />
+      <path
+         sodipodi:type="star"
+         style="fill:#000000;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="path3732-6"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="256.19199"
+         sodipodi:cy="524.12323"
+         sodipodi:r1="9.8931189"
+         sodipodi:r2="4.9465594"
+         sodipodi:arg1="0.52359878"
+         sodipodi:arg2="1.5707963"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         transform="matrix(0.07866537,0.24457305,-0.24457305,0.07866537,206.61387,2.9810492)"
+         inkscape:transform-center-x="-0.26790595"
+         inkscape:transform-center-y="0.38911099"
+         d="m 264.75968,529.06979 -17.13539,0 8.5677,-14.83968 z" />
+    </g>
+    <g
+       id="g3744-5"
+       transform="matrix(0.48289085,0.11641126,-0.11641126,0.48289085,53.314548,186.41759)"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.748416;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 81.948909,112.23357 c 5.254508,-1.72279 10.50878,-3.44551 15.762834,-5.16815"
+         id="path3740-0"
+         inkscape:path-effect="#path-effect2685"
+         inkscape:original-d="m 81.948909,112.23357 c 5.254653,-1.72235 10.508927,-3.44506 15.762834,-5.16815" />
+      <path
+         sodipodi:type="star"
+         style="fill:#000000;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="path3742-2"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="256.19199"
+         sodipodi:cy="524.12323"
+         sodipodi:r1="9.8931189"
+         sodipodi:r2="4.9465594"
+         sodipodi:arg1="0.52359878"
+         sodipodi:arg2="1.5707963"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         transform="matrix(0.07866537,0.24457305,-0.24457305,0.07866537,206.61387,2.9810492)"
+         inkscape:transform-center-x="-0.26790595"
+         inkscape:transform-center-y="0.38911099"
+         d="m 264.75968,529.06979 -17.13539,0 8.5677,-14.83968 z" />
+    </g>
+    <path
+       sodipodi:type="star"
+       style="fill:#000000;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path3782-5"
+       inkscape:flatsided="true"
+       sodipodi:sides="3"
+       sodipodi:cx="97.194023"
+       sodipodi:cy="439.4101"
+       sodipodi:r1="20.83853"
+       sodipodi:r2="10.419265"
+       sodipodi:arg1="0.52359878"
+       sodipodi:arg2="1.5707963"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       transform="matrix(0.10895522,-0.04323009,0.04323009,0.10895522,43.877199,162.2536)"
+       inkscape:transform-center-y="-0.17754031"
+       inkscape:transform-center-x="-0.45042865"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"
+       d="m 115.24072,449.82936 -36.093393,0 18.046696,-31.25779 z" />
+    <g
+       data-mml-node="math"
+       id="g3960-6"
+       transform="matrix(0.0047879,0,0,-0.0047879,88.807477,257.33366)"
+       style="fill:#000000;stroke:#000000;stroke-width:0"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <g
+         data-mml-node="mi"
+         id="g3940-7">
+        <use
+           xlink:href="#MJX-5-TEX-I-78"
+           id="use3938-4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+      <g
+         data-mml-node="mo"
+         transform="translate(572)"
+         id="g3944-29">
+        <use
+           xlink:href="#MJX-5-TEX-N-28"
+           id="use3942-7"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+      <g
+         data-mml-node="msub"
+         transform="translate(961)"
+         id="g3954-4">
+        <g
+           data-mml-node="mi"
+           id="g3948-9">
+          <use
+             xlink:href="#MJX-5-TEX-I-74"
+             id="use3946-8"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </g>
+        <g
+           data-mml-node="mn"
+           transform="matrix(0.707,0,0,0.707,361,-150)"
+           id="g3952-1">
+          <use
+             xlink:href="#MJX-5-TEX-N-31"
+             id="use3950-7"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+      <g
+         data-mml-node="mo"
+         transform="translate(1725.6)"
+         id="g3958-7">
+        <use
+           xlink:href="#MJX-5-TEX-N-29"
+           id="use3956-13"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <circle
+       style="fill:#000000;stroke:none;stroke-width:0.12046;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path4101-3"
+       cx="79.097183"
+       cy="222.01289"
+       r="1.0540251"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <circle
+       style="fill:#000000;stroke:none;stroke-width:0.12046;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="circle4183-6"
+       cx="84.993958"
+       cy="258.04874"
+       r="1.0540251"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <g
+       data-mml-node="math"
+       id="g4251-6"
+       transform="matrix(0.0047879,0,0,-0.0047879,81.090665,220.46129)"
+       style="fill:#000000;stroke:#000000;stroke-width:0"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <g
+         data-mml-node="mi"
+         id="g4231-5">
+        <use
+           xlink:href="#MJX-6-TEX-I-78"
+           id="use4229-6"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+      <g
+         data-mml-node="mo"
+         transform="translate(572)"
+         id="g4235-0">
+        <use
+           xlink:href="#MJX-6-TEX-N-28"
+           id="use4233-7"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+      <g
+         data-mml-node="msub"
+         transform="translate(961)"
+         id="g4245-4">
+        <g
+           data-mml-node="mi"
+           id="g4239-4">
+          <use
+             xlink:href="#MJX-6-TEX-I-74"
+             id="use4237-4"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </g>
+        <g
+           data-mml-node="mn"
+           transform="matrix(0.707,0,0,0.707,361,-150)"
+           id="g4243-2">
+          <use
+             xlink:href="#MJX-6-TEX-N-32"
+             id="use4241-5"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+      <g
+         data-mml-node="mo"
+         transform="translate(1725.6)"
+         id="g4249-0">
+        <use
+           xlink:href="#MJX-6-TEX-N-29"
+           id="use4247-6"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:7.81253px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.195314"
+       x="70.745323"
+       y="263.42963"
+       id="text7327-5"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan7325-0"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.81253px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.195314"
+         x="70.745323"
+         y="263.42963">C</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.36391px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.134098"
+       x="89.520355"
+       y="236.58794"
+       id="text7327-3-02"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan7325-6-59"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.36391px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.134098"
+         x="89.520355"
+         y="236.58794">S</tspan></text>
+    <use
+       xlink:href="#MJX-7-TEX-I-3B3"
+       id="use8695-4"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="matrix(0.00658253,0,0,-0.00658253,77.297884,207.03929)"
+       style="fill:#000000;stroke:#000000;stroke-width:0"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.748416;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 5.0580952,215.42244 c 3.5834535,10.09298 7.1668478,20.18579 9.1752128,30.27038 2.008365,10.0846 2.441688,20.15977 2.875035,30.23548"
+       id="path857-6"
+       inkscape:path-effect="#path-effect1109"
+       inkscape:original-d="m 5.0580952,215.42244 c 3.5836708,10.0929 7.1670648,20.18571 10.7501968,30.27847 0.433747,10.07649 0.867055,20.15166 1.300051,30.22739"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       id="path1328-0"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.635361"
+       d="m 8.731474,226.00238 c -10.0451637,0.61004 -14.9918599,-10.7053 -9.7548776,-16.9639 5.3261163,-6.36512 26.2826136,-8.24896 32.2240616,6.72186 1.972521,4.97021 1.104815,18.20827 -0.673585,25.3987 -1.849923,7.47963 -7.082377,15.43623 -14.577077,18.22528"
+       sodipodi:nodetypes="csssc"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <g
+       id="g3538-2"
+       transform="matrix(0.49672442,0,0,0.49672442,-38.088947,167.41197)"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.748416;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 81.948909,112.23357 c 5.254508,-1.72279 10.50878,-3.44551 15.762834,-5.16815"
+         id="path2988-2"
+         inkscape:path-effect="#path-effect1113"
+         inkscape:original-d="m 81.948909,112.23357 c 5.254653,-1.72235 10.508927,-3.44506 15.762834,-5.16815" />
+      <path
+         sodipodi:type="star"
+         style="fill:#000000;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="path3094-2"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="256.19199"
+         sodipodi:cy="524.12323"
+         sodipodi:r1="9.8931189"
+         sodipodi:r2="4.9465594"
+         sodipodi:arg1="0.52359878"
+         sodipodi:arg2="1.5707963"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         transform="matrix(0.07866537,0.24457305,-0.24457305,0.07866537,206.61387,2.9810492)"
+         inkscape:transform-center-x="-0.26790595"
+         inkscape:transform-center-y="0.38911099"
+         d="m 264.75968,529.06979 -17.13539,0 8.5677,-14.83968 z" />
+    </g>
+    <g
+       id="g3724-1"
+       transform="matrix(0.49603016,0.0262532,-0.0262532,0.49603016,-28.66739,186.08288)"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.748416;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 81.948909,112.23357 c 5.254508,-1.72279 10.50878,-3.44551 15.762834,-5.16815"
+         id="path3720-2"
+         inkscape:path-effect="#path-effect1117"
+         inkscape:original-d="m 81.948909,112.23357 c 5.254653,-1.72235 10.508927,-3.44506 15.762834,-5.16815" />
+      <path
+         sodipodi:type="star"
+         style="fill:#000000;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="path3722-2"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="256.19199"
+         sodipodi:cy="524.12323"
+         sodipodi:r1="9.8931189"
+         sodipodi:r2="4.9465594"
+         sodipodi:arg1="0.52359878"
+         sodipodi:arg2="1.5707963"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         transform="matrix(0.07866537,0.24457305,-0.24457305,0.07866537,206.61387,2.9810492)"
+         inkscape:transform-center-x="-0.26790595"
+         inkscape:transform-center-y="0.38911099"
+         d="m 264.75968,529.06979 -17.13539,0 8.5677,-14.83968 z" />
+    </g>
+    <g
+       id="g3734-1"
+       transform="matrix(0.49192074,0.068914,-0.068914,0.49192074,-21.944652,190.21011)"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.748416;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 81.948909,112.23357 c 5.254508,-1.72279 10.50878,-3.44551 15.762834,-5.16815"
+         id="path3730-1"
+         inkscape:path-effect="#path-effect1121"
+         inkscape:original-d="m 81.948909,112.23357 c 5.254653,-1.72235 10.508927,-3.44506 15.762834,-5.16815" />
+      <path
+         sodipodi:type="star"
+         style="fill:#000000;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="path3732-5"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="256.19199"
+         sodipodi:cy="524.12323"
+         sodipodi:r1="9.8931189"
+         sodipodi:r2="4.9465594"
+         sodipodi:arg1="0.52359878"
+         sodipodi:arg2="1.5707963"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         transform="matrix(0.07866537,0.24457305,-0.24457305,0.07866537,206.61387,2.9810492)"
+         inkscape:transform-center-x="-0.26790595"
+         inkscape:transform-center-y="0.38911099"
+         d="m 264.75968,529.06979 -17.13539,0 8.5677,-14.83968 z" />
+    </g>
+    <g
+       id="g3744-7"
+       transform="matrix(0.49633706,0.01961309,-0.01961309,0.49633706,-31.499114,179.12243)"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.748416;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 81.948909,112.23357 c 5.254508,-1.72279 10.50878,-3.44551 15.762834,-5.16815"
+         id="path3740-1"
+         inkscape:path-effect="#path-effect1125"
+         inkscape:original-d="m 81.948909,112.23357 c 5.254653,-1.72235 10.508927,-3.44506 15.762834,-5.16815" />
+      <path
+         sodipodi:type="star"
+         style="fill:#000000;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="path3742-8"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="256.19199"
+         sodipodi:cy="524.12323"
+         sodipodi:r1="9.8931189"
+         sodipodi:r2="4.9465594"
+         sodipodi:arg1="0.52359878"
+         sodipodi:arg2="1.5707963"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         transform="matrix(0.07866537,0.24457305,-0.24457305,0.07866537,206.61387,2.9810492)"
+         inkscape:transform-center-x="-0.26790595"
+         inkscape:transform-center-y="0.38911099"
+         d="m 264.75968,529.06979 -17.13539,0 8.5677,-14.83968 z" />
+    </g>
+    <path
+       sodipodi:type="star"
+       style="fill:#000000;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path3782-7"
+       inkscape:flatsided="true"
+       sodipodi:sides="3"
+       sodipodi:cx="97.194023"
+       sodipodi:cy="439.4101"
+       sodipodi:r1="20.83853"
+       sodipodi:r2="10.419265"
+       sodipodi:arg1="0.52359878"
+       sodipodi:arg2="1.5707963"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       transform="matrix(0.10895522,-0.04323009,0.04323009,0.10895522,-24.326878,172.47681)"
+       inkscape:transform-center-y="-0.17754031"
+       inkscape:transform-center-x="-0.45042865"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"
+       d="m 115.24072,449.82936 -36.093393,0 18.046696,-31.25779 z" />
+    <g
+       data-mml-node="math"
+       id="g3960-1"
+       transform="matrix(0.0047879,0,0,-0.0047879,4.5432364,260.21971)"
+       style="fill:#000000;stroke:#000000;stroke-width:0"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <g
+         data-mml-node="mi"
+         id="g3940-0">
+        <use
+           xlink:href="#MJX-5-TEX-I-78"
+           id="use3938-1"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+      <g
+         data-mml-node="mo"
+         transform="translate(572)"
+         id="g3944-2">
+        <use
+           xlink:href="#MJX-5-TEX-N-28"
+           id="use3942-8"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+      <g
+         data-mml-node="msub"
+         transform="translate(961)"
+         id="g3954-3">
+        <g
+           data-mml-node="mi"
+           id="g3948-2">
+          <use
+             xlink:href="#MJX-5-TEX-I-74"
+             id="use3946-3"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </g>
+        <g
+           data-mml-node="mn"
+           transform="matrix(0.707,0,0,0.707,361,-150)"
+           id="g3952-0">
+          <use
+             xlink:href="#MJX-5-TEX-N-31"
+             id="use3950-2"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+      <g
+         data-mml-node="mo"
+         transform="translate(1725.6)"
+         id="g3958-1">
+        <use
+           xlink:href="#MJX-5-TEX-N-29"
+           id="use3956-1"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <ellipse
+       style="fill:#000000;stroke:none;stroke-width:0.12046;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path4101-2"
+       cx="8.8434677"
+       cy="225.93539"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"
+       rx="1.0541"
+       ry="1.0540251" />
+    <circle
+       style="fill:#000000;stroke:none;stroke-width:0.12046;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="circle4183-8"
+       cx="16.030756"
+       cy="259.01068"
+       r="1.0540251"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <g
+       data-mml-node="math"
+       id="g4251-1"
+       transform="matrix(0.0047879,0,0,-0.0047879,-0.53766121,231.84134)"
+       style="fill:#000000;stroke:#000000;stroke-width:0"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <g
+         data-mml-node="mi"
+         id="g4231-7">
+        <use
+           xlink:href="#MJX-6-TEX-I-78"
+           id="use4229-1"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+      <g
+         data-mml-node="mo"
+         transform="translate(572)"
+         id="g4235-7">
+        <use
+           xlink:href="#MJX-6-TEX-N-28"
+           id="use4233-2"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+      <g
+         data-mml-node="msub"
+         transform="translate(961)"
+         id="g4245-2">
+        <g
+           data-mml-node="mi"
+           id="g4239-3">
+          <use
+             xlink:href="#MJX-6-TEX-I-74"
+             id="use4237-6"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </g>
+        <g
+           data-mml-node="mn"
+           transform="matrix(0.707,0,0,0.707,361,-150)"
+           id="g4243-1">
+          <use
+             xlink:href="#MJX-6-TEX-N-32"
+             id="use4241-0"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+      <g
+         data-mml-node="mo"
+         transform="translate(1725.6)"
+         id="g4249-9">
+        <use
+           xlink:href="#MJX-6-TEX-N-29"
+           id="use4247-9"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:7.81253px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.195314"
+       x="19.360077"
+       y="226.65253"
+       id="text7327-4"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan7325-3"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.81253px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.195314"
+         x="19.360077"
+         y="226.65253">C</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.36391px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.134098"
+       x="5.1038599"
+       y="248.78429"
+       id="text7327-3-0"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan7325-6-5"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.36391px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.134098"
+         x="5.1038599"
+         y="248.78429">S</tspan></text>
+    <use
+       xlink:href="#MJX-7-TEX-I-3B3"
+       id="use8695-9"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="matrix(0.00658253,0,0,-0.00658253,9.093801,217.26249)"
+       style="fill:#000000;stroke:#000000;stroke-width:0"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.748416;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 129.02747,214.48263 c 3.58345,10.09297 7.16685,20.18578 9.17522,30.27038 2.00836,10.0846 2.44168,20.15977 2.87503,30.23547"
+       id="path857-6-3"
+       inkscape:path-effect="#path-effect2739"
+       inkscape:original-d="m 129.02747,214.48263 c 3.58368,10.09289 7.16707,20.1857 10.7502,30.27846 0.43375,10.0765 0.86706,20.15167 1.30005,30.22739"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <g
+       id="g3538-2-6"
+       transform="matrix(0.49672442,0,0,0.49672442,85.880437,166.47215)"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.748416;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 81.948909,112.23357 c 5.254508,-1.72279 10.50878,-3.44551 15.762834,-5.16815"
+         id="path2988-2-3"
+         inkscape:path-effect="#path-effect2743"
+         inkscape:original-d="m 81.948909,112.23357 c 5.254653,-1.72235 10.508927,-3.44506 15.762834,-5.16815" />
+      <path
+         sodipodi:type="star"
+         style="fill:#000000;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="path3094-2-1"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="256.19199"
+         sodipodi:cy="524.12323"
+         sodipodi:r1="9.8931189"
+         sodipodi:r2="4.9465594"
+         sodipodi:arg1="0.52359878"
+         sodipodi:arg2="1.5707963"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         transform="matrix(0.07866537,0.24457305,-0.24457305,0.07866537,206.61387,2.9810492)"
+         inkscape:transform-center-x="-0.26790595"
+         inkscape:transform-center-y="0.38911099"
+         d="m 264.75968,529.06979 -17.13539,0 8.5677,-14.83968 z" />
+    </g>
+    <g
+       id="g3724-1-2"
+       transform="matrix(0.49603016,0.0262532,-0.0262532,0.49603016,95.301994,185.14306)"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.748416;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 81.948909,112.23357 c 5.254508,-1.72279 10.50878,-3.44551 15.762834,-5.16815"
+         id="path3720-2-4"
+         inkscape:path-effect="#path-effect2747"
+         inkscape:original-d="m 81.948909,112.23357 c 5.254653,-1.72235 10.508927,-3.44506 15.762834,-5.16815" />
+      <path
+         sodipodi:type="star"
+         style="fill:#000000;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="path3722-2-7"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="256.19199"
+         sodipodi:cy="524.12323"
+         sodipodi:r1="9.8931189"
+         sodipodi:r2="4.9465594"
+         sodipodi:arg1="0.52359878"
+         sodipodi:arg2="1.5707963"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         transform="matrix(0.07866537,0.24457305,-0.24457305,0.07866537,206.61387,2.9810492)"
+         inkscape:transform-center-x="-0.26790595"
+         inkscape:transform-center-y="0.38911099"
+         d="m 264.75968,529.06979 -17.13539,0 8.5677,-14.83968 z" />
+    </g>
+    <g
+       id="g3734-1-9"
+       transform="matrix(0.49192074,0.068914,-0.068914,0.49192074,102.02473,189.27029)"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.748416;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 81.948909,112.23357 c 5.254508,-1.72279 10.50878,-3.44551 15.762834,-5.16815"
+         id="path3730-1-4"
+         inkscape:path-effect="#path-effect2751"
+         inkscape:original-d="m 81.948909,112.23357 c 5.254653,-1.72235 10.508927,-3.44506 15.762834,-5.16815" />
+      <path
+         sodipodi:type="star"
+         style="fill:#000000;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="path3732-5-9"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="256.19199"
+         sodipodi:cy="524.12323"
+         sodipodi:r1="9.8931189"
+         sodipodi:r2="4.9465594"
+         sodipodi:arg1="0.52359878"
+         sodipodi:arg2="1.5707963"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         transform="matrix(0.07866537,0.24457305,-0.24457305,0.07866537,206.61387,2.9810492)"
+         inkscape:transform-center-x="-0.26790595"
+         inkscape:transform-center-y="0.38911099"
+         d="m 264.75968,529.06979 -17.13539,0 8.5677,-14.83968 z" />
+    </g>
+    <g
+       id="g3744-7-8"
+       transform="matrix(0.49633706,0.01961309,-0.01961309,0.49633706,92.47027,178.18261)"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.748416;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 81.948909,112.23357 c 5.254508,-1.72279 10.50878,-3.44551 15.762834,-5.16815"
+         id="path3740-1-6"
+         inkscape:path-effect="#path-effect2755"
+         inkscape:original-d="m 81.948909,112.23357 c 5.254653,-1.72235 10.508927,-3.44506 15.762834,-5.16815" />
+      <path
+         sodipodi:type="star"
+         style="fill:#000000;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="path3742-8-1"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="256.19199"
+         sodipodi:cy="524.12323"
+         sodipodi:r1="9.8931189"
+         sodipodi:r2="4.9465594"
+         sodipodi:arg1="0.52359878"
+         sodipodi:arg2="1.5707963"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         transform="matrix(0.07866537,0.24457305,-0.24457305,0.07866537,206.61387,2.9810492)"
+         inkscape:transform-center-x="-0.26790595"
+         inkscape:transform-center-y="0.38911099"
+         d="m 264.75968,529.06979 -17.13539,0 8.5677,-14.83968 z" />
+    </g>
+    <path
+       sodipodi:type="star"
+       style="fill:#000000;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path3782-7-9"
+       inkscape:flatsided="true"
+       sodipodi:sides="3"
+       sodipodi:cx="97.194023"
+       sodipodi:cy="439.4101"
+       sodipodi:r1="20.83853"
+       sodipodi:r2="10.419265"
+       sodipodi:arg1="0.52359878"
+       sodipodi:arg2="1.5707963"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       transform="matrix(0.10895522,-0.04323009,0.04323009,0.10895522,99.642505,171.53699)"
+       inkscape:transform-center-y="-0.17754031"
+       inkscape:transform-center-x="-0.45042865"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"
+       d="m 115.24072,449.82936 -36.093393,0 18.046696,-31.25779 z" />
+    <g
+       data-mml-node="math"
+       id="g3960-1-9"
+       transform="matrix(0.0047879,0,0,-0.0047879,135.60372,228.35263)"
+       style="fill:#000000;stroke:#000000;stroke-width:0"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <g
+         data-mml-node="mi"
+         id="g3940-0-1">
+        <use
+           xlink:href="#MJX-5-TEX-I-78"
+           id="use3938-1-0"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+      <g
+         data-mml-node="mo"
+         transform="translate(572)"
+         id="g3944-2-5">
+        <use
+           xlink:href="#MJX-5-TEX-N-28"
+           id="use3942-8-6"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+      <g
+         data-mml-node="msub"
+         transform="translate(961)"
+         id="g3954-3-4">
+        <g
+           data-mml-node="mi"
+           id="g3948-2-4">
+          <use
+             xlink:href="#MJX-5-TEX-I-74"
+             id="use3946-3-6"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </g>
+        <g
+           data-mml-node="mn"
+           transform="matrix(0.707,0,0,0.707,361,-150)"
+           id="g3952-0-0">
+          <use
+             xlink:href="#MJX-5-TEX-N-31"
+             id="use3950-2-8"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+      <g
+         data-mml-node="mo"
+         transform="translate(1725.6)"
+         id="g3958-1-9">
+        <use
+           xlink:href="#MJX-5-TEX-N-29"
+           id="use3956-1-2"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <ellipse
+       style="fill:#000000;stroke:none;stroke-width:0.12046;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path4101-2-0"
+       cx="132.81285"
+       cy="224.99557"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"
+       rx="1.0541"
+       ry="1.0540251" />
+    <circle
+       style="fill:#000000;stroke:none;stroke-width:0.12046;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="circle4183-8-9"
+       cx="140.00014"
+       cy="258.07086"
+       r="1.0540251"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <g
+       data-mml-node="math"
+       id="g4251-1-8"
+       transform="matrix(0.0047879,0,0,-0.0047879,141.59776,259.84522)"
+       style="fill:#000000;stroke:#000000;stroke-width:0"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <g
+         data-mml-node="mi"
+         id="g4231-7-8">
+        <use
+           xlink:href="#MJX-6-TEX-I-78"
+           id="use4229-1-3"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+      <g
+         data-mml-node="mo"
+         transform="translate(572)"
+         id="g4235-7-8">
+        <use
+           xlink:href="#MJX-6-TEX-N-28"
+           id="use4233-2-0"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+      <g
+         data-mml-node="msub"
+         transform="translate(961)"
+         id="g4245-2-5">
+        <g
+           data-mml-node="mi"
+           id="g4239-3-9">
+          <use
+             xlink:href="#MJX-6-TEX-I-74"
+             id="use4237-6-0"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </g>
+        <g
+           data-mml-node="mn"
+           transform="matrix(0.707,0,0,0.707,361,-150)"
+           id="g4243-1-2">
+          <use
+             xlink:href="#MJX-6-TEX-N-32"
+             id="use4241-0-6"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+      <g
+         data-mml-node="mo"
+         transform="translate(1725.6)"
+         id="g4249-9-0">
+        <use
+           xlink:href="#MJX-6-TEX-N-29"
+           id="use4247-9-5"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:7.81253px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.195314"
+       x="118.39325"
+       y="230.67162"
+       id="text7327-4-6"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan7325-3-2"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.81253px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.195314"
+         x="118.39325"
+         y="230.67162">C</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.36391px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.134098"
+       x="140.2662"
+       y="246.56934"
+       id="text7327-3-0-1"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"><tspan
+         sodipodi:role="line"
+         id="tspan7325-6-5-1"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.36391px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.134098"
+         x="140.2662"
+         y="246.56934">S</tspan></text>
+    <use
+       xlink:href="#MJX-7-TEX-I-3B3"
+       id="use8695-9-9"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="matrix(0.00658253,0,0,-0.00658253,133.06318,216.32268)"
+       style="fill:#000000;stroke:#000000;stroke-width:0"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\section_monotone_other_cases.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="177.27083"
+       y="220.66249"
+       id="text7486"><tspan
+         sodipodi:role="line"
+         id="tspan7484"
+         style="stroke-width:0.264583"
+         x="177.27083"
+         y="220.66249" /></text>
+  </g>
+</svg>

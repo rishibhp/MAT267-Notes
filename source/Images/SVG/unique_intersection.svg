@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1472"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="unique_intersection.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1474"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     showborder="false"
+     inkscape:snap-global="false"
+     inkscape:zoom="1"
+     inkscape:cx="-43"
+     inkscape:cy="543"
+     inkscape:window-width="1920"
+     inkscape:window-height="986"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1469">
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1264"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1268"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1272"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1276"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1280"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <path
+       id="MJX-5-TEX-I-78"
+       d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z" />
+    <path
+       id="MJX-5-TEX-N-28"
+       d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z" />
+    <path
+       id="MJX-5-TEX-I-74"
+       d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z" />
+    <path
+       id="MJX-5-TEX-N-31"
+       d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" />
+    <path
+       id="MJX-5-TEX-N-29"
+       d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z" />
+    <path
+       id="MJX-6-TEX-I-78"
+       d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z" />
+    <path
+       id="MJX-6-TEX-N-28"
+       d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z" />
+    <path
+       id="MJX-6-TEX-I-74"
+       d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z" />
+    <path
+       id="MJX-6-TEX-N-32"
+       d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" />
+    <path
+       id="MJX-6-TEX-N-29"
+       d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z" />
+    <path
+       id="MJX-7-TEX-I-3B3"
+       d="M31 249Q11 249 11 258Q11 275 26 304T66 365T129 418T206 441Q233 441 239 440Q287 429 318 386T371 255Q385 195 385 170Q385 166 386 166L398 193Q418 244 443 300T486 391T508 430Q510 431 524 431H537Q543 425 543 422Q543 418 522 378T463 251T391 71Q385 55 378 6T357 -100Q341 -165 330 -190T303 -216Q286 -216 286 -188Q286 -138 340 32L346 51L347 69Q348 79 348 100Q348 257 291 317Q251 355 196 355Q148 355 108 329T51 260Q49 251 47 251Q45 249 31 249Z" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.34659;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -44.424806,84.72416 c 6.447565,18.1599 12.895014,36.31947 16.508582,54.46426 3.613567,18.1448 4.393228,36.27263 5.172931,54.40143"
+       id="path857-7"
+       inkscape:path-effect="#path-effect1264"
+       inkscape:original-d="m -44.424806,84.72416 c 6.447951,18.15976 12.895404,36.31933 19.342385,54.47882 0.780423,18.13021 1.560056,36.25804 2.339128,54.38687"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\unique_intersection.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       id="path1328-2"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.14318"
+       d="m -11.083809,179.04561 c -31.265016,-2.45717 -38.406331,21.25358 -23.788923,30.64183 21.675998,13.92173 47.638684,1.52502 53.44446,-22.20949 9.489955,-38.79574 -3.31517,-58.83336 -30.284977,-68.86981 -7.127493,-2.65239 -14.737112,-3.94975 -22.338584,-3.89363"
+       sodipodi:nodetypes="csssc"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\unique_intersection.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <g
+       id="g3538-56"
+       transform="matrix(0.8937357,0,0,0.8937357,-122.0575,-1.659074)"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\unique_intersection.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.748416;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 81.948909,112.23357 c 5.254508,-1.72279 10.50878,-3.44551 15.762834,-5.16815"
+         id="path2988-8"
+         inkscape:path-effect="#path-effect1268"
+         inkscape:original-d="m 81.948909,112.23357 c 5.254653,-1.72235 10.508927,-3.44506 15.762834,-5.16815" />
+      <path
+         sodipodi:type="star"
+         style="fill:#000000;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="path3094-4"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="256.19199"
+         sodipodi:cy="524.12323"
+         sodipodi:r1="9.8931189"
+         sodipodi:r2="4.9465594"
+         sodipodi:arg1="0.52359878"
+         sodipodi:arg2="1.5707963"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         transform="matrix(0.07866537,0.24457305,-0.24457305,0.07866537,206.61387,2.9810492)"
+         inkscape:transform-center-x="-0.26790595"
+         inkscape:transform-center-y="0.38911099"
+         d="m 264.75968,529.06979 -17.13539,0 8.5677,-14.83968 z" />
+    </g>
+    <g
+       id="g3724-42"
+       transform="matrix(0.89248654,0.0472363,-0.0472363,0.89248654,-105.36059,29.385478)"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\unique_intersection.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.748416;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 81.948909,112.23357 c 5.254508,-1.72279 10.50878,-3.44551 15.762834,-5.16815"
+         id="path3720-04"
+         inkscape:path-effect="#path-effect1272"
+         inkscape:original-d="m 81.948909,112.23357 c 5.254653,-1.72235 10.508927,-3.44506 15.762834,-5.16815" />
+      <path
+         sodipodi:type="star"
+         style="fill:#000000;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="path3722-4"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="256.19199"
+         sodipodi:cy="524.12323"
+         sodipodi:r1="9.8931189"
+         sodipodi:r2="4.9465594"
+         sodipodi:arg1="0.52359878"
+         sodipodi:arg2="1.5707963"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         transform="matrix(0.07866537,0.24457305,-0.24457305,0.07866537,206.61387,2.9810492)"
+         inkscape:transform-center-x="-0.26790595"
+         inkscape:transform-center-y="0.38911099"
+         d="m 264.75968,529.06979 -17.13539,0 8.5677,-14.83968 z" />
+    </g>
+    <g
+       id="g3734-6"
+       transform="matrix(0.88509264,0.12399411,-0.12399411,0.88509264,-93.009733,39.360658)"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\unique_intersection.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.748416;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 81.948909,112.23357 c 5.254508,-1.72279 10.50878,-3.44551 15.762834,-5.16815"
+         id="path3730-62"
+         inkscape:path-effect="#path-effect1276"
+         inkscape:original-d="m 81.948909,112.23357 c 5.254653,-1.72235 10.508927,-3.44506 15.762834,-5.16815" />
+      <path
+         sodipodi:type="star"
+         style="fill:#000000;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="path3732-4"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="256.19199"
+         sodipodi:cy="524.12323"
+         sodipodi:r1="9.8931189"
+         sodipodi:r2="4.9465594"
+         sodipodi:arg1="0.52359878"
+         sodipodi:arg2="1.5707963"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         transform="matrix(0.07866537,0.24457305,-0.24457305,0.07866537,206.61387,2.9810492)"
+         inkscape:transform-center-x="-0.26790595"
+         inkscape:transform-center-y="0.38911099"
+         d="m 264.75968,529.06979 -17.13539,0 8.5677,-14.83968 z" />
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.668886;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -32.622565,165.60931 c 4.926201,-0.39626 9.852181,-0.79251 14.777957,-1.18874"
+       id="path3740-14"
+       inkscape:path-effect="#path-effect1280"
+       inkscape:original-d="m -32.622565,165.60931 c 4.926234,-0.39585 9.852215,-0.79209 14.777957,-1.18874"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\unique_intersection.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       sodipodi:type="star"
+       style="fill:#000000;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path3742-7"
+       inkscape:flatsided="true"
+       sodipodi:sides="3"
+       sodipodi:cx="256.19199"
+       sodipodi:cy="524.12323"
+       sodipodi:r1="9.8931189"
+       sodipodi:r2="4.9465594"
+       sodipodi:arg1="0.52359878"
+       sodipodi:arg2="1.5707963"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       transform="matrix(0.01712126,0.22897297,-0.22897297,0.01712126,98.575402,96.797316)"
+       inkscape:transform-center-x="-0.26790595"
+       inkscape:transform-center-y="0.38911099"
+       d="m 264.75968,529.06979 -17.13539,0 8.5677,-14.83968 z"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\unique_intersection.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       sodipodi:type="star"
+       style="fill:#000000;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path3742-7-5"
+       inkscape:flatsided="true"
+       sodipodi:sides="3"
+       sodipodi:cx="256.19199"
+       sodipodi:cy="524.12323"
+       sodipodi:r1="9.8931189"
+       sodipodi:r2="4.9465594"
+       sodipodi:arg1="0.52359878"
+       sodipodi:arg2="1.5707963"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       transform="matrix(-0.01966699,0.22876837,-0.22876837,-0.01966699,114.16331,130.70029)"
+       inkscape:transform-center-x="-0.21076517"
+       inkscape:transform-center-y="0.16728242"
+       d="m 264.75968,529.06979 -17.13539,0 8.5677,-14.83968 z"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\unique_intersection.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <path
+       sodipodi:type="star"
+       style="fill:#000000;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path3782-8"
+       inkscape:flatsided="true"
+       sodipodi:sides="3"
+       sodipodi:cx="97.194023"
+       sodipodi:cy="439.4101"
+       sodipodi:r1="20.83853"
+       sodipodi:r2="10.419265"
+       sodipodi:arg1="0.52359878"
+       sodipodi:arg2="1.5707963"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       transform="matrix(0.19603862,-0.07778211,0.07778211,0.19603862,-97.295973,7.453865)"
+       inkscape:transform-center-y="-0.31944071"
+       inkscape:transform-center-x="-0.81043733"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\unique_intersection.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150"
+       d="m 115.24072,449.82936 -36.093393,0 18.046696,-31.25779 z" />
+    <circle
+       style="fill:#000000;stroke:none;stroke-width:0.216739;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path4101-29"
+       cx="-33.926125"
+       cy="114.97626"
+       r="1.8964636"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\unique_intersection.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <circle
+       style="fill:#000000;stroke:none;stroke-width:0.216739;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="circle4183-7"
+       cx="-23.316298"
+       cy="179.81413"
+       r="1.8964636"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\unique_intersection.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.450514;stroke-linecap:round;stroke-linejoin:round"
+       id="rect2606"
+       width="16.518835"
+       height="16.518835"
+       x="-74.151794"
+       y="91.884064"
+       transform="rotate(-16.904316)"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\unique_intersection.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.450514;stroke-linecap:round;stroke-linejoin:round"
+       id="rect2606-6"
+       width="16.518835"
+       height="16.518835"
+       x="-41.684025"
+       y="169.95273"
+       transform="rotate(-3.2344526)"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\unique_intersection.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+    <g
+       data-mml-node="math"
+       id="g911"
+       transform="matrix(0.0062544,0,0,-0.0062544,-56.034517,118.44893)"
+       style="fill:#000000;stroke:#000000;stroke-width:0"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\unique_intersection.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <g
+         data-mml-node="mi"
+         id="g891">
+        <use
+           xlink:href="#MJX-5-TEX-I-78"
+           id="use889"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+      <g
+         data-mml-node="mo"
+         transform="translate(572)"
+         id="g895">
+        <use
+           xlink:href="#MJX-5-TEX-N-28"
+           id="use893"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+      <g
+         data-mml-node="msub"
+         transform="translate(961)"
+         id="g905">
+        <g
+           data-mml-node="mi"
+           id="g899">
+          <use
+             xlink:href="#MJX-5-TEX-I-74"
+             id="use897"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </g>
+        <g
+           data-mml-node="mn"
+           transform="matrix(0.707,0,0,0.707,361,-150)"
+           id="g903">
+          <use
+             xlink:href="#MJX-5-TEX-N-31"
+             id="use901"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+      <g
+         data-mml-node="mo"
+         transform="translate(1725.6)"
+         id="g909">
+        <use
+           xlink:href="#MJX-5-TEX-N-29"
+           id="use907"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       data-mml-node="math"
+       id="g1221"
+       transform="matrix(0.0062544,0,0,-0.0062544,-46.906395,180.42193)"
+       style="fill:#000000;stroke:#000000;stroke-width:0"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\unique_intersection.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
+      <g
+         data-mml-node="mi"
+         id="g1201">
+        <use
+           xlink:href="#MJX-6-TEX-I-78"
+           id="use1199"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+      <g
+         data-mml-node="mo"
+         transform="translate(572)"
+         id="g1205">
+        <use
+           xlink:href="#MJX-6-TEX-N-28"
+           id="use1203"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+      <g
+         data-mml-node="msub"
+         transform="translate(961)"
+         id="g1215">
+        <g
+           data-mml-node="mi"
+           id="g1209">
+          <use
+             xlink:href="#MJX-6-TEX-I-74"
+             id="use1207"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </g>
+        <g
+           data-mml-node="mn"
+           transform="matrix(0.707,0,0,0.707,361,-150)"
+           id="g1213">
+          <use
+             xlink:href="#MJX-6-TEX-N-32"
+             id="use1211"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+      <g
+         data-mml-node="mo"
+         transform="translate(1725.6)"
+         id="g1219">
+        <use
+           xlink:href="#MJX-6-TEX-N-29"
+           id="use1217"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <use
+       xlink:href="#MJX-7-TEX-I-3B3"
+       id="use1394"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="matrix(0.00951963,0,0,-0.00951963,-39.792173,84.991621)"
+       style="fill:#000000;stroke:#000000;stroke-width:0"
+       inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\unique_intersection.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150" />
+  </g>
+</svg>
