@@ -1,0 +1,131 @@
+Now we show that in the case of sinks, the non-linear system is indeed conjugate to its linearisation. This is a special case of Hartman-Grobman
+\begin{proposition}\label{prop:homeo-special-case}
+Consider the differential equation $x' = f(x)$ where $f$ is $C^1$ and $a$ is an equilibrium point. Suppose $A := Df(a)$ has $n$ distinct, negative eigenvalues. Let $\Phi_t$ denote the flow of the differential equation. Then there exist open neighbourhoods $V$ and $U$ of the origin and $a$ respectively and a map $h: V \to U$ such that 
+$$ \Phi_t = h \circ e^{tA} \circ h^{-1} $$
+\end{proposition}
+\begin{proof}
+As before, without loss of generality, we can assume that $A$ is diagonal and $a = 0$. By the previous lemma, \autoref{lem:sink-solns}, we know there is a $\rho > 0$ such that for all $x \in B_\rho(0)$, we have $\Phi_t(x) \to 0$ as $t \to \infty$. We define $B_\rho(0)$ to be our $U$. Since all solutions in $U$, tend toward 0, we conclude that the vector field is always pointing inward, (roughly) toward the origin (to be precise what we want to say is that the dot product of the vector field at a point with the point itself is always negative. This is clear from the fact that solutions tend toward the origin but can also be verified rigorously in a very similar manner to the previous lemma. The dot product of a point $(x_1, \dots, x_n)$ with its corresponding vector is exactly $\lambda_1 x_1^2 + \dots \lambda_n x_n^2 + \ol{o}(\left|x^2\right|)$. By making the error small, we can ensure this quantity is negative.). In particular this means that $-f$ is always pointing outward (away from the origin). Thus for every $x \in U$, there is some (unique) time $t < 0$ such that $\left|\Phi_t(x)\right| = \rho$. This means that $\{t < 0: \Phi_t(x) \notin U\}$ is always non-empty (there is some time in `the past' where the solution was on the boundary hence not in $U$) and is of coursed bounded above (by 0 for example). This means that the supremum always exists, allowing us to define the map
+\begin{align*}
+    \tau: U \backslash \{0\} &\to \R\\
+    x &\mapsto \sup \{t < 0: \Phi_t(x) \notin U\}
+\end{align*}
+In particular, $\tau(x)$ corresponds to the first time that the solution starting at $x$ entered $U$. Then we define
+$$ h^{-1}(x) = e^{-\tau(x) A} \Phi_{\tau(x)} (x) $$
+with $h^{-1}(0) = 0$.
+We want to show that 
+$$ h^{-1} \circ \Phi_t = e^{tA} \circ h^{-1} $$
+for all $t \geq 0$. We claim that $\tau(\Phi_t(x)) = \tau(x) - t$. Intuitively, this is clear. We know that $\tau(x)$ is the first time that the solution starting at $x$ entered $U$ (again, remembered that this happened in the past so to speak, so $\tau(x)$ is in fact negative). So if we evolve the system (forward) by time $t$, in order to find the first time we entered $U$ from this new point $\Phi_t(x)$ we must go back time $t$ and then go further back $\tau(x)$. Thus $\tau(\Phi_t(x)) = -t + \tau(x) = \tau(x) - t$. Luckily, this is one of (the painfully few) times in math when intuition can be converted almost exactly into formulaic manipulations.
+\begin{align*}
+    \tau(\Phi_t(x)) = \sup \{s < 0: \Phi_s(\Phi_t(x)) \notin U\} = \sup \{s < 0: \Phi_{s + t}(x) \notin U\} = \sup\{s < 0: \Phi_{s}(x) \notin U\} - t = \tau(x) - t
+\end{align*}
+We then compute that
+\begin{align*}
+    h^{-1}(\Phi_t(x)) &= e^{-\tau(\Phi_t(x))A} \circ \Phi_{\tau(\Phi_t(x))} (\Phi_t(x))\\
+    &= e^{-(\tau(x) - t)A} \Phi_{\tau(x) - t} (\Phi_t(x))\\
+    &= e^{tA} \circ e^{-\tau(x)} \Phi_{\tau(x)}(x)\\
+    &= e^{tA} \circ h^{-1}(x)
+\end{align*}
+The fact that $h^{-1}$ is invertible is clear, we could swap around things appropriately in the construction above. All that remains to check is that it is continuous.
+
+We define the function $$ f(t, x) = |\Phi_{t}(x)| - r_0 $$
+
+Note this function is 0 exactly when the solution starting at $x$ passed through the ball of radius $r_0$ (some time in the past). We know this function is $C^1$ if we ignore the origin. Moreover,
+$$ \frac{\partial f}{\partial t} = \frac{\partial}{\partial t} (\sqrt{x_1(t)^2 + \dots + x_n(t)^2}) = \frac{1}{|x(t)|} \begin{pmatrix} x_1(t) \\ \vdots\\ x_n(t) \end{pmatrix} \cdot \begin{pmatrix} x_1'(t) \\ \vdots\\ x_n'(t) \end{pmatrix} $$
+
+The dot product is always non-zero (the vector field always points inward toward the origin/solutions intersect the boundary of the ball transversely). Since $\frac{\partial f}{\partial t} \neq 0$, we can use the Implicit Function Theorem to find the $x$ that solve $f(t, x)$ in terms of $t$ and conclude that this map is $C^1$. This is exactly the map $\tau$.
+
+This shows continuity (and even differentiability) of $h^{-1}$ everywhere besides the origin. So let's check continuity at the origin as well. Recall we have $h^{-1}(x) = e^{-\tau(x) A} \Phi_{\tau(x)}(x)$. By definition of $\tau(x)$, we have that $|\Phi_{\tau(x)}(x)| = \rho$. Convince yourself that $\lim_{x \to 0} \tau(x) = -\infty$. Since the linear system causes all systems to (exponentially) decay as we move forward in time, we get continuity at the origin as well.
+\end{proof}
+
+Although we assumed that the eigenvalues were real in the above proof, them having negative real part is sufficient. (The only thing we need to check is that the system is still a sink and this can be done by considering the same Lyapunov function).
+
+We also assumed that $A$ was diagonalisable, but even this is not necessary. Suppose $A$ is a Jordan block like so
+$$ A = \matrix{\lambda & 1\\0 & \lambda} $$
+We claim that $A$ is conjugate to the matrix
+$$ \tilde{A} := \matrix{\lambda & \epsilon \\0 & \lambda} $$
+for all $\epsilon > 0$ (this is sometimes called the $\epsilon$-Jordan form). This is easily verified by taking
+$$ T = \matrix{1 & 0\\0 & \epsilon} $$
+and computing $T^{-1} A T$. Suppose $y$ is a solution to $y' = \tilde{A} y$. Then
+$$ \frac{d}{dt} \left( \frac{1}{2} \left| y \right|^2 \right) = \lambda(y_1^2 + y_2^2) + \epsilon y_1 y_2 $$
+We know that for any two real numbers $a, b$ we have
+$$ 0 \leq (a^2 + b^2) - 2ab \Rightarrow 0 \geq \lambda (a^2 + b^2) - 2\lambda ab$$
+where the inequality flips since $\lambda < 0$ (which also implies that $-2 \lambda > 0$). Thus by taking $\epsilon < 2 \lambda$, we can ensure that $\frac{d}{dt} (\frac{1}{2} |y|^2) < 0$ on all non-equlibria solutions, allowing us to use this as a Lyapunov function (as before) and then proceeding with the proof as before. In this manner, we can show that \hyperref[thm:hartman-grobman]{Hartman-Grobman} holds in the case of Jordan blocks as well (provided that all eigenvalues are real and negative).
+
+Although we won't prove the Hartman-Grobman theorem in general, we briefly outline the strategy for doing so. The generalisation of the above to $n \times n$ Jordan blocks is clear (we replace all the off diagonal 1's with $\epsilon$). We can construct very similar arguments for sources by going back in time. For saddles we can decompose our space into a direct sum of sources and sinks (that is we write our total space as the sum of subspaces where solutions approach the equilibria as $t \to \infty$ and solutions that approach the equilibria as $t \to -\infty$) and argue on these subspaces separately. 
+
+The final idea leads us to the following two definitions.
+\begin{definition}[Stable/Unstable manifold]
+Given an equilibrium $a$, the stable manifold $W^s(a)$ as
+$$ W^s(a) := \{x \in \R^n: \lim_{t \to \infty} \Phi_t(x) = a\} $$
+Similarly, the unstable mainfold $W^u(a)$ is defined to be
+$$ W^u(a) := \{x \in \R^n: \lim_{t \to -\infty} \Phi_t(x) = a\} $$
+\end{definition}
+The fact that these sets are manifolds is in fact a consequence of the \href{https://en.wikipedia.org/wiki/Stable_manifold_theorem}{stable manifold theorem}. A property that readily follows from the definitions is that the two manifolds are positively invariant (that is if $x$ is an element of either the stable or the unstable manifold then $\Phi_t(x)$ is an element of the same manifold for all $t \geq 0$). Moreover, these manifolds are tangent at $x = a$.
+
+\section{Techniques for non-linear systems}
+We have discussed plenty about how to classify flows and such. So we can know (in certain cases) how the flow of a certain system behaves, up to homeomorphism. Unfortunately, when dealing with systems in the real world (gross) one would like to know how a given system behaves without having to construct homeomorphisms and such (indeed the homeomorphism defined in \autoref{prop:homeo-special-case} required one to know the flow of the non-linear system which rather defeats the purpose). So we briefly discuss some techniques for determining qualitative/rough behaviour of dynamical systems.
+
+\subsection{Nullclines}
+Nullclines are perhaps the simplest idea one may think of when trying to determine the qualitative behaviour of some given system. Namely, we find when the different components of the solutions will have derivative 0. This allows us to partition the space into subdomains where we know the signs of the components of the solution. This gives a rough idea as to how initial points in these domains behave and with a bit of creativity and guesswork, one can stitch these together to sketch out the phase portrait of the system. 
+
+\begin{definition}[Nullcline]
+Given a system $x' = f(x)$ on $D \subset \R^n$, the $j$-th nullcline is the set 
+$$\{x \in D: f_j(x) = 0\}$$
+\end{definition}
+\subsubsection{Example 1}
+Consider the system
+\begin{align*}
+    x' &= x(a - by)\\
+    y' &= y(-c + dx)
+\end{align*}
+\begin{remark}
+This is the famous \href{https://en.wikipedia.org/wiki/Lotka\%E2\%80\%93Volterra_equations}{Lotka-Volterra system}
+\end{remark}
+We see that the $x$-nullcline is at $x = 0$ and $y = \frac{a}{b}$. Similarly the the $y$-nullcline is at $y = 0$ and $x = \frac{c}{d}$. This splits the upper right quadrant (which is our domain if we are indeed thinking of this as the Lotka-Volterra system). Then for $x < \frac{c}{d}$ we have $y' < 0$ and for $x > \frac{c}{d}$ we have $y' > 0$. Similarly for $y < \frac{a}{b}$ we see $x' >0$ and for $y > \frac{a}{b}$ we have $y' < 0$. Plotting this information we conclude, the system evolves at least somewhat circularly. We don't immediately see that the solutions are periodic (as we know them to be), which already tells us that nullclines aren't \textit{too} informative, but something is better than nothing so one can hardly complain.
+% TODO: Add diagram for nullcline
+
+\subsection{Lyapunov functions}
+We have already defined Lyapunov functions in the previous section. Here we show why they are so useful. They allow us to find stable and asymptotically stable equilibria (especially useful if solving for them directly is difficult).
+\begin{theorem}[Lyapunov's Theorem]
+Let $x^*$ is an equlibrium point for $x' = f(x)$. Suppose $L: D \to \R$ (where $D \subset \R^n$, as usual, is open) is a differentiable function such that $L(x^*) = 0$ and $L(x) > 0$ for all $x \in D \backslash \{x^*\}$. If $DL(x)(f(x)) \leq 0$ for all $x \in D \backslash \{x^*\}$ then $x^*$ is stable and if the inequality is strict, then $x^*$ is asymptotically stable.
+\end{theorem}
+\begin{remark}
+We don't strictly need the fact that $L(x^*) = 0$ and $L(x) > 0$ for $x \neq x^*$; we only need $x^*$ to be a strict local minimum. However, we can always assume this to be the case by shifting $L$ appropriately.
+\end{remark}
+\begin{remark}
+As a fun little fact, $DL(x)(f(x))$ is exactly the push forward of the tangent vector $f(x)$ at $x$ via $L$.
+\end{remark}
+\begin{proof}
+We first show stability. That is given a neighbourhood $U$ of $x^*$, we want to find a neighbourhood $V$ of $x^*$ such that $x \in V$ implies that $\Phi_t(x) \in U$ for all $t \geq 0$.
+
+Without loss of generality, we can assume that $U$ is bounded and that $x^*$ is the only critical point in $U$ (if either of these does not hold, we can always consider a smaller subset where this does hold and since the solutions will always lie in this subset, the same will hold true for the larger one). Let $m := \min \{ L(x): x \in \partial U \}$. Since $x^*$ is the (only) local minimum, we must have that $L(x^*) < m$. Then $x^* \in V := \{x \in D: L(x) < m\}$. Then if $x(0) \in V$, then $L(x(t)) < m$ for all $t > 0$ since $L$ is non-increasing along solutions (note $(L \circ x)' = DL(x) \circ x' = DL(x) (f(x))$ giving us the non-increasing property by hypothesis of the theorem). 
+
+Suppose now that the inequality is strict. In other words, $DL(x) (f(x)) < 0$ for all $x \in D \backslash \{x^*\}$. We wish to show that $x^*$ is asymptotically stable. We know that $L(x(t))$ is a decreasing function for every (non-constant) solution. Thus $\lim_{t \to \infty} L(x(t))$ is bounded below by $L(x^*)$ implying that the limit exists and is greater than or equal to $L(x^*)$. 
+
+We choose some $x_0 \in V$ and let $x(t)$ be the solution to the differential equation satisfying $x(0) = x_0$. Since $\ol{V}$ is compact, we can find an increasing sequence $t_j$ such that $\lim_{j \to \infty} x(t_j) = y_0$ for some $y_0 \in \ol{V}$. Clearly we must have that $L(x(t)) > L(y_0)$ for all $t$. We will show that this leads to a contradiction. The idea is that $L$ will decrease along the solution starting at $y_0$. Continuous dependence implies that $L$ of solutions that begin close to $y_0$ will also be bounded above by $L(y_0)$. But since $x(t_j)$ lie close to $y_0$ (for sufficiently large $j$) leading to the desired contradiction. Now we write this formally.
+
+Suppose $y_0 \neq x^*$ (if they are equal, we are done). Let $y(t)$ be a solution to the differential equation satisfying $y(0) = y_0$. We know then that for all $t > 0$, we get $L(y(t)) < L(y_0)$ (this is where we use $y_0 \neq x^*$). We fix some $\tau > 0$. Then of course $L(y(\tau)) < L(y_0)$ implying that there is a neighbourhood $W_{\tau}$ of $y(\tau)$ such that for all $w \in W_\tau$, we have $L(w) < L(y_0)$ (we can take $L^{-1}((-\infty, L(y_0))$ for example). 
+
+Continuous dependence of solutions implies that solutions with similar initial conditions will evolve similarly. Thus we can find a neighbourhood $W_0$ of $y_0$ such that $\Phi_{\tau}(w) \in W_\tau$ for all $w \in W_0$. Since $W_0$ is a neighbourhood of $y_0$, we know there is some $x(t_j) \in W_0$ (by definition of convergence). Therefore $\Phi_{\tau}(x(t_j)) = x(t_j + \tau) \in W_\tau$. But this means that $L(x(t_j + \tau)) < L(y_0)$ by construction of $W_\tau$, leading to the desired contradiction.
+\end{proof}
+
+In fact the above statement, has a converse. Namely if $x^*$ is a sink for a system $x' = f(x)$, then there exists a Lyapunov function $L(x)$ on a neighbourhood of $x^*$ that satisfies all the above hypotheses which would allow us to conclude that $x^*$ is a sink (i.e. we have $x^*$ is a strict local minimum, derivative along non-constant solutions is negative, etc.).
+
+Sometimes one finds that the Lyapunov function is actually constant along solutions. In this case, one finds solutions to the differential equation very easily: they are simply the level sets of the Lyapunov function. This occurs, for example, with the Lotka-Volterra system if we take 
+$$ L(x, y) = d \cdot x - c \log x + b \cdot y - a\log y $$
+% TODO: Add proof that L constant along solutions
+
+\subsection{Gradient Systems}
+As mentioned in general it is rather difficult to find Lyapunov functions. However one instance, where the Lyapunov function is particularly nice and easy to find is with gradient systems. 
+
+\begin{definition}[Gradient System]
+A gradient system is a differential equation of the form $x' = - \nabla V(x)$ where $V: D \to \R$ is a $C^2$ function.
+\end{definition}
+In this case we can take $L(x) = V(x)$ since
+\begin{align*}
+    \frac{d}{dt} V(x(t)) &= DV(x) \cdot x' = \nabla V \cdot (- \nabla V) = - |\nabla V|^2
+\end{align*}
+Of course this is 0 exactly on the equilibrium and negative everywhere else, as we would expect. 
+
+With gradient systems, one often imagines the graph of $V$ as forming a surface (say if $D \subset \R^2$) and solutions to $x' = - \nabla V(x)$ correspond to travelling down this surface according to gravity.
+

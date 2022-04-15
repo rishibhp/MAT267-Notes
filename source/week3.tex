@@ -99,6 +99,7 @@ where the standard basis vectors are eigenvectors themselves. In this case every
 % TODO: Add diagram for repeated eigenvalues, basis of eigenvectors, positive and negative
 
 \section{Trace-Determinant Plane}
+% TODO: Add trace-determinant plane diagram
 We are interested in classifying the different dynamical systems, roughly based on what the phase portraits look like. For example, all centers are roughly the same (the only thing that varies is the frequency and the direction of the rotation); all saddle points are essentially the same (up to some rotation and stretching), etc. What we realise is that almost all of this information is determined by the eigenvalues and in particular by the sign of the eigenvalues, whether they are real or complex, etc. If we can then work out the relationships between the eigenvalues (ideally without solving for them), we can classify the dynamical systems relatively easily.
 
 This is where we remember from our study of linear algebra that the eigenvalues of a matrix can by found by looking at the roots of the characteristic polynomial of the matrix and in the $2 \times 2$ case, this polynomial is completely determined by the trace and determinant. Indeed we have that the characteristic polynomial $p_A$ of a $2 \times 2$ matrix $A$ is given by
@@ -112,9 +113,7 @@ We know then, for example, that if the discriminant of the above quadratic is po
     Eigenvalues & Normal form & How to detect & Shape\\
     \hline
     $\lambda_1 > \lambda_2 > 0$ & $\matrix{\lambda_1 & 0\\0 & \lambda_2}$ & $\Tr(A)^2 > 4 \det(A)$ & Unstable node  \\
-    % \hline
     $\lambda_1 > 0 > \lambda_2$ & $\matrix{\lambda_1 & 0\\0 & \lambda_2}$ & $\det(A) < 0$ & Saddle\\
-    % \hline
     $0 > \lambda_1 > \lambda_2$ & $\matrix{\lambda_1 & 0\\0 & \lambda_2}$ & $\det(A) > 0$, $\Tr(A) < 0$ & Stable node\\
     $\lambda = \alpha + i\beta$, $\alpha > 0$ & $\matrix{\alpha & -\beta \\ \beta & \alpha}$ & $\Tr(A) > 0, 4\det(A) > \Tr(A)^2$ & Spiral source\\
     $\lambda = \alpha + i\beta, \alpha < 0$ & $\matrix{\alpha & -\beta \\ \beta & \alpha}$ & \makecell{$\det(A) > 0, \Tr(A) < 0$ \\ $4\det(A) < \Tr(A)^2$} & Spiral sink

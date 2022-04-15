@@ -52,6 +52,117 @@ It is easy to verify $P$ and $Q$ are homogeneous functions (of degree 2). We sub
 (note we divide by $x$ without worry since the original equation \autoref{eq:hom-eg} doesn't allow for $x = 0$)
 The variables can now clearly be separated.
 
+\subsection{Exact Differential Equations}\label{sec:exact-diff-eq}
+Suppose we have an ODE of the form
+$$ P(x, y)dx + Q(x, y)dy = 0 $$
+is exact if there exists a function $f(x, y)$ such that
+$$ \frac{\partial f}{\partial x} = P(x, y), \frac{\partial f}{\partial y} = Q(x, y) $$
+The general solution to such ODEs is given by the one-parameter family
+$$ f(x, y) = c $$
 
+It would be nice to know when an ODE is exact. Luckily we have the following theorem which not only tells us when an equation is exact but even gives a construction for the function $f$.
+\begin{theorem}
+Suppose we have an ODE of the form
+$$ P(x, y)dx + Q(x, y)dy = 0 $$
+where $P, Q$ are defined on a simply connected region and are $C^1$. Then the equation is exact if and only if
+$$ \frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x} $$
+\end{theorem}
+\begin{proof}
+The forward direction follows from a theorem in analysis. Namely if a function $f$ is smooth (or even just $C^1$) then
+\begin{align*}
+    \frac{\partial^2 f}{\partial x \partial y} = \frac{\partial^2 f}{\partial y \partial x}
+\end{align*}
+
+Thus we need show the reverse direction. Thus we assume that
+$$ \frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x} $$
+Suppose such an $f$ were to exist. Then we know that $f$ must satisfy
+\begin{align*}
+    \frac{\partial f}{\partial x} = P(x, y) \Rightarrow f(x, y) = \int_{x_0}^{x} P(x, y)dx + R(y)
+\end{align*}
+Typically we get a constant term when integrating, but in this case the constant term depends on $y$, hence why $R$ becomes a function of $y$. By assumption the derivative of $f$ with respect to $y$ is $Q$. Thus we get that
+\begin{align*}
+    Q(x, y) = \frac{\partial f}{\partial y} &= \frac{\partial}{\partial y} \left( \int_{x_0}^{x} P(s, y)ds + R(y) \right)\\
+    &= \int_{x_0}^{x} \frac{\partial}{\partial y} P(s, y)ds + R'(y)\\
+    &= \int_{x_0}^x \frac{\partial }{\partial x} Q(s, y) ds + R'(y)\\
+    &= Q(x, y) - Q(x_0, y) + R'(y)
+\end{align*}
+where of course $x_0$ is some arbitrary constant in the domain. We then conclude that $R'(y) = Q(x_0, y)$. Therefore
+$$ R(y) = \int_{y_0}^{y} Q(x_0, s) ds $$
+(we ignore the integration constant for now since account for it later when giving the general solution to the ODE). Therefore
+$$ f(x, y) = \int_{x_0}^{x} P(s, y)ds + \int_{y_0}^{y} Q(x_0, s)ds $$
+All that remains to check is that this $f$ does indeed satisfy the conditions. Now it is clear that
+$$ \frac{\partial f}{\partial x} = P(x, y) $$
+The other one takes slightly more work
+\begin{align*}
+    \frac{\partial f}{\partial y} &= \frac{\partial }{\partial y} \int_{x_0}^x P(s, y) ds + Q(x_0, y)\\
+    &= \int_{x_0}^x \frac{\partial }{\partial y} P(s, y) ds + Q(x_0, y)\\
+    &= \int_{x_0}^{x} \frac{\partial }{\partial x} Q(s, y) ds + Q(x_0, y)\\
+    &= Q(x, y) - Q(x_0, y) + Q(x_0, y)\\
+    &= Q(x, y)
+\end{align*}
+\end{proof}
+
+\subsubsection{Example}
+Suppose we have the equation
+\begin{equation}\label{eq:exact-eg}
+    (2x + y \cos x)dx + (2y + \sin x - \sin y)dy = 0
+\end{equation}
+In this case we have $P(x, y) = 2x + y \cos x$ and $Q(x, y) = 2y + \sin x - \sin y$. Since
+$$ \frac{\partial P}{\partial y} = \cos x = \frac{\partial Q}{\partial x} $$
+we can conclude using the previous theorem that the differential equation is exact. Thus we can construct $f$ as given by the proof as well. We start with
+$$ f(x, y) = \int P(x, y) dx + R(y) = x^2 + y \sin x + R(y) $$
+Then we know that
+\begin{align*}
+    \frac{\partial f}{\partial y} &= Q(x, y)\\
+    \sin x + R'(y) = 2y + \sin x - \sin y
+\end{align*}
+Therefore
+$$R(y) = y^2 + \cos y$$
+Finally we conclude that the general solution to \autoref{eq:exact-eg} is 
+$$ f(x, y) = x^2 + y \sin x + y^2 + \cos y = c $$
+
+\subsubsection{Integrating Factors}
+Sometimes an equation is not exact, but we can make it exact by multiplying it with a function. Such a function is called the integration factor. As an example consider the equation
+\begin{equation}
+    (t^2 x - t) dx + x dt = 0
+\end{equation}
+Suppose there was some function $h(t)$ (we assume $h$ is a function of $t$ because we know this works. In general it's difficult to know what the integration factor should be a function of). Then we would have
+$$ (h(t)(t^2 x - t))dx + (x h(t)) dt = 0 $$
+which we assume to be exact. This means that
+\begin{align*}
+    \frac{\partial }{\partial t} (h(t)(t^2 x - t)) &= \frac{\partial}{\partial x} (x h(t))\\
+    h'(t) (t^2 x - t) + h(t) (2tx - 1) &= h(t)\\
+    \frac{h'(t)}{h(t)} &= \frac{2 - 2tx}{t^2 x - t} \\
+    &= -\frac{2}{t}
+\end{align*}
+Since the right hand side is a function of $t$, we can integrate to conclude that
+$$ \log(h(t)) = -2 \log t $$
+or in other words that
+$$ h(t) = \frac{1}{t^2} $$
+
+Similar manipulations can be performed if $h$ is function of $x, xt, \frac{x}{t}, \frac{t}{x},$ etc. Often it is not obvious what $h$ should be a function and requires some trial and error. Hence why although we know that any ODE $x' = f(x, t)$ with $f \in C^1$ in a neighbourhood of $(x_0, t_0)$ admits an integration factor, in principle this is a useless technique because it is incredibly hard to find the integration factor.\\
+
+However there do exist some special cases where integration factors \textit{can} be found and these serve as useful examples. Suppose we have an equation of the form
+\begin{equation}\label{eq:lin-order-1}
+    \frac{dy}{dx} + P(x)y = Q(x)
+\end{equation}
+Since the derivative and $y$ are raised to the power of $1$, we call this a linear differential equation and specifically a linear differential equation of order 1. One way of solving this equation is to solve the homogeneous version (i.e. set $Q = 0$) using separation of variables and then solve the ODE using variation of constants. A second method, however, is to use integration factors. 
+
+We can first rewrite the equation to get
+$$ [P(x) y - Q(x)] dx + dy = 0 $$
+Suppose we had an an integrating factor $u(x)$ (in this case we know that the integrating factor is always a function of the dependent variable, in this case $x$). Then we would have
+\begin{align*}
+    \frac{\partial}{\partial y} [u(x) P(x) y - u(x)Q(x)] &= \frac{\partial}{\partial x} u(x)\\
+    u(x) P(x) &= u'(x)\\
+    \frac{u'(x)}{u(x)} &= P(x)\\
+    u(x) = e^{\int P(x) dx}
+\end{align*}
+Note that when integrating the exponent we don't need to worry about the integration constant since we don't need the general solution. Substituting this integration factor into \autoref{eq:lin-order-1}  we get
+\begin{align*}
+    e^{\int P(x) dx} \frac{dy}{dx} + P(x) e^{\int P(x) dx} y &= e^{\int P(x) dx} Q(x)\\
+    \frac{d}{dx} (y e^{\int P(x) dx}) &=  e^{\int P(x) dx} Q(x)\\
+    y &= e^{- \int P(x) dx} \left( \int e^{\int P(x) dx} Q(x) \right) + c e^{-\int P(x) dx}
+\end{align*}
+We apologise for the horror we have bestowed upon the reader.
 
 

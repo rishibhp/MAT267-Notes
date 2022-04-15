@@ -141,7 +141,7 @@ Now that we have Grönwall's Lemma, we can use it to to provide estimates for ho
 Suppose $\epsilon_1 = \epsilon_2 = 0$. Then $x_1$ and $x_2$ satisfy the same differential equation but with slightly different initial conditions. In this case the conclusion of the theorem is that $|x_1(t) - x_2(t)| \leq \delta e^{L(t - a)}$, which is to say that the solutions can differ at most by some exponential term. If we also have $\delta = 0$, we get yet another proof of uniqueness.
 \end{remark}
 \begin{proof}
-    Let $\epsilon = \epsilon_1 + \epsilon_2$. We define $g(t) = x_1(t) - x_2(t)$. We want to show that $g$ is bounded by some kind of exponential term and as we said we want to use Grönwall. For this we need a bound on $g$. First we will find an estimate for $g'$ (as you can imagine this will be easier since we have some strong conditions on $f$ which approximates $x_1'$ and $x_2'$ fairly well) and then use this to find an estimate for $g$.
+    Let $\epsilon = \epsilon_1 + \epsilon_2$. We define $g(t) = x_1(t) - x_2(t)$. We want to show that $g$ is bounded by some kind of exponential term and as we said we want to use Grönwall. For this we need a bound on $g$ in terms of some kind of integral. First we will find an estimate for $g'$ (as you can imagine this will be easier since we have some strong conditions on $f$ which approximates $x_1'$ and $x_2'$ fairly well) and then use this to find an estimate for $g$.
     \begin{align*}
         |g'(t)| &= |x_1'(t) - x_2'(t)|\\
         &= | (x_1'(t) - x_2'(t)) - f(t, x_1(t)) + f(t, x_1(t)) - f(t, x_2(t)) + f(t, x_2(t)) |\\
