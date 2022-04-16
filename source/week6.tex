@@ -1,15 +1,3 @@
-\subsection{Bernoulli Equations}
-
-Bernoulli equations are slight variations of the linear differential equations seen before which aren't themselves linear equations but can be turned into ones. Specifically, a Bernoulli equation is of the form
-\begin{equation}\label{eq:bernoulli}
-    \frac{dy}{dx} + P(x)y = Q(x) y^n
-\end{equation}
-In the case of $n = 1$ we can solve by separation of variables so let us assume that $n \neq 1$. Then we multiply both sides with $(1 - n)y^{-n}$ to get 
-$$ (1 - n)y^{-n} \frac{dy}{dx} + (1 - n)y^{1 - n}P(x) = (1 - n)Q(x) $$
-
-Now if we define $u = y^{1 - n}$ we see the above equation becomes
-$$ \frac{du}{dx} + (1 - n)P(x) u = (1 - n)Q(x) $$
-which is a linear differential equation of order 1 we know how to solve.
 
 \section{Dynamical Systems}\label{sec:dyn-systems}
 Consider our go-to differential equation:

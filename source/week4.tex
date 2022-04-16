@@ -172,7 +172,7 @@ $$ \frac{d}{dt} e^{tA} = A e^{tA} $$
     &= \exp(tA) A
 \end{align*}
 \end{proof}
-Much like the exponential function with real numbers, matrix exponentiation gives us a unique solution to a differential equation. In particular, $X(t) = e^{tA}$ is the unique solution to the initial value problem $X' = AX$ with $X(0) = X_0$. The proof is the exact same as with real numbers: suppose $Z(t)$ is another solution. Define $W(t) = Z(t) e^{-tA} x_0$. Then
+Much like the exponential function with real numbers, matrix exponentiation gives us a unique solution to a differential equation. In particular, $X(t) = e^{tA} x_0$ is the unique solution to the initial value problem $X' = AX$ with $X(0) = x_0$. The proof is the exact same as with real numbers: suppose $Z(t)$ is another solution. Define $W(t) = Z(t) e^{-tA} x_0$. Then
 \begin{align*}
     W'(t) &= \frac{d}{dt} (Z(t) e^{-tA} x_0)\\
     &= (-Z(t)A e^{-tA}) x_0 + (Z'(t) e^{-tA}) x_0\\
