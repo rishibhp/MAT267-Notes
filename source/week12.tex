@@ -31,7 +31,7 @@ In order to see how useful this tool is, consider the equation
     u''(x) + p(x) u'(x) + q(x) u(x) = 0 
 \end{equation}
 where $p(x)$ and $q(x)$ are some continuous functions. 
-Clearly if $f, g$ are linearly dependent functions that $W(f, g) = 0$. However the converse also holds to some extent: if $f, g$ are linearly independent solutions to \autoref{eq:second-order-normal} then $W(f, g)$ is never 0. This fact allows for an easy proof of the following theorems.
+Clearly if $f, g$ are linearly dependent functions then $W(f, g) = 0$. However the converse also holds to some extent: if $f, g$ are linearly independent solutions to \autoref{eq:second-order-normal} then $W(f, g)$ is never 0.
 
 \begin{lemma}
 Suppose $f, g$ are linearly independent solutions to \autoref{eq:second-order-normal} then $W(f, g)$ is never 0.
@@ -46,6 +46,7 @@ This exactly means that
 $$ \matrix{f(x)\\f'(x)}, \matrix{g(x) \\ g'(x)} $$
 are linearly independent for all $x$ which in turn is equivalent to saying that the determinant above is never zero.
 \end{proof}
+This fact allows for an easy proof of the following theorems.
 
 \begin{theorem}[Sturm Separation Theorem]
 Suppose $f, g$ are linearly independent solutions to \eqref{eq:second-order-normal}. Then $f$ must vanish between any two successive zeroes of $g$. In other words the zeroes of $f$ and $g$ occur alternately.
