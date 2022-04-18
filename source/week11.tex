@@ -49,7 +49,7 @@ and computing $T^{-1} A T$. Suppose $y$ is a solution to $y' = \tilde{A} y$. The
 $$ \frac{d}{dt} \left( \frac{1}{2} \left| y \right|^2 \right) = \lambda(y_1^2 + y_2^2) + \epsilon y_1 y_2 $$
 We know that for any two real numbers $a, b$ we have
 $$ 0 \leq (a^2 + b^2) - 2ab \Rightarrow 0 \geq \lambda (a^2 + b^2) - 2\lambda ab$$
-where the inequality flips since $\lambda < 0$ (which also implies that $-2 \lambda > 0$). Thus by taking $\epsilon < 2 \lambda$, we can ensure that $\frac{d}{dt} (\frac{1}{2} |y|^2) < 0$ on all non-equlibria solutions, allowing us to use this as a Lyapunov function (as before) and then proceeding with the proof as before. In this manner, we can show that \hyperref[thm:hartman-grobman]{Hartman-Grobman} holds in the case of Jordan blocks as well (provided that all eigenvalues are real and negative).
+where the inequality flips since $\lambda < 0$ (which also implies that $-2 \lambda > 0$). Thus by taking $0 < \epsilon < -2 \lambda$, we can ensure that $\frac{d}{dt} (\frac{1}{2} |y|^2) < 0$ on all non-equlibria solutions, allowing us to use this as a Lyapunov function (as before) and then proceeding with the proof as before. In this manner, we can show that \hyperref[thm:hartman-grobman]{Hartman-Grobman} holds in the case of Jordan blocks as well (provided that all eigenvalues are real and negative).
 
 Although we won't prove the Hartman-Grobman theorem in general, we briefly outline the strategy for doing so. The generalisation of the above to $n \times n$ Jordan blocks is clear (we replace all the off diagonal 1's with $\epsilon$). We can construct very similar arguments for sources by going back in time. For saddles we can decompose our space into a direct sum of sources and sinks (that is we write our total space as the sum of subspaces where solutions approach the equilibria as $t \to \infty$ and solutions that approach the equilibria as $t \to -\infty$) and argue on these subspaces separately. 
 
@@ -93,7 +93,7 @@ Let $x^*$ is an equlibrium point for $x' = f(x)$. Suppose $L: D \to \R$ (where $
 We don't strictly need the fact that $L(x^*) = 0$ and $L(x) > 0$ for $x \neq x^*$; we only need $x^*$ to be a strict local minimum. However, we can always assume this to be the case by shifting $L$ appropriately.
 \end{remark}
 \begin{remark}
-As a fun little fact, $DL(x)(f(x))$ is exactly the push forward of the tangent vector $f(x)$ at $x$ via $L$.
+As a fun little fact, $DL(x)(f(x))$ is exactly the push forward of the tangent vector $f(x)$ at $x$ via $L$. Perhaps someday I will be able to tell you whether this should be painfully obvious or not.
 \end{remark}
 \begin{proof}
 We first show stability. That is given a neighbourhood $U$ of $x^*$, we want to find a neighbourhood $V$ of $x^*$ such that $x \in V$ implies that $\Phi_t(x) \in U$ for all $t \geq 0$.

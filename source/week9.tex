@@ -92,11 +92,11 @@ Having verified the theorem in some ways, we can try proving it.
     as was claimed. Hopefully we can convince ourselves now that the above summation is correct. We can see the desired exponential term appearing (as a Taylor series). Thus if the claim is to hold true then we should find that the final term goes to 0 as we repeatedly apply the inequality. Now we verify that this happens.
     
     Since $g$ is always positive what we find is that
-    $$ \bigg| \int_a^t g(t_1) \dots \int_a^{t_n} g(t_{n+1}) y(t_{n + 1}) dt_{n+1}\dots dt_1 \bigg| \leq \int_a^t g(t_1) \dots \int_a^{t_n} g(t_{n+1}) |y(t_{n + 1})| dt_{n+1}\dots dt_1 $$
+    $$ \bigg| \int_a^t g(t_1) \dots \int_a^{t_n} g(t_{n+1}) y(t_{n + 1}) dt_{n+1}\dots dt_1 \bigg| \leq \int_a^t g(t_1) \dots \int_a^{t_n} g(t_{n+1}) \left|y(t_{n + 1})\right| dt_{n+1}\dots dt_1 $$
     We assumed that $|y(t)| \leq 1$ for all $t \in [a, b]$. Therefore the right hand side above is less than or equal to
     $$\int_a^t g(t_1) \dots \int_a^{t_n} g(t_{n+1}) dt_{n+1}\dots dt_1 $$
     However we already know that this is equal to
-    $$ \frac{1}{n!} \left( \int_a^t g(s)ds \right)^n $$
+    $$ \frac{1}{(n + 1)!} \left( \int_a^t g(s)ds \right)^{n+1} $$
     Clearly this goes to 0 as $n \to \infty$ (it is a term of a convergent infinite series for example). Therefore we conclude that 
     $$y(t) \leq k \exp \left( \int_a^t g(s) ds \right)$$
 \end{proof}
@@ -158,7 +158,7 @@ Suppose $\epsilon_1 = \epsilon_2 = 0$. Then $x_1$ and $x_2$ satisfy the same dif
     \end{align*}
     Using \hyperref[thm:big-gronwall]{Grönwall} then what we conclude is that
     $$ |g(t)| \leq \delta + \epsilon(t - a) + \int_a^t L(\delta + \epsilon(s - a)) e^{L(t - s)} ds $$
-    Computing the right hand side, we find it to be equal to
+    Computing the right hand side\footnote{There's some integration by parts nonsense. If you really want to, feel free to give it a go.}, we find it to be equal to
     $$ \delta e^{L(t - a)} + \frac{\epsilon}{L} (e^{L(t - a)} - 1) $$
     giving us the stated inequality.
 \end{proof}
@@ -255,7 +255,7 @@ We formalise this in the following proposition.
     $$ \lim_{\xi \to 0} \frac{g(t)}{|\xi|} $$
     goes to 0 uniformly since $\epsilon$ was chosen arbitrarily.    
 \end{proof}
-Why is this proposition important? Well, as we've said it is often impossible to solve differential equations explicitly. However, perhaps we can find $x(t)$ for some special $x_0$ (for example, we might be able to find equilibria, which would would correspond to the zeroes of $f$). This means that we can approximate solutions near these special $x_0$ to get at least get some idea of the behaviour. In fact we can compute $\frac{\partial \Phi}{\partial x}$ a bit more explicitly now. Then $y(t)$ and $x(t)$ in the above proposition are simply $\Phi(t, x_0 + \xi)$ and $\Phi(t, x_0)$. We think of $u(t)$ as a function of 2 variables: namely we define $u(t, \xi)$ to be the solution to the variational equation along $x(t)$ (or $\Phi(t, x_0)$) satisfying $u(0, \xi) = \xi$. The linearity principle ensure that $u$ is linear in $\xi$. The definition of the differential of $f$ is the (unique) linear map $A$ that satisfies 
+Why is this proposition important? Well, as we've said it is often impossible to solve differential equations explicitly. However, perhaps we can find $x(t)$ for some special $x_0$ (for example, we might be able to find equilibria, which would would correspond to the zeroes of $f$). This means that we can approximate solutions near these special $x_0$ to get at least get some idea of the behaviour. In fact we can compute $\frac{\partial \Phi}{\partial x}$ a bit more explicitly now. Then $y(t)$ and $x(t)$ in the above proposition are simply $\Phi(t, x_0 + \xi)$ and $\Phi(t, x_0)$. We think of $u(t)$ as a function of 2 variables: namely we define $u(t, \xi)$ to be the solution to the variational equation along $x(t)$ (or $\Phi(t, x_0)$) satisfying $u(0, \xi) = \xi$. The linearity principle (see \autoref{sec:superposition-principle}) ensures that $u$ is linear in $\xi$. The definition of the differential of $f$ is the (unique) linear map $A$ that satisfies 
 $$ \lim_{h \to 0} \frac{|f(x - h) - f(x) - Ah|}{|h|} = 0 $$
 Therefore the map $\xi \mapsto u(t, \xi)$ is the partial derivative of $\Phi(t, x)$ with respect to $x$, which we may also denote $D\Phi_t(x)$. In fact since we have an explicit solution for $u$, we can write
 $$ D \Phi_t(x_0) = e^{\int_0^t Df(x(s)) ds} x_0 $$
@@ -270,4 +270,4 @@ To recap, we have managed to find some formulae and descriptions of the variatio
 
 Suppose the known solution $x(t)$ is an equlibrium point. In other words $x(t) \equiv a$ for some $a$. Then $A(t) = Df(a)$ for all $t$. Hence what we find is that
 $$ u(t) = D\Phi_t(a) = e^{t Df(a)} $$
-Therefore we conclude that in a neighbourhood around equilibria, the flow is approximated by a linear system.
+Therefore we conclude that in a neighbourhood around equilibria, we can approximate the flow using a linear system.

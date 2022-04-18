@@ -35,7 +35,6 @@ A (classical) solution of an ODE $F(t, x(t), \dots, x^{(k)})(t) = 0$ is a functi
 \end{definition}
 Note that not all ODEs can be solved. Consider, for example,
 $$ \bigg|\frac{dy}{dx}\bigg| + |y| + 1 = 0 $$
-
 Now, consider the following non-example. Suppose we are given the ODE
 \begin{equation*}
     x + y \cdot y' = 0
@@ -103,7 +102,7 @@ Let $\tilde{x}(t)$ be any solution to the equation. Our claim is that (\ref*{eq:
     &= 0
 \end{align*}
 
-This example indeed illustrates a general principle for solving ODEs: guess and check. This is to say that it is often easier to guess an answer to an ODE and then verify that their solution works. 
+This example indeed illustrates a general principle for solving ODEs: guess and check. This is to say that it is often easier to guess an answer to an ODE and then verify that this solution works than find one analytically. 
 
 \section{Useful Pictures}
 We've said many times that solving ODEs is a difficult, often impossible, task. We reiterate that here: solving ODEs is a difficult, often impossible, task. However, it is the case that the ODE can give us a lot of information about its solution(s) which we often summarise in various pictorial formats.
@@ -137,7 +136,7 @@ We see that the slopes are all the same along any horizontal line. This is becau
 
 Consider the equation 
 $$ x' = 2x $$
-It is clear that the case with $x = 0$ (horizontal line in \autoref{fig:slope_field_w_solns}) is a special case as this is the only constant solution. In this case we call $0$ an equilibrium equilibrium or steady state or stationary point. Consider what happens we are slightly above $x = 0$. In this case as $t$ goes to infinity (one often thinks of this time evolving), $x(t)$ gets further and further away from 0 (if this is modelling the position of a particle, then this shows that the particle grows further and further from its initial position (and at an increasing pace)). In particular if $x(t)$ it becomes more and more positive and if $x(t)$ is negative, it becomes more and more negative. We often represent this in what is called a phase line or phase portrait.
+It is clear that the case with $x = 0$ (horizontal line in \autoref{fig:slope_field_w_solns}) is a special case as this is the only constant solution. In this case we call $0$ an equilibrium or steady state or stationary point. Consider what happens we are slightly above $x = 0$. In this case as $t$ goes to infinity (one often thinks of this time evolving), $x(t)$ gets further and further away from 0 (if this is modelling the position of a particle, then this shows that the particle grows further and further from its initial position (and at an increasing pace)). In particular if $x(t)$ is positive, it becomes more and more positive and if $x(t)$ is negative, it becomes more and more negative. We often represent this in what is called a phase line or phase portrait.
 
 The fact that solutions near 0 move away from 0 as $t$ increases, means that although 0 is an equilibrium point, it is an unstable one (also called a source, if one imagines this as the flow a fluid). The opposite is of course a stable equilibrium (or sink) where solutions within some neighbourhood of the equilibrium point tend towards the equilibrium. Such a case occurs if we consider \autoref{eq:eg3} for $a < 0$. In this case 0 is again an equilibrium point, but now it is a stable one.
 

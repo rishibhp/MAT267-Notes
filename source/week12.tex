@@ -33,11 +33,25 @@ In order to see how useful this tool is, consider the equation
 where $p(x)$ and $q(x)$ are some continuous functions. 
 Clearly if $f, g$ are linearly dependent functions that $W(f, g) = 0$. However the converse also holds to some extent: if $f, g$ are linearly independent solutions to \autoref{eq:second-order-normal} then $W(f, g)$ is never 0. This fact allows for an easy proof of the following theorems.
 
+\begin{lemma}
+Suppose $f, g$ are linearly independent solutions to \autoref{eq:second-order-normal} then $W(f, g)$ is never 0.
+\end{lemma}
+\begin{proof}
+If we write \autoref{eq:second-order-normal} as a linear system of first order equations, we get
+\begin{align*}
+    \matrix{u(x) \\ v(x)}' = \matrix{0 & 1\\-q(x) & -p(x)} \matrix{u(x) \\ v(x)}
+\end{align*}
+If $f$ and $g$ are linearly independent solutions to \autoref{eq:second-order-normal}, then they are linearly independent solutions to the first-order system above as well (to be precise $u(x) = f(x), v(x) = f'(x)$ and $u(x) = g(x), v(x) = g'(x)$ form the pair of linearly independent solutions).
+This exactly means that
+$$ \matrix{f(x)\\f'(x)}, \matrix{g(x) \\ g'(x)} $$
+are linearly independent for all $x$ which in turn is equivalent to saying that the determinant above is never zero.
+\end{proof}
+
 \begin{theorem}[Sturm Separation Theorem]
 Suppose $f, g$ are linearly independent solutions to \eqref{eq:second-order-normal}. Then $f$ must vanish between any two successive zeroes of $g$. In other words the zeroes of $f$ and $g$ occur alternately.
 \end{theorem}
 \begin{proof}
-Let $a, b$ be 2 successive zeroes of $g$ with $a < b$. Suppose $g > 0$ on $(a, b)$. Then $g'(a) > 0$ and $g'(b) > 0$ (in principal we only have $g'(a) \geq 0$ rather than have the strict inequality. However if $g'(a) = 0$ then $W(f, g)(a) = 0$ which we know cannot happen. The same is true for $g'(b)$). Note that $W(f, g)(a) = f(a) g'(a)$ and $W(f, g)(b) = f(b) g'(b)$. Since $W(f, g)$ never vanishes, it must maintain its sign. Since $g'(a)$ and $g'(b)$ have opposing signs, the same must be true for $f(a)$ and $f(b)$. Then the Intermediate Value Theorem implies that $f$ is 0 somewhere on $(a, b)$ as desired. A symmetric argument holds if $g < 0$ on $(a, b)$.
+Let $a, b$ be 2 successive zeroes of $g$ with $a < b$. Suppose $g > 0$ on $(a, b)$. Then $g'(a) > 0$ and $g'(b) < 0$ (in principal we only have $g'(a) \geq 0$ rather than have the strict inequality. However if $g'(a) = 0$ then $W(f, g)(a) = 0$ which we know cannot happen. The same is true for $g'(b)$). Note that $W(f, g)(a) = f(a) g'(a)$ and $W(f, g)(b) = f(b) g'(b)$. Since $W(f, g)$ never vanishes, it must maintain its sign. Since $g'(a)$ and $g'(b)$ have opposing signs, the same must be true for $f(a)$ and $f(b)$. Then the Intermediate Value Theorem implies that $f$ is 0 somewhere on $(a, b)$ as desired. A symmetric argument holds if $g < 0$ on $(a, b)$.
 \end{proof}
 \begin{remark}
 By noting that $\sin (kx)$ and $\cos (kx)$ are linearly independent solutions to $u'' + k^2 u = 0$, we find that their zeroes alternate (as we know them to).
@@ -94,7 +108,7 @@ We see that $z(t)$ has a closed orbit so, in fact, we get $\omega(z) = \alpha(z)
     \caption{Example of limit sets, assume $p, q, a$ are equilibria}
     \label{fig:limit-set-eg1}
 \end{figure}
-Finally \autoref{fig:limit-set-eg2} highlights another case that may occur with $\omega(w) = \left\{x(t): t \in \R \right\} \cup \left\{y(t): t \in \R \right\}$ and $\alpha(w) = \left\{a\right\}$. Roughly speaking, these examples illustrate what all limit sets in the plane look like.
+Finally \autoref{fig:limit-set-eg2} highlights another case that may occur with $\omega(w) = \left\{x(t): t \in \R \right\} \cup \left\{y(t): t \in \R \right\} \cup \{p, q\}$ and $\alpha(w) = \left\{a\right\}$. Roughly speaking, these examples illustrate what all bounded limit sets in the plane look like.
 
 \begin{figure}[h]
     \centering
@@ -106,12 +120,22 @@ Finally \autoref{fig:limit-set-eg2} highlights another case that may occur with 
 
 Limit sets have some nice properties as well. 
 \begin{proposition}\label{prop:omega-properties}
-Suppose $x(t)$ be a bounded solution to $x' = f(x)$ and let $\omega(x)$ denote the $\omega$-limit set of $x$. If $y \in \omega(x)$, then $y(\R) \subset \omega(x)$. Moreover $\omega(x)$ is connected.
+Suppose $x(t)$ be a bounded solution to $x' = f(x)$ and let $\omega(x)$ denote the $\omega$-limit set of $x$. Then $\omega(x)$ is always closed and if $y \in \omega(x)$, then $y(\R) \subset \omega(x)$. Moreover $\omega(x)$ is connected.
 \end{proposition}
-\begin{remark}
-The above properties are also held by $\alpha$-limit sets. This can be verified by tweaking the proofs below where appropriate (in the obvious manner) or realising that $\alpha(x)$ is the $\omega-$limit set of the solution to $x' = -f(x)$.
-\end{remark}
 \begin{proof}
+We show $\omega(x)$ is closed by showing it contains its limits points (where by limit points, we mean the topological notion). Let $y_n$ be a sequence in $\omega(x)$ that converges to some $y$. We want to show that $y \in \omega(x)$. The procedure will be exactly what you expect: since the $y_n$ converge to $y$, they come arbitrarily close to $y$ and since each $y_n$ is a $\omega$ limit point, the solution through $x$ also gets arbitrarily close to them. By combining these two facts (perhaps you can already see the triangle inequality lurking around the corner), we can find a sequence of points in $x$ that converges to $y$. All that remains is to translate this into precise mathematics.
+
+By definition of limit sets, for every $n$, there exists a sequence $(t_{k, n})_{k \in \N}$ such that
+$$ \lim_{k \to \infty} x(t_{k, n}) = y_n $$
+
+For each $n \in \N$, define $l_n$ be such that $\left|y_n - x(t_{k, n})\right| < \frac{1}{n}$ for all $k \geq l_n$. We then define $s_n = t_{l_n, n}$. In particular this means that
+$$ \left|y_n - x(s_n)\right| < \frac{1}{n} $$
+Let $\epsilon > 0$ be given. We find $n_0$ such that for all $n \geq n_0$ we have $\left| y - y_n \right| < \frac{\epsilon}{2}$. Then for $n \geq n_0$, we get
+\begin{align*}
+    \left| y - x(s_n) \right| \leq \left| y - y_n \right| + \left| y_n - x(s_n) \right| < \frac{\epsilon}{2} + \frac{1}{n}
+\end{align*}
+Thus by taking $n$ to be larger than $n_0$ and $\frac{2}{\epsilon}$, we get $\left| y - x(s_n) \right| < \epsilon$.\\
+
 Suppose $y \in \omega(x)$ and let $t \in \R$ be arbitrary. Then there exists an increasing $t_j$ to infinity such that $\lim_{j \to \infty} x(t_j) = y$. Then
 $$ \Phi_t(y) = \lim_{j \to \infty} \Phi_t(x(t_j)) = \lim_{j \to \infty} x(t_j + t) $$
 where the final term is an element of $\omega(x)$ by definition.
@@ -127,10 +151,13 @@ We can prove this using the second definition of $\omega(x)$ as well.
 
 Recall that a closed set $C \subset \R^n$ is connected if for any partition $C = C_1 \cup C_2$ where $C_1, C_2$ are closed with $C_1 \cap C_2 \neq \emptyset$ we have that $C_1 = \emptyset$ or $C_2 = \emptyset$.
 
-Now suppose $\omega(x)$ is not connected. Let $C_1, C_2$ form a partition of $\omega(x)$. In other words $C_1, C_2$ are both disjoint, non-empty closed sets whose union is equal to $\omega(x)$. Let $y_1 \in C_1$ and $y_2 \in C_2$. Note that $C_1$ and $C_2$ are bounded as well and are thus compact. Thus there exists $m > 0$ such that $|z_1 - z_2| \geq m$ for all $z_1, z2 \in C_1, C_2$ respectively. By definition of $\omega(x)$, we know there exist increasing sequences $s_j$ and $t_j$ such that $\lim_{j \to \infty} x(s_j) = y_1$ and $\lim_{j \to \infty} x(t_j) = y_2$.  Without loss of generality we can assume that $s_j < t_j$ for all $j$. Consider the construction of the sequences in \autoref{prop:omega-equiv-def}. We first construct the $s_j$, then when constructing the second sequence, we just always ensure to choose $t_j$ to be larger than $s_j$.
+Now suppose $\omega(x)$ is not connected. Let $C_1, C_2$ form a partition of $\omega(x)$. In other words $C_1, C_2$ are both disjoint, non-empty closed sets whose union is equal to $\omega(x)$. Let $y_1 \in C_1$ and $y_2 \in C_2$. Note that $C_1$ and $C_2$ are bounded as well and are thus compact. Thus there exists $m > 0$ such that $\left| z_1 - z_2 \right| \geq m$ for all $z_1, z2 \in C_1, C_2$ respectively. By definition of $\omega(x)$, we know there exist increasing sequences $s_j$ and $t_j$ such that $\lim_{j \to \infty} x(s_j) = y_1$ and $\lim_{j \to \infty} x(t_j) = y_2$.  Without loss of generality we can assume that $s_j < t_j$ for all $j$. Consider the construction of the sequences in \autoref{prop:omega-equiv-def}. We first construct the $s_j$, then when constructing the second sequence, we just always ensure to choose $t_j$ to be larger than $s_j$.
 
 Consider the map on $[s_j, t_j]$ (for every $j$) where we map $r$ in this open interval to $d(x(r), C_1)$ (note that this distance function is well-defined since $C_1$ is closed and even compact). We see that $d(x(s_j), C_1) = 0$ and $d(x(t_j), C_1) \geq m$. Thus my the Intermediate Value Theorem, there exists some $r_j \in (s_j, t_j)$ such that $d(x(r_j), C_1) \geq \frac{m}{2}$. Similarly, we can argue that $r_j$ are such that $d(x(r_j), C_2) \geq \frac{m}{2}$ (in fact there needs to be a slight argument for why we can pick the same $r_j$ to satisfy both inequalities. It's not a terribly difficult argument but is besides the point. Quite frankly all we need is that $x(r_j)$ is some positive distance from both $C_1$ and $C_2$ and clearly this can be done). We now have another increasing sequence $r_j$ so we must have $p := \lim_{j \to \infty} x(r_j) \in \omega(x)$ (if the limit does not exist, we can always pass to a convergent subsequence by sequential compactness). But $p$ cannot be in either of $C_1$ or $C_2$ since it is a positive distance away from both (follows from the fact that the map defined above on $[s_j, t_j]$ is actually continuous). This contradicts $\omega(x) = C_1 \cup C_2$.
 \end{proof}
+\begin{remark}
+The above properties are also held by $\alpha$-limit sets. This can be verified by tweaking the proofs where appropriate (in the obvious manner) or realising that $\alpha(x) = \omega(y)$ where $y = x(-t)$ (i.e. going back in time) is a solution to $y' = -f(y)$.
+\end{remark}
 
 \subsection{Poincaré-Bendixson Theorem}
 

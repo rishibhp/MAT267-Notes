@@ -86,7 +86,7 @@ Let $f$ denote the limit of the $f_n$. We first show uniform boundedness. Since 
 
 The idea is that eventually all the $f_n$ are going to be quite close to $f$ therefore we should able to bound (bind?) all but finitely many of them with $M_0$ (or something close to it at least). Then we are only left with finitely many bounds so the maximum of all of these should bound all the $f_n$. Let us formalise this.
 
-Let $N$ be such that for all $n \geq N$ we have that $\norm{f - f_n}_{\infty} < 1$ (this is equivalent to saying that $|f(x) - f_n(x)| < 1$ for all $x \in E$). The existence of such an $N$ is guaranteed by uniform continuity. Let $M = \max\{M_0 + 1, M_1, \dots, M_{N}\}$. We claim that $M$ is a bound for all the $f_n$. Clearly this holds true for $n \leq N$. Suppose $n > N$. Then
+Let $N$ be such that for all $n \geq N$ we have that $\norm{f - f_n}_{\infty} < 1$ (this is equivalent to saying that $|f(x) - f_n(x)| < 1$ for all $x \in E$). The existence of such an $N$ is guaranteed by uniform convergence. Let $M = \max\{M_0 + 1, M_1, \dots, M_{N}\}$. We claim that $M$ is a bound for all the $f_n$. Clearly this holds true for $n \leq N$. Suppose $n > N$. Then
 $$ \norm{f_n}_{\infty} \leq \norm{f_n - f}_{\infty} + \norm{f}_{\infty} < 1 + M_0 $$
 Thus the $f_n$ are uniformly bounded.
 
