@@ -79,22 +79,22 @@ $$ \norm{f}_\infty = \sup_{x \in E} |f(x)| $$
 The space of continuous functions on $[0, 1]$ is often denoted $C([0, 1])$. We claim that that $C([0, 1])$ equipped with $\norm{\cdot}_{\infty}$ is a complete metric space. This is exactly the statement that the uniform convergence of a sequence of continuous functions is also continuous.
 
 \begin{theorem}
-    Suppose $f_n: E \to \R^n$  is a sequence of continuous maps. If $E$ is compact and and the $\{f_n\}$ converge uniformly, then the $\{f_n\}$ are uniformly bounded and equicontinuous.
+    Suppose $f_n: E \to \R^n$  is a sequence of continuous maps. If $E$ is compact and the $\{f_n\}$ converge uniformly, then the $\{f_n\}$ are uniformly bounded and equicontinuous.
 \end{theorem}
 \begin{proof}
-Let $f$ denote the limit of the $f_n$. We first show uniform boundedness. Since each $f_n$ is continuous and $E$ is compact, we know there exists some constant $M_n$ such that $|f_n(x)| \leq M_n$ (indeed we can take $M_n$ to be $\norm{f_n}_{\infty}$). Since $f$ is also continuous, it is also going to be bounded by some $M_0$.
+Let $f$ denote the limit of the $f_n$. We first show uniform boundedness. Since each $f_n$ is continuous and $E$ is compact, we know there exists some constant $M_n$ such that $\left|f_n(x)\right| \leq M_n$ (indeed we can take $M_n$ to be $\norm{f_n}_{\infty}$). Since $f$ is also continuous, it is also going to be bounded by some $M_0$.
 
 The idea is that eventually all the $f_n$ are going to be quite close to $f$ therefore we should able to bound (bind?) all but finitely many of them with $M_0$ (or something close to it at least). Then we are only left with finitely many bounds so the maximum of all of these should bound all the $f_n$. Let us formalise this.
 
-Let $N$ be such that for all $n \geq N$ we have that $\norm{f - f_n}_{\infty} < 1$ (this is equivalent to saying that $|f(x) - f_n(x)| < 1$ for all $x \in E$). The existence of such an $N$ is guaranteed by uniform convergence. Let $M = \max\{M_0 + 1, M_1, \dots, M_{N}\}$. We claim that $M$ is a bound for all the $f_n$. Clearly this holds true for $n \leq N$. Suppose $n > N$. Then
+Let $N$ be such that for all $n \geq N$ we have that $\norm{f - f_n}_{\infty} < 1$ (this is equivalent to saying that $\left|f(x) - f_n(x)\right| < 1$ for all $x \in E$). The existence of such an $N$ is guaranteed by uniform convergence. Let $M = \max\{M_0 + 1, M_1, \dots, M_{N}\}$. We claim that $M$ is a bound for all the $f_n$. Clearly this holds true for $n \leq N$. Suppose $n > N$. Then
 $$ \norm{f_n}_{\infty} \leq \norm{f_n - f}_{\infty} + \norm{f}_{\infty} < 1 + M_0 $$
 Thus the $f_n$ are uniformly bounded.
 
 For equicontinuity, we again use the fact that we can use $f$ to approximate all but finitely many of the $f_n$. In particular, we see that
 \begin{align*}
-    |f_n(x) - f_n(y)| \leq |f_n(x) - f(x)| + |f(x) - f(y)| + |f_n(y) - f(y)|
+    \left|f_n(x) - f_n(y)\right| \leq \left|f_n(x) - f(x)\right| + \left|f(x) - f(y)\right| + \left|f_n(y) - f(y)\right|
 \end{align*}
-Suppose $\epsilon > 0$ is given. Then there exists some $N \in \N$ such that $\norm{f - f_n}_{\infty} < \epsilon$ for $n \geq N$. Additionally since $f$ is continuous on a compact space, it is in particular uniformly continuous. Thus there exists a $\delta_0$ such that if $|x - y| < \delta_0$ then $|f(x) - f(y)| < \epsilon$. Additionally, each of the $f_n$ are uniformly continuous as well, thus there exist similar $\delta_n$ for each of them as well. It is then easy to see that the $\delta$ we need is $\delta = \min\{\delta_0, \delta_1, \dots, \delta_n\}$.
+Suppose $\epsilon > 0$ is given. Then there exists some $N \in \N$ such that $\norm{f - f_n}_{\infty} < \epsilon$ for $n \geq N$. Additionally since $f$ is continuous on a compact space, it is in particular uniformly continuous. Thus there exists a $\delta_0$ such that if $\left|x - y\right| < \delta_0$ then $\left|f(x) - f(y)\right| < \epsilon$. Additionally, each of the $f_n$ are uniformly continuous as well, thus there exist similar $\delta_n$ for each of them as well. It is then easy to see that the $\delta$ we need is $\delta = \min\{\delta_0, \delta_1, \dots, \delta_n\}$.
 \end{proof}
 
 We then get to the Ascoli-Arzelà theorem.
@@ -105,7 +105,7 @@ We then get to the Ascoli-Arzelà theorem.
 You can see my notes \href{http://individual.utoronto.ca/rishibhp/notes/ascoli_arzela_thm.pdf}{here} or open any functional analysis textbook (I think).
 \end{proof}
 
-Recall that we say a set $A$ is relatively compact if its closure is compact which (for metric spaces)\footnote{For a similar statement in general topological spaces, change the word sequence to net, see \href{https://en.wikipedia.org/wiki/Net_(mathematics)}{Wikipedia}} is the same as saying every sequence in $A$ has a convergent subsequence (although the limit may not be in $A$ itself). We then have the following theorem
+Recall that we say a set $A$ is relatively compact if its closure is compact which (for metric spaces) is the same as saying every sequence in $A$ has a convergent subsequence (although the limit may not be in $A$ itself).\footnote{For a similar statement in general topological spaces, change the word sequence to net, see \href{https://en.wikipedia.org/wiki/Net_(mathematics)}{Wikipedia}} We then have the following theorem
 \begin{theorem}\label{thm:rel-compact-equiv}
     Let $A \subset C(K, \R^m)$ (this is the set of continuous functions from $K$ to $\R^m$) where $K \subset \R^n$ is compact. Then $A$ is relatively compact if and only if it is uniformly bounded and equicontinuous.
 \end{theorem}
@@ -115,7 +115,7 @@ Once again, my notes above or any functional analysis textbook should work.
 
 We also need consider how we may extend functions defined on a subset to be defined on the whole space.
 \begin{theorem}\label{thm:cont-ext}
-    Let $f: \ol{B(0, r)} \to \R^m$ (where $B(0, r) \subset \R^n$) be continuous. The $\ol{f}: \R^n \to \R^m$, where
+    Let $f: \ol{B(0, r)} \to \R^m$ (where $B(0, r) \subset \R^n$) be continuous. Then $\ol{f}: \R^n \to \R^m$, where
     \begin{align*}
         \ol{f}(x) = 
         \begin{cases}
