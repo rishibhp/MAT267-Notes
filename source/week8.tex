@@ -115,7 +115,7 @@ Another important point is that we are not assuming $f$ to be continuous, so we 
     By assumption, $\Phi(y) \to \infty$ as $y \to 0$ (recall this was one of the properties of $\varphi$). Additionally $\Phi(z_1) = 0$ so $\Phi: (0, z_1] \to [0, \infty)$. Since
     $\Phi' = -\frac{1}{\varphi}$, we can conclude that $\Phi$ is decreasing. This mean that $\Phi$ is in particular invertible, allowing us to write
     $$ v(x) = \Phi^{-1}(2(x_1 - x)) $$
-    The domain of $\Phi^{-1}$ is $[0, \infty)$ thus the above formula is define whenever $x_1 - x > 0$ or in other words when $x < x_0$. 
+    The domain of $\Phi^{-1}$ is $[0, \infty)$ thus the above formula is define whenever $x_1 - x > 0$ or in other words when $x < x_1$. 
     
     Clearly $v$ is increasing (there are 2 ways of seeing this: for one it is the composition of two decreasing maps and secondly, we can look at the IVP defining it and use the fact that $\varphi$ is positive on non-zero values). Additionally, since $\Phi^{-1}$ takes values in $(0, z_1]$, $v$ must also be positive. As discussed previously, this implies that the graphs of $v$ and $z$ intersect (at least) twice: once at $z_1$ and once prior, leading to the desired contradiction.
 \end{proof}
@@ -196,7 +196,7 @@ Suppose $D \subset \R^n$ is open and connected and $f: D \to \R^n$ is a locally 
     \end{align*}
     has a unique solution on $I_{max}$ and
     \item if $\ol{T} < \infty$ then
-    $$ \lim_{t \to \ol{T}} |x(t)| + \frac{1}{d(x(t), \partial D)} $$
+    $$ \lim_{t \to \ol{T}} |x(t)| + \frac{1}{d(x(t), \partial D)} = \infty $$
 \end{enumerate}
 \end{theorem}
 \begin{proof}

@@ -43,7 +43,7 @@ Then $f(x, y) = (x + y^2, -y)$. Clearly we have only one equilibrium point, whic
 $$ \matrix{x\\y}' = \underbrace{\matrix{1 & 0\\0 & -1}}_A \matrix{x\\y} $$
 Without any further work, we can conclude that the linearised system is unstable and has a saddle. Note that if $y$ is small, then $y^2$ would be even smaller. Thus we would expect the non-linear system to look quite similar to its linearisation around the origin.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[scale=0.17]{Images/linearisation_eg1.png}
     \caption{Phase portrait of linearised system, \href{https://www.desmos.com/calculator/jqmz5jddc4}{source}}
@@ -65,7 +65,7 @@ thus
 $$ x(t) = \left( x_0 + \frac{y_0^2}{3}  \right)e^{t}  -\frac{y_0^2}{3} e^{-2t}$$
 (the coefficient of $e^t$ is of that form so that $x(0) = x_0$). Plotting this we get the phase portrait in \autoref{fig:nonlinear-eg1}.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[scale=0.17]{Images/nonlinear_eg1.png}
     \caption{Phase portrait of non-linear system,  \href{https://www.desmos.com/calculator/hda60sxrdf}{source}}
@@ -156,7 +156,8 @@ for all $j$.
     In order to see why the above definition of instability is equivalent to the negation consider the following argument: if an equilibrium point is not stable then there is some $\epsilon > 0$ such that for all $\delta > 0$ we have some $x$ such that $\left| x - a \right| < \delta$ and $\sup_{t \geq 0} \left| \Phi_t(x_j) - a \right| \geq \epsilon$. Taking the $x_j$ to be the corresponding $x$ for $\delta = \frac{1}{j}$ we get the desired sequence.
 \end{remark}
 \begin{definition}
-An equilibrium point $a$ is said to be asymptotically stable (or attractive) if $a$ is stable and there is some $\delta > 0$ such that $$\lim_{t \to \infty} \left| \Phi_t(x) - a \right| = 0$$
+An equilibrium point $a$ is said to be asymptotically stable (or attractive) if $a$ is stable and there is some $\delta > 0$ such that 
+$$\lim_{t \to \infty} \left| \Phi_t(x) - a \right| = 0$$
 for all $\left| x - a \right| < \delta$.
 \end{definition}
 \begin{remark}

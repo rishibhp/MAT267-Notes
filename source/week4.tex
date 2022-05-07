@@ -1,4 +1,4 @@
-\section{Canonical Forms and Genericity}
+\section{Canonical Forms and Genericity}\label{sec:canonical-form-and-generiticity}
 
 \begin{definition}[Hyperbolicity]
     The origin is called a hyperbolic equilibrium for the ODE $X' = AX$ if all eigenvalues of $A$ have non-zero real part. 
@@ -35,7 +35,7 @@ The Jordan Canonical form allows to perform a change of basis to write every mat
 & & &\lambda_i
 \end{pmatrix}
 \end{align*}
-where each $J_i$ is an $l_i \times l_i$ matrix. The $J_i$'s are called Jordan blocks. Note that a diagonal matrix is a special case of the above form where each Jordan block is $1 \times 1$.
+where each $J_i$ is an $l_i \times l_i$ matrix. The $J_i$'s are called Jordan blocks. A diagonal matrix is a special case of the above form where each Jordan block is $1 \times 1$.
 \begin{remark}
 The same eigenvalue could appear in different Jordan block. The total number of times that $\lambda$ appears in $C$ (along the diagonal of course) is exactly the algebraic multiplicity of $\lambda$.
 \end{remark}
@@ -74,11 +74,11 @@ Suppose we know that a $5 \times 5$ matrix has an eigenvalue $\lambda$ that has 
     & & & & \lambda
     \end{pmatrix}
 \end{align*}
-The question then is how do we know which of the Jordan blocks we have? This takes a bit more work.\\
+The question then is how do we know which of the Jordan blocks we have? This takes a bit more work.
 
 Note that any Jordan block of size $l$ can be written as
 $$ J = \lambda I + N $$
-where $N$ is a nilpotent matrix (this means that $N^l = 0$ but $N^{l - 1} \neq 0$). As a consequece then we can distinguish which of the canonical forms by looking at the kernel of $(A - \lambda)$ raised to various power. To be specific, $\dim \ker((A - \lambda I)^{m})$ is the number of Jordan blocks of size less than or equal to $m$. In first case given above, we see that $\dim \ker(A - \lambda) = 1$. This is enough to characterise this matrix completely since this is the only way to a $5 \times 5$ Jordan block with one eigenvector. However for the middle two examples, we see that $\dim \ker (A - \lambda I) = 2$ for both of them (they both have two eigenvectors). We then try the next power: $\dim \ker(A - \lambda I)^2$ is 3 for the first matrix (second in row) and 4 for the other matrix (third in row).
+where $N$ is a nilpotent matrix (this means that $N^l = 0$ but $N^{l - 1} \neq 0$). As a consequece then we can distinguish which of the canonical forms by looking at the kernel of $(A - \lambda)$ raised to various power. To be specific, $\dim \ker((A - \lambda I)^{m})$ is the number of Jordan blocks of size less than or equal to $m$. In first case given above, we see that $\dim \ker(A - \lambda) = 1$. This is enough to characterise this matrix completely since this is the only way to a $5 \times 5$ Jordan block with one eigenvector. However for the middle two examples, we see that $\dim \ker (A - \lambda I) = 2$ for both of them (they both have two eigenvectors). We then try the next power: $\dim \ker(A - \lambda I)^2$ is 3 for the first matrix (second matrix in the list) and 4 for the other matrix (third in the list).
 
 \subsection{Solving Jordan Blocks}
 The question now boils down to how to solve a system of the form $Y' = CY$ where $C$ is in canonical form and possibly complex. One thing to note is that Jordan decomposition allows us to break the space into invariant subspaces (that is after all one of the motivations for the decomposition). What this means is that solutions for the Jordan blocks can be found independently and `stacked' up together (think of the analogy with diagonal matrices where we get $n$ distict equations that can be solved independenly and when combined give us a solution to the entire system). Thus we we only need solutions to $Y' = JY$ where the matrix $J$ is of the form
@@ -111,8 +111,8 @@ Since $z_n' = 0$, we know that $z_n(t) = c_n$ where $c_n$ is some arbitrary cons
 
 \section{Matrix Exponentials}
 There is a second method of reaching the same answer with a bit less work (or rather with most of the work swept under the rugs of past theorems and lemmas). We claim that a (in fact the) solution to $Y' = (\lambda I + N)Y$ (where $N$ is nilpotent) with $Y(0)=  y_0$ is given by
-$$e^{\lambda I  + N}y_0 = e^\lambda t \sum_{k = 0}^{\infty} \frac{t^k}{k!} N^k y_0$$
-Normally we would have to worry about convergence of infinite series, however since $N$ is nilpotent the above series is finite. Once again we have a product of $e^\lambda t$ with some polynomial in $t$ as we did before (the coefficents come from $y_0$). This might lead one to conjecture that the general solution to $X' = AX$ for \textit{any} $A$ is given by
+$$e^{\lambda I  + N}y_0 = e^{\lambda t} \sum_{k = 0}^{\infty} \frac{t^k}{k!} N^k y_0$$
+Normally we would have to worry about convergence of infinite series, however since $N$ is nilpotent the above series is finite. Once again we have a product of $e^{\lambda t}$ with some polynomial in $t$ as we did before (the coefficents come from $y_0$). This might lead one to conjecture that the general solution to $X' = AX$ for \textit{any} $A$ is given by
 $$e^{tA}$$
 where once again we are more or less using the exponential notation as shorthand for its Taylor expansion. We first need to ensure that this actually makes sense, that is we really do have convergence. We first need a norm. It is a fact that in finite dimensions that all norms (and also all inner products) are equivalent (any norm can be bounded by a multiple of another norm and similarly with inner products). Thus we can quite frankly choose any norm we want. We will choose one that is quite common in this setting, called the operation norm which is defined as
 $$ \norm{A} := \sup_{\norm{v} \leq 1} \norm{Av} = \sup_{v \in \R^n, v\neq 0} \frac{|Av|}{|v|} $$
@@ -121,7 +121,7 @@ We may equivalently define it as the largest singular value of $A$ (in the appro
 By definition we have the fact that $\norm{A} \leq \norm{A} \norm{v}$. This leads to the lovely fact that $\norm{AB} \leq \norm{A} \norm{B}$ since
 $$ \norm{AB} = \sup_{\norm{v} \leq 1} \norm{ABv} \leq \norm{A} \sup_{\norm{v} \leq 1} \norm{Bv} \leq \norm{A} \norm{B} $$
 \begin{remark}
-$\R^{n \times n}$ with this norm is called a Banach algebra.
+$\R^{n \times n}$ with this norm forms a Banach algebra.
 \end{remark}
 
 \begin{proposition}
@@ -134,13 +134,13 @@ We need to show that
 $$ \sum_{k = 0}^{\infty} \norm{ \frac{t^k}{k!} A^k } $$
 is finite. With our previous statement this is easy to see, since
 \begin{align*}
-    \sum_{k = 0}^{\infty} \norm{ \frac{t^k}{k!} A^k } &= \sum_{k = 0}^{\infty} \frac{|t|^k}{k!} \norm{A^k}\\
-    &= \sum_{k = 0}^{\infty} \frac{|t|^k}{k!} \norm{A}^k\\
+    \sum_{k = 0}^{\infty} \norm{ \frac{t^k}{k!} A^k } &\leq \sum_{k = 0}^{\infty} \frac{|t|^k}{k!} \norm{A^k}\\
+    &\leq \sum_{k = 0}^{\infty} \frac{|t|^k}{k!} \norm{A}^k\\
     &= e^{|t| \norm{A}}
 \end{align*}
 \end{proof}
 
-We also have the following lovely statements about matrix exponentials. Note that the first property is often called the semigroup property and the latter property is an if and only if.
+We also have the following lovely statements about matrix exponentials. The first property is often called the semigroup property and the latter property is an if and only if.
 \begin{lemma} Let $s, t \in \R$ and $A, B \in \R^{n \times n}$. Then
 \begin{enumerate}
     \item $e^{(t + s)A} = e^{tA} e^{sA}$
@@ -179,4 +179,4 @@ Much like the exponential function with real numbers, matrix exponentiation give
     &= (-A e^{-tA} Z(t) + e^{-tA} AZ(t))x_0\\
     &= 0
 \end{align*}
-(we use the fact that $A$ commutes with its exponential). Therefore $W(t)$ is a constant $x_0$. Since $Z(0) = e^{0A} x_0 = x_0$, $Z$ and $X$ agree everywhere and we are done.
+(we use the fact that $A$ commutes with its exponential). Therefore $W(t)$ is constant. Since $Z(0) = e^{0A} x_0 = x_0$, $Z$ and $X$ agree everywhere and we are done.

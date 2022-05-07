@@ -1,32 +1,35 @@
 \section{Linear System of ODEs}
+Now instead of looking at ODEs with real-valued solutions, we look at ODEs with vector-valued solutions. We often think of this as a \textit{system} of first-order ODEs. As before, the simplest (and arguably most important) case will be the linear one. 
 
 A differential equation of the form
 $$ X' = A(t) X + f(t) $$
-where $A(t)$ is an $n \times n$ matrix and $f$ is a map from an interval $I \subset \R$ to $\R^n$ is known as a linear system of ODEs. $A(t)$ is called the matrix of coefficients (its entires being the coefficients) and the function $f$ is called the inhomogeneity. If $f = 0$ then the equation is called homogeneous and if $A(t)$ is a constant matrix then we have what is called a constant coefficient ODE. As usual, if $X' = F(X)$ for some $F$, then all $X_0$ that satisfy $F(X_0) = 0$ are called equilibrium points of a system (in the case of a linear system, $F(X) = A(t) X + f(t)$, but this statement applies more generally). 
+where $A(t)$ is an $n \times n$ matrix that may vary with $t$ and $f$ is a map from an interval $I \subset \R$ to $\R^n$ is known as a linear system of ODEs. $A(t)$ is called the matrix of coefficients (its entires being the coefficients) and the function $f$ is called the inhomogeneity. If $f = 0$ then the equation is called homogeneous and if $A(t)$ is a constant matrix then we have what is called a constant coefficient ODE. As usual, if $X' = F(X)$ for some $F$, then all $X_0$ that satisfy $F(X_0) = 0$ are called equilibrium points of a system (in the case of a linear system, $F(X) = A(t) X + f(t)$, but the definition applies more generally). 
 
-We will start by considering the simplest case of a linear system: a homogeneous, constant coefficient ODE (as we will see solving a homogeneous ODE allows us to solve the general system, see \autoref{sec:superposition-principle}). In this case $X_0 = 0$ is always a equilibrium point. If $\det(A) = 0$ then we have a space of equilibrium. Reducing further to case of $A$ being $2 \times 2$, if $\det(A) = 0$ we have a straight line of equilibrium points in $\R^2$ (we of course ignore the uninteresting case of $A = 0$).\\
+We will start by considering the simplest case of a linear system: a homogeneous, constant coefficient ODE (as we will see solving a homogeneous ODE allows us to solve the general system, see \autoref{sec:superposition-principle}). That is we are considering equations of the form
+$$X' = AX$$
+where $A$ is an $n \times n$ matrix. In such cases $X = 0$ is always a equilibrium point. If $\det(A) = 0$ then we have a linear subspace of equilibria. Reducing further to case of $A$ being $2 \times 2$, if $\det(A) = 0$ we have a straight line of equilibrium points in $\R^2$ (we of course ignore the uninteresting case of $A = 0$).\\
 
 As mentioned, we will start by simply considering the case in $\R^2$. In other words our differential equation is of the form
 \begin{equation}\label{eq:hom-lin-eqn}
     \matrix{x \\ y}' = \underbrace{\matrix{a & b\\c & d}}_{A} \matrix{x \\ y} = \matrix{ax + by \\ cx + dy}
 \end{equation}
-The system would be easy to solve if $b = 0$ and $c = 0$ as we would left with equations of the form $x' = ax$ and $y' = dy$ which already know how to solve. This occurs if $A$ is a diagonal matrix. If $A$ is diagonalizable, then we can change our coordinates to make $A$ diagonal and solve the system. In either case, we more or less get $x = x_0 e^{at}$ and $y = y_0 e^{dt}$ as our general solutions. Moreover, in the one-dimensional, case the system would would look like $x' = ax$, which again has the solution $x(t) = x_0 e^{at}$. This might inspire us to define the answer for the $2 \times 2$ case (and the general case) to be
-$$ X(t) = e^{At} $$
-Despite the nonsense that this looks, there is a way of interpreting what it means to ``exponentiate a matrix", using the Taylor expansion of $e^x$. In other words, we define
+The system would be easy to solve if $b = 0$ and $c = 0$ as we would left with equations of the form $x' = ax$ and $y' = dy$ which already know how to solve. This occurs if $A$ is a diagonal matrix. If $A$ is diagonalizable, then we can change our coordinates to make $A$ diagonal and solve the system. In either case, we more or less get $x = x_0 e^{at}$ and $y = y_0 e^{dt}$ as our general solutions. Moreover, in the one-dimensional case the homogeneous linear system would would simply be $x' = ax$, which again has the solution $x(t) = x_0 e^{at}$. This might inspire us to define the answer for the $2 \times 2$ case (and the general case) to be
+$$ X(t) = e^{At} X_0 $$
+Despite the nonsense that this looks like, there is a way of interpreting what it means to ``exponentiate a matrix"; we use the Taylor expansion of $e^x$. In other words, we define
 $$ e^{At} := \sum_{k = 0}^{\infty} \frac{t^k}{k!} A^k = I + tA + \frac{t^2}{2}A^2 + \frac{t^3}{3!} A^3 + \dots $$
 Of course this is an infinite series so we need to decided whether it converges or not (and what convergence even means in this case), but at least each of the terms in the series makes sense.
 
 As we will see later, this is in fact always convergent and does indeed solve our ODE and forms a general solution to our ODE. Moreover, we have that
 $$ \frac{d}{dt} e^{At} = A e^{At} $$
-
-Another educated guess one may make, once again looking at the one-dimensional case, is that the answer will be of the form
-$$ x(t) = e^{\lambda t} v $$
+\\
+Another educated guess one may make, once again looking at the one-dimensional case, is that solutions will be of the form
+$$ X(t) = e^{\lambda t} v $$
 where $\lambda$ is a real number and $v$ is a (constant) vector in $\R^n$, which are parameters to be determined. Assuming this to be case, we can substitute this in \autoref{eq:hom-lin-eqn} to conclude that
 $$ \lambda e^{\lambda t} v = A (e^{\lambda t} v) $$
 for all $t$.
 This implies that $Av = \lambda v$ or in other words that $\lambda$ is an eigenvalue with eigenvector $v$.
 
-\subsection{Example}
+\subsection{Example}\label{subsec:linear-example}
 Let us try our hand with an example (with the second guess for now).
 Suppose we are given
 \begin{equation}\label{eq:lin-eqn-eg}
@@ -41,10 +44,10 @@ Using our favourite method of finding eigenvalue/eigenvector pairs, we determine
 
 However observe that any linear combination of $X_1$ and $X_2$ is also a solution. This leads us to superposition principle (also known as the linearity principle).
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
-    \includegraphics[scale=0.6]{Images/phase portrait.png}
-    \caption{Phase Portrait of \autoref{eq:lin-eqn-eg}}
+    \includegraphics[scale=0.35]{Images/saddle_point.png}
+    \caption{Phase Portrait of \autoref{eq:lin-eqn-eg}. Solutions along eigenvectors in black. \href{https://www.desmos.com/calculator/olr55ghiwv}{Source} }
     \label{fig:phase-portrait-eg}
 \end{figure}
 
@@ -63,7 +66,7 @@ where $X_{genhom}(t)$ is the general solution to the homogeneous system of equat
 
 This means that if $X$ maps to $\R^n$ and $A \in \R^{n \times n}$ then the space of solutions to $X' = AX$ forms a $n-$dimensional vector space. In fact if $X_1(t), \dots, X_n(t)$ are (linearly independent) solutions to $X' = AX$ then 
 $$ X(t) = a_1 X_1(t) + \dots a_n X_n(t) \quad a_1, \dots, a_n \in \R $$
-is the general solution to $X' = AX$. This in fact holds in general but we will only prove this for the case when $A$ can be diagonalised (for now). Later we will show the general case.
+is the general solution to $X' = AX$. This in fact holds in general but we will only prove this for the case when $A$ can be diagonalised (for now) and later we will show it holds for all $A$.
 
 \begin{lemma}
 The general solution to $X' = AX$ where $X$ maps to $\R^n$ and $A$ is a diagonalisable $n \times n$ matrix is given by 
@@ -105,27 +108,27 @@ Suppose we are given
 \begin{equation}
     X' = \underbrace{\matrix{2 & 3\\1 & 0}}_{A} X
 \end{equation}
-Then we know that its eigenvalues are $\lambda_1 = 3$ and $\lambda_2 = -1$ with eigenvectors $v_1 = (3, 1)$ and $v_2 = (1, -1)$ respectively. Note that this is a case where the eigenvalues are of opposite sign. In this case the phase portrait would look like \autoref{fig:saddle_point}.
-\begin{figure}[h]
+Then we know that its eigenvalues are $\lambda_1 = 3$ and $\lambda_2 = -1$ with eigenvectors $v_1 = (3, 1)$ and $v_2 = (1, -1)$ respectively, see \autoref{subsec:linear-example}. Note that this is a case where the eigenvalues are of opposite sign. In this case the phase portrait would look like \autoref{fig:saddle_point}.
+\begin{figure}[ht]
     \centering
     \includegraphics[scale=0.35]{Images/saddle_point.png}
-    \caption{Saddle point}
+    \caption{Saddle point, \href{https://www.desmos.com/calculator/olr55ghiwv}{source}}
     \label{fig:saddle_point}
 \end{figure}
 
-Note that as time as evolves points on the line spanned by $v_2$ move towards the origin (exponentially) while points on the line spanned by $v_1$ move away (also exponentially). In this case we call $v_2$ the stable line and $v_1$ the unstable line. Now consider a point that is not on either of these lines but is some linear combination of $v_1$ and $v_2$. In this case as time evolves, the component for $v_2$ will shrink to 0 while the component for $v_1$ will shoot off to infinity leading to this above shape. This is called having a saddle point at 0. Any time we have eigenvalues of opposite sign we get something like above.
+As time evolves points on the line spanned by $v_2$ move towards the origin (exponentially) while points on the line spanned by $v_1$ move away (also exponentially). In this case we call $v_2$ the stable line and $v_1$ the unstable line. Now consider a point that is not on either of these lines but is some linear combination of $v_1$ and $v_2$. In this case as time evolves, the component for $v_2$ will shrink to 0 while the component for $v_1$ will shoot off to infinity leading to this above shape. This is called having a saddle point at 0. Any time we have eigenvalues of opposite sign we get something like above.
 
 \subsubsection{Unstable Node}
 The next question, of course, is of course is what happens if we have two eigenvalues of the same sign. We first consider the case of both eigenvalues being positive. As an example, we can consider
 \begin{equation}
     X' = BX
 \end{equation}
-where $B = A + 2I$. Then the eigenvalues of $B$ are $\lambda_1 = 5$ and $\lambda_2 = 1$ with $v_1$ and $v_2$ as before. In this case everything moves away from the origin giving us what is called an ``unstable node at 0". However note that since the $\lambda_1$ is greater, the $v_1$ component of any point will increase much faster as $t \to \infty$. So eventually the paths will seem parallel to $v_1$. Conversely as $t \to 0$, the $v_1$ component will also decrease to 0 faster than $v_2$ so the integral curves (aka solutions) become tangent to $v_2$ as $t$ approaches 0. Hence we conclude that the phase portrait will look like so.
+where $B = A + 2I$. Then the eigenvalues of $B$ are $\lambda_1 = 5$ and $\lambda_2 = 1$ with $v_1$ and $v_2$ as before. In this case everything moves away from the origin giving us what is called an ``unstable node at 0". However since $\lambda_1$ is greater, the $v_1$ component of any point will increase much faster as $t \to \infty$. So eventually the paths will seem parallel to $v_1$. Conversely as $t \to 0$, the $v_1$ component will also decrease to 0 faster than $v_2$ so the integral curves (aka solutions) become tangent to $v_2$ as $t$ approaches 0. These features of the phase portrait can be verified in \autoref{fig:unstable_node}.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[scale=0.35]{Images/unstable_node.png}
-    \caption{Unstable Node}
+    \caption{Unstable Node, \href{https://www.desmos.com/calculator/icgyjpqmjx}{source}}
     \label{fig:unstable_node}
 \end{figure}
 
@@ -134,16 +137,16 @@ We next look at the case when both eigenvalues are negative. Perhaps unsurprisin
 \begin{equation}
     X' = CX
 \end{equation}
-where $C = A - 5 I$. Our eigenvectors remain $v_1$ and $v_2$ as usual but their corresponding eigenvalues are now $\lambda_1 = -2$ and $\lambda_2 = -6$. Now as we evolve time, everything will approach the origin. Thus we call this situation having a ``stable node at 0". However now $v_2$ approaches the origin faster than $v_1$ so the the integral curves will reflect this by becoming tangent to $v_1$ as $t \to \infty$.
-\begin{figure}[h]
+where $C = A - 5 I$. Our eigenvectors remain $v_1$ and $v_2$ as usual but their corresponding eigenvalues are now $\lambda_1 = -2$ and $\lambda_2 = -6$. Now as we evolve time, everything will approach the origin. Thus we call this situation having a ``stable node at 0". However now $v_2$ approaches the origin faster than $v_1$ so the the integral curves will reflect this by becoming tangent to $v_1$ as $t \to \infty$. See \autoref{fig:stable_node}.
+\begin{figure}[ht]
     \centering
     \includegraphics[scale=0.25]{Images/stable_node.png}
-    \caption{Stable Node}
+    \caption{Stable Node, \href{https://www.desmos.com/calculator/zw6kxpb5aw}{source}}
     \label{fig:stable_node}
 \end{figure}
 
 \subsubsection{Center}
-Of course not every real matrix will have eigenvalue. More particularly, it may not have \textit{real} eigenvalues but it will certainly have \textit{complex} eigenvalues. Indeed eigenvalues (for real matrices) come in conjugate pairs. However we can close our eyes, pretend everything is real, and in the end split things into their real and complex complex components to get genuinely real solutions. Let us demonstrate what this means. Suppose we are given
+Of course not every real matrix will have eigenvalues. To be precise, a given matrix may not have \textit{real} eigenvalues but it will certainly have \textit{complex} eigenvalues. In fact eigenvalues for matrices with real entries come in conjugate pairs. However we can close our eyes, pretend everything is real, and in the end split things into their real and complex complex components to get genuinely real solutions. Let us demonstrate what this means. Suppose we are given
 \begin{equation}\label{eq:diff_eqn_center}
     X' = \underbrace{\matrix{0 & -1\\1 & 0}}_{J} X
 \end{equation}
@@ -151,9 +154,9 @@ In this case, the characteristic equation is $p(\lambda) = \lambda^2 + 1$. The r
 \begin{align*}
     J - iI = \matrix{-i & -1\\1 & -i}
 \end{align*}
-and that the vector $v_1 = \matrix{i \\ 1}$ lies in its kernel hence is the corresponding eigenvector for $\lambda_1 = i$. Similarly we conclude $v_2 = \matrix{-i \\ 1}$ is the eigenvector with eigenvalue $\lambda_2 = -i$ (in fact this can be concluded without any calculations. If $A$ is a matrix with real entries and has an eigenvector $v$ with eigenvalue $\lambda$, then $\ol{v}$ is an eigenvector with eigenvalue $\ol{\lambda}$ where $\ol{v}$ is defined in the obvious way: taking the complex conjugate of each entry). Thus our two solutions are
+and that the vector $v_1 = \matrix{i \\ 1}$ lies in its kernel hence is the corresponding eigenvector for $\lambda_1 = i$. Similarly we conclude $v_2 = \matrix{-i \\ 1}$ is the eigenvector with eigenvalue $\lambda_2 = -i$ (in fact this can be concluded without any calculations. If $A$ is a matrix with real entries and has an eigenvector $v$ with eigenvalue $\lambda$, then $\ol{v}$ is an eigenvector with eigenvalue $\ol{\lambda}$ where $\ol{v}$ is defined in the obvious way: taking the complex conjugate of each entry. See \autoref{lem:complexification} for details and proof). Thus our two solutions are
 $$ z_1(t) = e^{it} v_1, z_2(t) = e^{-it} v_2  $$
-Expanding this using Euler's formula, we get
+Expanding $z_1$ using Euler's formula, we get
 \begin{align*}
     e^{it} v_1 &= (\cos t + i \sin t) \matrix{i\\1}\\
     &= \matrix{i \cos t - \sin t  \\ \cos t + i \sin t}\\
@@ -161,19 +164,19 @@ Expanding this using Euler's formula, we get
 \end{align*}
 We claim that
 $$X_1(t) = \matrix{-\sin t \\ \cos t}, X_2(t) = \matrix{\cos t \\ \sin t}$$
-are (linearly independent) solutions to \autoref{eq:diff_eqn_center} (note we would have gotten the same solutions if we had chose to expand $z_2$ instead).
+are (linearly independent) solutions to \autoref{eq:diff_eqn_center} (note: we would have gotten the same solutions if we had chose to expand $z_2$ instead).
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
-    \includegraphics[scale=0.35]{Images/center.png}
-    \caption{Center at 0}
+    \includegraphics[scale=0.4]{Images/center.png}
+    \caption{Center at 0, \href{https://www.desmos.com/calculator/votqebxxgy}{source}}
     \label{fig:center}
 \end{figure}
 
-It is easy to see that the solutions will travel in a circular path: counterclockwise as time moves forward and clockwise as time moves backward. This is known has having a center at 0. This occurs anytime the eigenvalues are purely imaginary numbers.\\
+It is easy to see that the solutions will travel in a circular path: counterclockwise as time moves forward and clockwise as time moves backward. This is known has having a center at 0. This occurs anytime the eigenvalues are purely imaginary numbers. See \autoref{fig:center}\\
 
-A few claims were made up in the above example. Let us prove them formally.
-\begin{lemma}
+A few claims were made up in the previous example. Let us prove them formally.
+\begin{lemma}\label{lem:complexification}
 Suppose $A \in \R^{n \times n}$. Suppose $v$ is an eigenvector with a eigenvalue $\lambda$. Then
 \begin{itemize}
     \item $\ol{\lambda}$ is an eigenvalue of $A$ with eigenvector $\ol{v}$

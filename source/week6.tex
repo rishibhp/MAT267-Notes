@@ -1,4 +1,3 @@
-
 \section{Dynamical Systems}\label{sec:dyn-systems}
 Consider our go-to differential equation:
 $$ X' = AX $$
@@ -8,10 +7,10 @@ On the other hand, we could fix $t$ and consider what happens as we vary $v$. Su
 
 It is perhaps useful to consider why the `semigroup property' of dynamical systems (i.e. that $\phi_{s + t} = \phi(s) \circ \phi(t)$ is important. The claim is that with this property, by only looking at the initial conditions, we can in some sense study all solutions. This is because the semigroup property allows us to `stitch together' solutions in a certain sense. Suppose we have a solution that begins at $x$ and passes through $y_1$ in time $t$. Suppose we have another solution that starts at $y_1$ and reaches $y_2$ in time $s$. Then one would hope that the original solution that began at $x$ also reaches $y_2$, but at time $s + t$ (and in fact hopefully the path from $x$ to $y_2$ would be given by combining/stiching together the two solutions in the obvious manner, should this be possible). This is exactly the property characterised by the semigroup property.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[scale=0.7]{Images/flow_semigroup.png}
-    \caption{The semigroup property of flow. We evolve for time $s$ from $\Phi_t(x)$. This corresponds exactly with evolving for time $s + t$ from $x$.}
+    \caption{The semigroup property of flow. Evolving for time $s$ from $\Phi_t(x)$ corresponds exactly with evolving for time $s + t$ from $x$.}
     \label{fig:flow-semigroup-prop}
 \end{figure}
 
@@ -97,7 +96,7 @@ For equicontinuity, we again use the fact that we can use $f$ to approximate all
 Suppose $\epsilon > 0$ is given. Then there exists some $N \in \N$ such that $\norm{f - f_n}_{\infty} < \epsilon$ for $n \geq N$. Additionally since $f$ is continuous on a compact space, it is in particular uniformly continuous. Thus there exists a $\delta_0$ such that if $\left|x - y\right| < \delta_0$ then $\left|f(x) - f(y)\right| < \epsilon$. Additionally, each of the $f_n$ are uniformly continuous as well, thus there exist similar $\delta_n$ for each of them as well. It is then easy to see that the $\delta$ we need is $\delta = \min\{\delta_0, \delta_1, \dots, \delta_n\}$.
 \end{proof}
 
-We then get to the Ascoli-Arzelà theorem.
+We then get to the Ascoli-Arzelà theorem. Roughly speaking, Ascoli-Arzelà gives a complete description of compact subsets of function spaces (with some conditions) analogous to how Heine-Borel gives a complete description of compact subsets of $\R^n$.
 \begin{theorem}[Ascoli-Arzelà]\label{thm:ascoli}
     Let $\mathcal{F} = \{f_\alpha: E \to \R^m\}$ where $E$ is a compact subset of $\R^n$ be an infinite family of continuous functions that is uniformly bounded and equicontinuous. Then there exists a sequence of functions in $\mathcal{F}$ that converges uniformly on $E$.
 \end{theorem}

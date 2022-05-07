@@ -2,18 +2,32 @@
 Hamiltonian systems are quite analogous to gradient systems, at least in terms of definitions. Although they are a bit more general, we will restrict out attention to Hamiltonian systems on $\R^2$.
 \begin{definition}[Hamiltonian systems]
 A Hamiltonian system is a differential equation of the form 
-$$x'' = - \nabla V(x)$$ 
-where $V: D \to \R$ is a $C^2$ function.
+$$x'' = - V'(x)$$
+where $V: D \subset \R \to \R$ is a $C^2$ function.
 
-Equivalently a system $z' = f(z)$ is Hamiltonian if there exists a map $H: D \to \R$ such that 
+Equivalently a system $z' = f(z)$ is Hamiltonian if there exists a map $H: C \subset \R^2 \to \R$ such that 
 $$ x' = \frac{\partial H}{\partial y}(x, y), y' = -\frac{\partial H}{\partial x}(x, y) $$
-\end{definition}
+\end{definition}    
+\begin{remark}
+    The equivalence is not obvious. For one thing, we need to write the second-order differential equation in the first definition as a system of first-order differential equations giving us 
+    \begin{align*}
+        \begin{cases}
+            x' &= y\\
+            y' &= - V'(x)
+        \end{cases}
+    \end{align*}
+    Given such a $V$, we can define the Hamiltonian $H$ as 
+    $$ H(x, y) = \frac{1}{2} y^2 + V(x) $$
+    Then we have 
+    $$ \partial_x H = V'(x), \partial_y H = y $$
+    The other direction remains a mystery to me (for now?).\\
+\end{remark}
 
-\noindent These are another class of systems where the Lyapunov function is easy to find. Namely we define
+These are another class of systems where the Lyapunov function is easy to find. Namely we define
 $$ L(x, y) = \frac{1}{2} |y|^2 + V(x) $$
 (where $V$ is as in the first definition). Then if $(x(t), y(t))$ is a solution, we get
 \begin{align*}
-    \frac{d}{dt} L(x(t), y(t)) = y y' + \nabla V(x) x' = 0
+    \frac{d}{dt} L(x(t), y(t)) = y y' + V'(x) x' = 0
 \end{align*}
 Thus we find that $L$ is actually constant along solutions. Since $L$ is continuous, if solutions get closer and closer together with time then they must have the same constant. To be precise, we have the following statement.
 
@@ -103,7 +117,7 @@ Note that limit sets could be empty. For example if $x' = 1$, then we know solut
 Consider \autoref{fig:limit-set-eg1}. In this case we have $\omega(x) = \left\{p\right\}$ and $\alpha(x) = \left\{q\right\}$. The situation is reversed for $y(t)$, namely we have $\omega(x) = \left\{q\right\}$ and $\alpha(x) = \left\{p\right\}$. Such solutions that connect different equilibrium points to one another are called heteroclinic solutions. Solutions that connect the same equilibria are called homoclinic.
 
 We see that $z(t)$ has a closed orbit so, in fact, we get $\omega(z) = \alpha(z) = \left\{ z(t): t \in \R \right\}$. Finally we have $r(t)$ with $\omega(r) = \left\{z(t): t \in \R \right\}$ and $\alpha(r) = \left\{a\right\}$.
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[scale=0.5]{Images/limit_set_eg1.png}
     \caption{Example of limit sets, assume $p, q, a$ are equilibria}
@@ -111,7 +125,7 @@ We see that $z(t)$ has a closed orbit so, in fact, we get $\omega(z) = \alpha(z)
 \end{figure}
 Finally \autoref{fig:limit-set-eg2} highlights another case that may occur with $\omega(w) = \left\{x(t): t \in \R \right\} \cup \left\{y(t): t \in \R \right\} \cup \{p, q\}$ and $\alpha(w) = \left\{a\right\}$. Roughly speaking, these examples illustrate what all bounded limit sets in the plane look like.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[scale=0.5]{Images/limit_set_eg2.png}
     \caption{Example of limit sets, assume $p, q, a$ are equilibria}
@@ -177,7 +191,7 @@ Let $y \in \omega(x)$. Since $\omega(x)$ does not contain any equilibria we know
 
 Now suppose $\tilde{x}(t)$ is any solution to the ODE that intersects the section $\gamma$ at times $t_1, t_2, t_3, \dots$ with $t_i < t_{i + 1}$. That is there are some $s_1, s_2, s_3, \dots$ such that $\tilde{x}(t_1) = \gamma(s_1), \tilde{x}(t_2) = \gamma(s_2), \dots$. Then we claim that $s_i < s_{i + 1}$ for all $i$ or $s_i > s_{i + 1}$ for all $i$ (in other words either $s_1 < s_2 < s_3 < \dots$ or $s_1 > s_2 > s_3 > \dots$). In order to verify this consider \autoref{fig:section-monotone}.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[scale=0.8]{Images/section_monotone.png}
     \caption{Solutions are trapped inside $C$ after entering it}
@@ -185,7 +199,7 @@ Now suppose $\tilde{x}(t)$ is any solution to the ODE that intersects the sectio
 \end{figure}
 
 Let $C$ be the region bounded by $\left\{\tilde{x}(t): t \in [t_1, t_2]\right\} \cup S$ where $S$ is the portion of the section that is between $\tilde{x}(t_1)$ and $\tilde{x}(t_2)$ (in other words $S = \left\{\gamma(s) : s \in [s_2, s_1]\right\}$ assuming $s_2 < s_1$ as in the figure). It is clear that the region $C$ is positively invariant: solutions cannot exit by crossing the solution curve $x$ since this would violate uniqueness and they cannot exit via $S$ since the vector field is pointing into $C$ (this also highlights why it's important that we're in the plane, clearly the argument above breaks down for higher dimensions). Thus if $\tilde{x}(t)$ intersects $\gamma$ again at $\gamma(s_3)$, it must do so inside $C$ implying that $s_3 < s_2$. There remain 3 other cases to consider (1 other if we ignore mirror images) and the arguments for all other cases are near identical.
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[scale=0.7]{Images/section_monotone_other_cases.png}
     \caption{Other cases for showing monotonicity. Note in the second two cases it is the `complement' of $C$ that is positively invariant.}
@@ -204,7 +218,7 @@ Let $V$ be the neighbourhood of $z$ upon which $h$ acts homeomorphically. Since 
 
 The claim is as follows: if a solution through $y$ where $y \in \omega(x)$ intersects a section multiple times, then it must do so at the same point each time. Suppose not. In other words, suppose $y_1$ and $y_2$ are distinct points on the solution through $y$ that also lie on the section $\tilde{\gamma}$. Like in the previous paragraph, we find neighbourhoods $V_1, V_2$ of $y_1$ and $y_2$ respectively where the homeomorphisms can be found and without loss of generality we can assume that these are disjoint (simply consider smaller neighbourhoods if not). The intersections of $V_1$ and $V_2$ with the section $\tilde{\gamma}$ are going to form sections of their own. By using the homeomorphisms as in the previous case if necessary, we can assume that $x(t_n)$ intersect $\tilde{\gamma}$ for all (sufficiently large) $n$. Thus $x$ must intersect the entire section $\tilde{\gamma}$ as well as the smaller, disjoint sections monotonically in all cases. Clearly this cannot be done, see \autoref{fig:unique-intersection}.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[scale=0.4]{Images/unique_intersection.png}
     \caption{$x(t_n)$ must eventually be in the top box but this breaks monotonicity on $\gamma$}

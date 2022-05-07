@@ -1,5 +1,3 @@
-% TODO: Add sidebar about rotation groups
-
 \section{Inhomogeneous Linear Systems}
 Suppose we have an equation of the form
 \begin{equation}\label{eq:inhom-ode}
@@ -35,10 +33,10 @@ Suppose $f: \R^n \to \R^n$ is a smooth vector field and we have the differential
 \begin{equation}\label{eq:linsation-eg}
     x' = f(x)
 \end{equation}
-Although it's hard to give an explicit solution to this, we can still try and determine it's qualitative behaviour, at least locally. Let $p \in \R^n$ be arbitrary. If $f(p)$ is non-zero, then for $q$ near $p$ we are going to have that $f(q)$ is close to $f(p)$. Therefore the flow is going to look like (almost) parallel lines in this neighbourhood. If $f(p)$ is 0, we need to do a bit more work. One thing we can do is consider the Taylor expansion of $f$. We know that
-$$ f(x) = f(p) + f'(p)(x - p) + \underbrace{O(|x - p|)}_{\text{error}} $$
+Although in general it's hard to give an explicit solution to this, we can still try and determine it's qualitative behaviour, at least locally. Let $p \in \R^n$ be arbitrary. If $f(p)$ is non-zero, then for $q$ near $p$ we are going to have that $f(q)$ is close to $f(p)$. Therefore the flow is going to look like (almost) parallel lines in this neighbourhood. If $f(p)$ is 0, we need to do a bit more work. One thing we can do is consider the Taylor expansion of $f$. We know that
+$$ f(x) = f(p) + f'(p)(x - p) + \underbrace{O(\left|x - p\right|)}_{\text{error}} $$
 Since we assume $f(p) = 0$, the first term disappears and by substituting $y = x - p$, \autoref{eq:linsation-eg} becomes
-$$ y' = Df(p)y + O(|y|) $$
+$$ y' = Df(p)y + O(\left|y\right|) $$
 Since $Df(p)$ is a linear map, this looks just like the linear equations we have studied thus far, except there is the added error term. The hope is that this error terms is going to be small so by studying the linear system
 $$ y' = Df(p) y $$
 we can get a pretty good idea of how the true system behaves. For example if there are sources or sinks in the linearised system, they will also appear in the true system. The phase portraits will also be similar (similarity will be defined more precisely later) if the origin is hyperbolic (recall this means that $\Re(\lambda) \neq 0$ for every eigenvalue $\lambda$ of $Df(p)$).
@@ -54,7 +52,12 @@ The cryptic `tie everything up into a big picture' can be best illustrated with 
 \subsection{Example}
 We will consider the case of swinging a pendulum, kind of. More precisely we will look at the case when a mass is attached to a (rigid) rod allowed to swing freely in a vertical circle (we use a rod instead of a string because we don't want to worry about cases where the string may fold onto itself or something). 
 
-% TODO: Insert mass pendulumn diagram
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.7]{Images/mass_pendulum_diagram.png}
+    \caption{Mass pendulum setup}
+    \label{fig:mass-pend-diagram}
+\end{figure}
 
 The equation modelling this situation is given by
 \begin{equation*}
@@ -88,5 +91,22 @@ Let us consider the case with $k$ odd first. In this case the determinant of the
 Now let us consider the case with $k$ even. Then we know the eigenvalues are
 $$ \lambda_{1, 2} = \frac{-r \pm \sqrt{r^2 - 4}}{2} $$
 If $0 < r < 2$ then we will have complex eigenvalues implying that we will have a spiral. Since the real part is positive, solutions are going to spiral in and by looking at the first column we can even infer that spiral is going to be clockwise. This corresponds with the angle tending towards 0 and its speed decreasing, as we would expect the pendulum to behave. If $r > 2$ then we get 2 real eigenvalues, both of which are negative. In this case all equilibria will be stable. This corresponds with the friction becoming so strong that the pendulum can actually become stuck and `stable' at odd angles. 
+
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[width=.5\linewidth]{Images/mass_pendulum_eq1.png}
+        \caption{Stable equilibrium}
+        \label{fig:mass-pend-stable}
+    \end{subfigure}%
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[width=.5\linewidth]{Images/mass_pendulum_eq2.png}
+        \caption{Unstable equilibrium}
+        \label{fig:mass-pend-unstable}
+    \end{subfigure}
+    \caption{Equilibria in mass pendulum setup}
+\end{figure}
 
 We get some rather interesting behaviour at $r = 0$, in the frictionless case. In this case we get a center which again should make sense. If there is no friction, then the pendulum continues swinging on its path ad infinitium. 
