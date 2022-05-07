@@ -8,7 +8,7 @@
    version="1.1"
    id="svg5"
    inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
-   sodipodi:docname="flow_semigroup.svg.2022_04_15_14_23_08.0.svg"
+   sodipodi:docname="flow_semigroup.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -26,8 +26,8 @@
      showgrid="false"
      showborder="false"
      inkscape:zoom="1"
-     inkscape:cx="334"
-     inkscape:cy="482"
+     inkscape:cx="322"
+     inkscape:cy="473"
      inkscape:window-width="1920"
      inkscape:window-height="986"
      inkscape:window-x="-11"
@@ -125,22 +125,31 @@
     <path
        id="MJX-10-TEX-N-29"
        d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z" />
+    <path
+       id="MJX-4-TEX-I-73"
+       d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z" />
+    <path
+       id="MJX-4-TEX-N-2B"
+       d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z" />
+    <path
+       id="MJX-4-TEX-I-74"
+       d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z" />
   </defs>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
     <g
-       id="g1130"
+       id="g1846"
        inkscape:export-filename="C:\Users\Rishibh P\OneDrive - University of Toronto\Desktop\OneDrive - University of Toronto\Courses\MAT267\images\flow_semigroup.png"
        inkscape:export-xdpi="150"
        inkscape:export-ydpi="150">
       <path
-         style="fill:none;stroke:#000000;stroke-width:0.79375;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
-         d="m 56.091666,105.30417 c 0,30.25095 0,60.50165 0,90.75208"
+         style="fill:none;stroke:#000000;stroke-width:0.748062;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 56.091666,115.45081 c 0,26.86871 0,53.73719 0,80.60544"
          id="path857"
          inkscape:path-effect="#path-effect859"
-         inkscape:original-d="m 56.091666,105.30417 c 2.65e-4,30.25095 2.65e-4,60.50165 0,90.75208" />
+         inkscape:original-d="m 56.091666,115.45081 c 2.65e-4,26.86871 2.65e-4,53.73719 0,80.60544" />
       <path
          style="fill:none;stroke:#000000;stroke-width:0.79375;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 135.86354,184.81146 c -30.25095,0 -60.501651,0 -90.752081,0"
@@ -165,28 +174,6 @@
          id="path1199"
          inkscape:path-effect="#path-effect1203"
          inkscape:original-d="m 107.42083,162.18682 c 2.7e-4,7.67404 2.7e-4,15.34788 0,23.02151" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:7.02774px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.175694"
-         x="84.146408"
-         y="189.67728"
-         id="text1559"><tspan
-           sodipodi:role="line"
-           id="tspan1557"
-           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.02774px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.175694"
-           x="84.146408"
-           y="189.67728">t</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:7.02774px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.175694"
-         x="102.66647"
-         y="190.20644"
-         id="text3249"><tspan
-           sodipodi:role="line"
-           id="tspan3247"
-           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.02774px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.175694"
-           x="102.66647"
-           y="190.20644">s+t</tspan></text>
       <g
          data-mml-node="math"
          id="g9121"
@@ -255,6 +242,19 @@
              width="100%"
              height="100%" />
         </g>
+      </g>
+      <g
+         data-mml-node="mi"
+         transform="matrix(0.0047879,0,0,-0.0047879,52.599276,164.41172)"
+         id="g9115-3"
+         style="fill:#000000;stroke:#000000;stroke-width:0">
+        <use
+           xlink:href="#MJX-5-TEX-I-78"
+           id="use9113-7"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
       </g>
       <circle
          style="fill:#000000;stroke:#000000;stroke-width:0.396875;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
@@ -395,17 +395,6 @@
          cx="107.44693"
          cy="162.05623"
          r="1.0696173" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:7.02774px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.175694"
-         x="52.027168"
-         y="164.63695"
-         id="text9487"><tspan
-           sodipodi:role="line"
-           id="tspan9485"
-           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.02774px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.175694"
-           x="52.027168"
-           y="164.63695">x</tspan></text>
       <path
          sodipodi:type="star"
          style="fill:#000000;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"
@@ -420,10 +409,10 @@
          sodipodi:arg2="1.5707963"
          inkscape:rounded="0"
          inkscape:randomized="0"
-         d="m 360.45243,426.3701 -34.06111,0 17.03056,-29.49778 z"
-         transform="matrix(0.10113392,0,0,0.10113392,21.360066,62.864745)"
+         transform="matrix(0.10113392,0,0,0.10113392,21.360066,73.096651)"
          inkscape:transform-center-y="-0.49720353"
-         inkscape:transform-center-x="-1.6262449e-06" />
+         inkscape:transform-center-x="-1.6262449e-06"
+         d="m 360.45243,426.3701 -34.06111,0 17.03056,-29.49778 z" />
       <path
          sodipodi:type="star"
          style="fill:#000000;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"
@@ -438,10 +427,64 @@
          sodipodi:arg2="1.5707963"
          inkscape:rounded="0"
          inkscape:randomized="0"
-         d="m 360.45243,426.3701 -34.06111,0 17.03056,-29.49778 z"
          transform="matrix(0,0.10113392,-0.10113392,0,177.85732,150.07986)"
          inkscape:transform-center-y="1.5053196e-06"
-         inkscape:transform-center-x="-0.49720381" />
+         inkscape:transform-center-x="-0.49720381"
+         d="m 360.45243,426.3701 -34.06111,0 17.03056,-29.49778 z" />
+      <g
+         data-mml-node="math"
+         id="g1036"
+         transform="matrix(0.00478941,0,0,-0.00478941,102.45325,188.69608)"
+         style="fill:#000000;stroke:#000000;stroke-width:0">
+        <g
+           data-mml-node="mi"
+           id="g1026">
+          <use
+             xlink:href="#MJX-4-TEX-I-73"
+             id="use1024"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </g>
+        <g
+           data-mml-node="mo"
+           transform="translate(691.2)"
+           id="g1030">
+          <use
+             xlink:href="#MJX-4-TEX-N-2B"
+             id="use1028"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </g>
+        <g
+           data-mml-node="mi"
+           transform="translate(1691.4)"
+           id="g1034">
+          <use
+             xlink:href="#MJX-4-TEX-I-74"
+             id="use1032"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+      <g
+         data-mml-node="mi"
+         transform="matrix(0.00478941,0,0,-0.00478941,84.889247,188.8661)"
+         id="g1034-0"
+         style="fill:#000000;stroke:#000000;stroke-width:0">
+        <use
+           xlink:href="#MJX-4-TEX-I-74"
+           id="use1032-0"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
     </g>
   </g>
 </svg>
